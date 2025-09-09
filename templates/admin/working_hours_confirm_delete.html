@@ -1,0 +1,6 @@
+<h2>Are you sure you want to delete these working hours?</h2>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="{% url 'working_hours_list' %}" class="btn btn-secondary">Cancel</a>
+</form>

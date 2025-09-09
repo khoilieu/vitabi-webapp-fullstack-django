@@ -1,0 +1,146 @@
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <link rel="icon" href="{% static "home/favicon.png" %}" type="image/x-icon">
+    <title>History</title>
+    <link rel="stylesheet" href="{% static "home/history.css" %}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-NBX832CK');</script>
+		<!-- End Google Tag Manager -->
+
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "nqixhxf3g6");
+  </script>
+</head>
+  <body>
+    <section>
+        <header>
+            <a href="{% url "mydata" %}"><img src="{% static "home/arrow-left.svg" %}" alt="Back-arrow" style="width: 22px; height: 22px;"></a>
+            <div class="top">
+                <h1 class="h1">{% trans "History" %}</h1>      
+            </div>
+            <div style="width: 22px; height: 22px;"></div>
+        </header>
+
+
+        <main>
+          {% if histories %}
+            {% for history in histories %}
+            <a style="text-decoration: none" href="{% url "conclusion-detail" history.id_conclusion %}">
+                <div class="hospital-item">
+                    <div class="hospital-info">
+                      <h2>{{ history.conclusion_text }}</h2>
+                      <p>{{history.created_at|date:"F d, Y H:i A"}}</p>
+                      <p class="percentage {% if history.odds_percentage|to_float <= 25 %}percentage-low{% elif history.odds_percentage|to_float > 25 and history.odds_percentage|to_float <= 50 %}percentage-medium{% elif history.odds_percentage|to_float > 50 and history.odds_percentage|to_float <= 80 %}percentage-high{% else %}percentage-very-high{% endif %}">
+                          {{ history.odds_percentage }}
+                      </p>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+          {% endif %}  
+        </main>
+
+        <div class="footer">
+          <a href="{% url "home" %}" class="nav-link" style="width: 70px;">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-house"
+            viewBox="0 0 16 16"
+            >
+            <path
+            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
+            />
+            </svg>
+            <span>{% trans "Home" %}</span>
+          </a>
+          <a href="{% url "care" %}" class="nav-link" style="width: 70px;">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-calendar-event"
+              viewBox="0 0 16 16"
+            >
+              <path
+              d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"
+              />
+              <path
+              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
+              />
+            </svg>
+            <span>{% trans "Bookings" %}</span>
+          </a>
+          <a href="{% url "mydata" %}" class="nav-link" style="width: 70px;">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-card-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+              d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"
+              />
+              <path
+              d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"
+              />
+            </svg>
+            <span>{% trans "My Data" %}</span>
+          </a>
+        </div>
+    </section>
+  </body>
+  {% if user.is_authenticated and user.patient.is_patient %}
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBX832CK"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->	
+	{% endif %}
+</html>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hospitalListItems = document.querySelectorAll(".hospital-item");
+    hospitalListItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+        window.location.href = this.getAttribute("data-url");
+      });
+    });
+  });
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const hospitalItems = document.querySelectorAll(".hospital-item");
+
+    hospitalItems.forEach(function (item) {
+      item.addEventListener("mouseover", function () {
+        this.style.transform = "scale(0.95)";
+      });
+
+      item.addEventListener("mouseout", function () {
+        this.style.transform = "scale(1)";
+      });
+    });
+  });
+</script>
+

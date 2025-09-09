@@ -1,0 +1,200 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  scrollbar-width: none;
+}
+
+section {
+  height: fit-content;
+  width: 400px;
+  border: 1px solid #ccc;
+}
+
+.top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown a {
+  font-size: 14px;
+}
+
+.dropdown-toggle {
+  min-width: 100px;
+  width: 30%;
+  height: 35px;
+}
+
+.dropdown-menu {
+  font-size: 14px;
+}
+
+#title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px !important;
+}
+
+h1 {
+  margin: 0px !important;
+  font-size: 26px !important;
+}
+
+h2 {
+  margin-bottom: 10px !important;
+  font-size: 22px !important;
+}
+
+/* Main CSS */
+main {
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-bottom: 20%;
+  height: calc(100vh - 120px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.percentage-low {
+  background: #a3e635;
+}
+
+.percentage-medium {
+  background: #facc15;
+}
+
+.percentage-high {
+  background: #f59e0b;
+}
+
+.percentage-very-high {
+  background: #ef4444;
+}
+
+.percentage {
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-weight: bold;
+  margin-left: 8px;
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+}
+
+.hospital-item {
+  margin-bottom: 20px;
+  display: flex;
+  width: 340px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.hospital-photo {
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+}
+
+.hospital-info {
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.hospital-info h2 {
+  margin: 10px 0;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px !important;
+  max-width: 320px;
+  color: #0f172a;
+}
+
+.hospital-rating {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #0056b3;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.hospital-name {
+  font-size: 18px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.hospital-item p {
+  font-size: 10px;
+  margin: 5px 0;
+  color: #0f172a;
+}
+
+.hospital-item p:last-of-type {
+  float: right;
+  display: inline-block;
+  padding: 5px;
+  color: #fff;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+/* Footer CSS */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: auto;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: space-around;
+  height: 60px;
+  flex-direction: row;
+  align-items: center;
+  /* box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.2); */ /* 上の影を削除 */
+
+  color: #555;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+
+.footer a {
+  color: #555;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-link img {
+  display: block;
+  margin: 0 auto;
+  width: 30px;
+  height: auto;
+}
+
+.nav-link span {
+  display: block;
+  font-size: 14px;
+}

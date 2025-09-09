@@ -1,0 +1,1 @@
+web gunicorn vitabi.wsgi:application --log-file -

@@ -1,0 +1,1947 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-03 17:07+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: .\vitabi\settings.py:111
+msgid "English"
+msgstr "英語"
+
+#: .\vitabi\settings.py:112
+msgid "Japanese"
+msgstr "日本語"
+
+#: .\vitabi\settings.py:113
+msgid "Vietnamese"
+msgstr "ベトナム語"
+
+msgid "Language"
+msgstr "言語"
+
+msgid "Welcome to Vitabi – Your Account Details"
+msgstr "Vitabiへようこそ – アカウント情報のお知らせ"
+
+msgid "Zimbabwe"
+msgstr "ジンバブエ"
+
+msgid "Your result"
+msgstr "結果"
+
+msgid "Vitabi is a platform that offers hospital reservation services for overseas travelers. Easily book local medical facilities through our app and manage your health with confidence."
+msgstr "Vitabiは、海外旅行者向けに病院予約サービスを提供するプラットフォームです。アプリで簡単に現地の医療機関を予約し、健康管理をサポートします。"
+
+msgid "Vitabi - Hospital Booking App for Overseas Travelers"
+msgstr "Vitabi - 海外旅行者向け病院予約アプリ"
+
+msgid "Information distance not available."
+msgstr "情報距離がありません."
+
+msgid "You likely do not have infectious diarrhea, but it is strongly recommended to visit the hospital."
+msgstr "感染性の下痢ではない可能性がありますが、病院への受診を強くお勧めします。"
+
+msgid "You likely have infectious diarrhea, and it is strongly recommended to visit the hospital."
+msgstr "感染性の下痢の可能性が高いです。病院への受診を強くお勧めします。"
+
+msgid "You likely have infectious diarrhea."
+msgstr "感染性の下痢の可能性が高いです。"
+
+msgid "You likely have infectious diarrhea, and you should go hospital."
+msgstr "感染性の下痢の可能性がありますので、病院に行く必要があります。"
+
+msgid "You likely do not have infectious diarrhea, but you should go hospital"
+msgstr "感染性の下痢ではない可能性がありますが、病院に行く必要があります。"
+
+msgid "Hospital visit recommended"
+msgstr "病院の訪問をお勧めします。"
+
+msgid "This condition can usually be managed at home"
+msgstr "通常、自宅で管理できます。"
+
+msgid "Can usually be managed at home"
+msgstr "通常、家で対処できます"
+
+msgid "Advice on coronavirus (COVID-19)"
+msgstr "新型コロナウイルス（COVID-19）に関するアドバイス"
+
+msgid "ー A new, continuous cough"
+msgstr "ー 新しい、持続的な咳"
+
+msgid "ー Fever"
+msgstr "ー 発熱"
+
+msgid "ー Difficulty breathing"
+msgstr "ー 呼吸困難"
+
+msgid "ー Loss or change of sense of taste or smell."
+msgstr "ー 味覚や嗅覚の喪失または変化"
+
+msgid "Most people with coronavirus have at least one of these symptoms."
+msgstr "コロナウイルスを持つほとんどの人がこれらの症状の少なくとも1つを持っています。"
+
+msgid "7 out of 10 people with these symptoms had this condition."
+msgstr "これらの症状のある10人のうち7人がこの状態にありました。"
+
+msgid "People with symptoms similar to yours can usually manage them safely at home. You can also seek advice by visiting or contacting your local pharmacy. If your symptoms persist longer than expected, worsen, or if you notice new symptoms, it is recommended to consult a doctor for further assessment and advice."
+msgstr "あなたの症状に似た症状を持つ人々は、通常、自宅で安全に管理できます。また、地元の薬局を訪れてアドバイスを求めることもできます。もし症状が予想以上に長引く、悪化する、または新しい症状が現れた場合は、さらなる評価とアドバイスを受けるために医師に相談することをお勧めします。"
+
+msgid "Less likely causes"
+msgstr "可能性が低い原因"
+
+msgid "ーFlu"
+msgstr "ーインフルエンザ"
+
+msgid "5 out of 1000 people with these symptoms had this condition."
+msgstr "これらの症状のある1000人のうち5人がこの状態にありました。"
+
+msgid "ーMigraine"
+msgstr "ー片頭痛"
+
+msgid "Suggested Medicines"
+msgstr "推奨される薬"
+
+msgid "Find Hospitals"
+msgstr "病院を検索"
+
+msgid "Call 911 or the emergency number for your region now and request an ambulance."
+msgstr "今すぐ911またはあなたの地域の緊急番号に電話して救急車を呼んでください。"
+
+msgid "This could be an emergency. People with similar symptoms usually need to go to the emergency department."
+msgstr "これは緊急事態な可能性があります。同様の症状を持つ人は、通常、救急部門に行く必要があります。"
+
+msgid "Account"
+msgstr "アカウント"
+
+msgid "Personal Details"
+msgstr "個人情報"
+
+msgid "Medical Information"
+msgstr "医療情報"
+
+msgid "Password and Security"
+msgstr "パスワードとセキュリティ"
+
+msgid "Password & Security"
+msgstr "パスワードとセキュリティ"
+
+msgid "Sign Out"
+msgstr "ログアウト"
+
+msgid "No reviews available."
+msgstr "レビューが見つかりません。"
+
+msgid "Home"
+msgstr "ホーム"
+
+msgid "Care"
+msgstr "ケア"
+
+msgid "Bookings"
+msgstr "病院予約"
+
+msgid "review"
+msgstr "レビュー"
+
+msgid "reviews"
+msgstr "レビュー"
+
+msgid "My Data"
+msgstr "マイデータ"
+
+msgid "My data"
+msgstr "マイデータ"
+
+msgid "Update Personal Details"
+msgstr "個人情報の更新"
+
+msgid "Change Password"
+msgstr "パスワードを変更する"
+
+msgid "Old password"
+msgstr "古いパスワード"
+
+msgid "New password"
+msgstr "新しいパスワード"
+
+msgid "Confirm new password"
+msgstr "新しいパスワードを確認する"
+
+msgid "Change my password"
+msgstr "パスワードを変更する"
+
+msgid "Login"
+msgstr "ログイン"
+
+msgid "LOGIN"
+msgstr "ログイン"
+
+msgid "OR"
+msgstr "または"
+
+msgid "CREATE NEW ACCOUNT"
+msgstr "新しいアカウントを作成する"
+
+msgid "Log In"
+msgstr "ログイン"
+
+msgid "Enter email"
+msgstr "メールアドレスを入力してください"
+
+msgid "Enter password"
+msgstr "パスワードを入力してください"
+
+msgid "Register"
+msgstr "登録"
+
+msgid "Don't have an account?"
+msgstr "アカウントをお持ちでないですか？"
+
+msgid "Male"
+msgstr "男性"
+
+msgid "Female"
+msgstr "女性"
+
+msgid "Height"
+msgstr "身長"
+
+msgid "Weight"
+msgstr "体重"
+
+msgid "Insurance"
+msgstr "保険"
+
+msgid "History"
+msgstr "履歴"
+
+msgid "Setting"
+msgstr "設定"
+
+msgid "Help"
+msgstr "ヘルプ"
+
+msgid "Legal"
+msgstr "法的事項"
+
+msgid "Saved"
+msgstr "保存されました"
+
+msgid "Password"
+msgstr "パスワード"
+
+msgid "Security"
+msgstr "セキュリティ"
+
+msgid "Name"
+msgstr "名前"
+
+msgid "Sex"
+msgstr "性別"
+
+msgid "Address"
+msgstr "住所"
+
+msgid "Email Address"
+msgstr "メールアドレス"
+
+msgid "Nationality"
+msgstr "国籍"
+
+msgid "Language you speak"
+msgstr "話す言語"
+
+msgid "Currency"
+msgstr "通貨"
+
+msgid "Local currency"
+msgstr "現地通貨"
+
+msgid "Units"
+msgstr "単位"
+
+msgid "Metric"
+msgstr "メートル法"
+
+msgid "Username"
+msgstr "ユーザー名"
+
+msgid "Full Name"
+msgstr "フルネーム"
+
+msgid "Phone Number"
+msgstr "電話番号"
+
+msgid "Select your nationality"
+msgstr "国籍を選択してください"
+
+msgid "Vietnam"
+msgstr "ベトナム"
+
+msgid "Japan"
+msgstr "日本"
+
+msgid "United Kingdom (UK)"
+msgstr "イギリス"
+
+msgid "Re-enter Password"
+msgstr "パスワードを再入力"
+
+msgid "Already have an account?"
+msgstr "すでにアカウントをお持ちですか？"
+
+msgid "Select your language"
+msgstr "言語を選択してください"
+
+msgid "Update Personal Information"
+msgstr "個人情報を更新する"
+
+msgid "Update"
+msgstr "更新"
+
+msgid "Languages"
+msgstr "言語"
+
+msgid "Update Setting"
+msgstr "設定を更新する"
+
+msgid "Date of Birth"
+msgstr "生年月日"
+
+msgid "Manage Your Hospital Visits"
+msgstr "病院の予約を管理"
+
+msgid "Book an appointment"
+msgstr "予約を行う"
+
+msgid "Insurances Supported"
+msgstr "提携している保険"
+
+msgid "Languages Supported"
+msgstr "対応可能言語"
+
+msgid "Working Hour"
+msgstr "営業時間"
+
+msgid "How to Use Direct Billing Service"
+msgstr "キャッシュレス診療の利用方法"
+
+msgid "Conclusion Details"
+msgstr "結論の詳細"
+
+msgid "Conclusion"
+msgstr "結論"
+
+msgid "Filter"
+msgstr "絞り込み"
+
+msgid "Country"
+msgstr "国"
+
+msgid "Japanese-speaking staff available"
+msgstr "日本語対応可能"
+
+msgid "JAPANESE AVAILABLE"
+msgstr "日本語対応"
+
+msgid "Insurance information may change and is provided for reference only."
+msgstr "記載されていない保険も利用可能な場合がございます。あくまで参考としてご利用ください。"
+
+msgid "Open Now"
+msgstr "現在営業中"
+
+msgid "Midnight"
+msgstr "深夜営業中"
+
+msgid "Less than 1km"
+msgstr "1km圏内"
+
+msgid "Less than 3km"
+msgstr "3km圏内"
+
+msgid "Less than 5km"
+msgstr "5km圏内"
+
+msgid "Affiliated with insurers"
+msgstr "保険会社との提携"
+
+msgid "By integrating your insurance details during booking, we automatically handle claims with your insurance company, ensuring you don't have to pay any medical expenses out of pocket."
+msgstr "予約の際に、加入中の保険を選択することでキャッシュレス診療が可能です。"
+
+msgid "Book a hospital appointment for yourself or a family member. We'll quickly connect you directly with the appropriate medical specialist."
+msgstr "海外滞在中に体調を崩されていませんか？ご自身やご家族の病院予約をサポートします。"
+
+msgid "English-speaking staff available"
+msgstr "英語対応可能"
+
+msgid "Distance"
+msgstr "距離"
+
+msgid "Metrics"
+msgstr "メトリクス"
+
+msgid "Distance information not available"
+msgstr "距離情報は利用できません"
+
+msgid "Opening Hours"
+msgstr "営業時間"
+
+msgid "Current time"
+msgstr "現在の時刻"
+
+msgid "Midnight (9PM~)"
+msgstr "深夜営業中（午後9時～）"
+
+msgid "Search"
+msgstr "検索"
+
+msgid "Find Hospital"
+msgstr "病院を探す"
+
+msgid "Sort"
+msgstr "並び替え"
+
+msgid "Loading..."
+msgstr "読み込み中..."
+
+msgid "ENGLISH AVAILABLE"
+msgstr "英語利用可能"
+
+msgid "Calculating distance..."
+msgstr "距離を計算しています..."
+
+msgid "Calculating..."
+msgstr "距離を計算中"
+
+msgid "Calculating time..."
+msgstr "時間を計算しています..."
+
+msgid "Open"
+msgstr "営業中"
+
+msgid "Direct Billing Available"
+msgstr "キャッシュレス診療対応"
+
+msgid "Hospital Information"
+msgstr "病院情報"
+
+msgid "Supported Insurance"
+msgstr "サポートされる保険"
+
+msgid "Supported Languages"
+msgstr "サポートされる言語"
+
+msgid "Book a hospital"
+msgstr "病院を予約する"
+
+msgid "Services"
+msgstr "サービス"
+
+msgid "Reviews"
+msgstr "レビュー"
+
+msgid "Opening times"
+msgstr "営業時間"
+
+msgid "Photo"
+msgstr "写真"
+
+msgid "About"
+msgstr "概要"
+
+msgid "Present your insurance policy at the reception desk and ask for cashless service to be provided. (You may need your passport.)"
+msgstr "受付で被保険者証を提示し、キャッシュレスサービスの提供を依頼してください。（パスポートが必要な場合があります。）"
+
+msgid "Receive treatment."
+msgstr "治療を受けます。"
+
+msgid "If needed, call"
+msgstr "必要な場合は、次の電話番号に連絡して確認ください。"
+
+msgid "Japanese Available"
+msgstr "日本語対応"
+
+msgid "English Available"
+msgstr "英語対応"
+
+msgid "Book Now"
+msgstr "予約へ進む"
+
+msgid "Logout"
+msgstr "ログアウト"
+
+msgid "How can we help you?"
+msgstr "何かお困りですか？"
+
+msgid "Your Latest Activities"
+msgstr "最近のアクティビティ"
+
+msgid "Check symptoms"
+msgstr "症状をチェックする"
+
+msgid "Find a hospital"
+msgstr "病院を探す"
+
+msgid "Your Lastest Activites"
+msgstr "最新のアクティビティ"
+
+msgid "Diagnose"
+msgstr "診断する"
+
+msgid "Continue"
+msgstr "続行"
+
+msgid "Hospital Saved"
+msgstr "病院が保存されました"
+
+msgid "Saved Hospitals"
+msgstr "保存された病院"
+
+msgid "Not found"
+msgstr "見つかりません"
+
+msgid "Hospital Name, City, or Country"
+msgstr "病院名、都市名、国名"
+
+msgid "Reset"
+msgstr "リセット"
+
+msgid "Duration"
+msgstr "期間"
+
+msgid "Good Morning"
+msgstr "おはようございます"
+
+msgid "Good Afternoon"
+msgstr "こんにちは"
+
+msgid "Good Evening"
+msgstr "こんばんは"
+
+msgid "How can I help you?"
+msgstr "何にお困りですか？"
+
+msgid "Do you have nausea or vomiting?"
+msgstr "吐き気や嘔吐はありますか？"
+
+msgid "Are there people who have similar symptoms around you?"
+msgstr "周りに同じような症状を持つ人はいますか？"
+
+msgid "What did you eat whithin 6 hours?"
+msgstr "6時間以内に何を食べましたか？"
+
+msgid "Do you have any other symptoms?"
+msgstr "他に症状はありますか？"
+
+msgid "What kind of stool do you have?"
+msgstr "どのような便ですか？"
+
+msgid "When did your diarrhia start?"
+msgstr "下痢はいつ始まりましたか？"
+
+msgid "Have your weight change over 2.3kg?"
+msgstr "体重は2.3kg以上変わりましたか？"
+
+msgid "Do you have fever? (>37.5? )"
+msgstr "熱はありますか？ (>37.5°C?)"
+
+msgid "Do you have bloody stool?"
+msgstr "血便はありますか？"
+
+msgid "Do you wake up during sleep?"
+msgstr "睡眠中に目が覚めますか？"
+
+msgid "Are you taking immune-suppressing medications? or have you been told that your immune system is weakened?"
+msgstr "免疫抑制薬を服用していますか？または、免疫系が弱っていると言われたことはありますか？"
+
+msgid "Yes"
+msgstr "はい"
+
+msgid "No"
+msgstr "いいえ"
+
+msgid "I have diarrhia"
+msgstr "下痢をしている"
+
+msgid "Mayonnaise"
+msgstr "マヨネーズ"
+
+msgid "Symptoms occurred 8~14 hours after eating insufficiently reheated chicken or animalmeat."
+msgstr "十分に加熱されていない鶏肉や動物性肉を食べた8〜14時間後に症状が発生した"
+
+msgid "Thick, viscous stool"
+msgstr "粘り気のある濃い便"
+
+msgid "Within the last 2 weeks"
+msgstr "直近2週間以内"
+
+msgid "Fried Potato"
+msgstr "フライドポテト"
+
+msgid "Egg Salad"
+msgstr "たまごサラダ"
+
+msgid "Custard"
+msgstr "カスタード"
+
+msgid "Chicken"
+msgstr "チキン"
+
+msgid "Chinese-Style Fried Rice"
+msgstr "チャーハン"
+
+msgid "Others"
+msgstr "その他"
+
+msgid "Other"
+msgstr "その他"
+
+msgid "Symptom occured 8~72 hours after eating seafood"
+msgstr "魚介類を食べてから8〜72時間後に症状が発生した"
+
+msgid "Vomiting lasting more than 14 hours"
+msgstr "14時間以上続く嘔吐"
+
+msgid "Red diarrhia stool"
+msgstr "赤い下痢便"
+
+msgid "No other symptom"
+msgstr "他の症状はなし"
+
+msgid "Small but frequent stools"
+msgstr "少量だが頻繁に便が出る"
+
+msgid "Large amount of water-soluble stools"
+msgstr "大量の水溶性の便"
+
+msgid "2 ~ 4 weeks ago"
+msgstr "2~4週間前"
+
+msgid "More than 4 weeks ago"
+msgstr "4週間以上前"
+
+msgid "Phone number"
+msgstr "電話番号"
+
+msgid "District"
+msgstr "地区"
+
+msgid "City"
+msgstr "市"
+
+msgid "Ward"
+msgstr "区"
+
+msgid "Closed"
+msgstr "営業時間外"
+
+msgid "Book Hospital Visit"
+msgstr "病院訪問の予約"
+
+msgid "Firstname"
+msgstr "名"
+
+msgid "Surname"
+msgstr "姓"
+
+msgid "Next"
+msgstr "次に進む"
+
+msgid "Hospital Appointment"
+msgstr "病院の予約"
+
+msgid "Verify Account"
+msgstr "アカウントを確認する"
+
+msgid "VERIFY ACCOUNT"
+msgstr "アカウントを確認する"
+
+msgid "Enter 5-digit code we have sent to your email"
+msgstr "メールアドレスに送信された5桁のコードを入力してください"
+
+msgid "Didn't not receive the code?"
+msgstr "コードを受け取っていませんか？"
+
+msgid "Resend Code"
+msgstr "コードを再送する"
+
+msgid "by clicking next, you agree to our"
+msgstr "次をクリックすると、次のことに同意します："
+
+msgid "Privacy Policy"
+msgstr "プライバシーポリシー"
+
+msgid "and"
+msgstr "および"
+
+msgid "Terms and Conditions"
+msgstr "利用規約"
+
+msgid "Hospital"
+msgstr "病院"
+
+msgid "Appointment Time"
+msgstr "予定時間"
+
+msgid "1st Preferred Time"
+msgstr "第1希望日時"
+
+msgid "Required"
+msgstr "(必須)"
+
+msgid "2nd Preferred Date/Time"
+msgstr "第2希望日時"
+
+msgid "Please Briefly describe your condition, including symptoms, severity, onset time, and etc."
+msgstr "ご状態を簡潔に説明してください。症状、重症度、発症時刻などを含めてください。"
+
+msgid "Coverage"
+msgstr "保険"
+
+msgid "Select your insurance"
+msgstr "加入している保険を選択してください"
+
+msgid "No coverage"
+msgstr "保険なし"
+
+msgid "Insurance Company"
+msgstr "保険会社"
+
+msgid "Enter your insurance coverage"
+msgstr "加入している保険会社名を入力してください"
+
+msgid "Policy Number"
+msgstr "保険証券番号"
+
+msgid "e.g."
+msgstr "例:"
+
+msgid "Tokio Marine"
+msgstr "東京海上日動"
+
+msgid "Tokyo Marine"
+msgstr "東京海上日動"
+
+msgid "Aioi Nissei"
+msgstr "あいおいニッセイ"
+
+msgid "Mitsui-Sumitomo"
+msgstr "三井住友海上"
+
+msgid "JI"
+msgstr "ジェイアイ"
+
+msgid "Sompo Japan"
+msgstr "損保ジャパン"
+
+msgid "AIG Insurance"
+msgstr "AIG保険"
+
+msgid "AIU Insurance"
+msgstr "AIU保険"
+
+msgid "HS Insurance"
+msgstr "HS保険"
+
+msgid "Final Confirmation"
+msgstr "最終確認"
+
+msgid "Selected Hospital"
+msgstr "選択された病院"
+
+msgid "1st Preferred Date/Times"
+msgstr "第1希望日時"
+
+msgid "2nd Preferred Times"
+msgstr "第2希望日時"
+
+msgid "Also Add 2nd Preferred Time"
+msgstr "第2希望日時も選択する"
+
+msgid "More Information"
+msgstr "詳細"
+
+msgid "Confirm and Book"
+msgstr "予約"
+
+msgid "from"
+msgstr "から"
+
+msgid "to"
+msgstr "へ"
+
+msgid "Cancel"
+msgstr "キャンセル"
+
+msgid "Booking Succe"
+msgstr "予約が確定しました"
+
+msgid "You need to register to access this page"
+msgstr "このページにアクセスするには登録が必要です"
+
+msgid "Sign Up"
+msgstr "サインアップ"
+
+msgid "Note: This is a provisional booking date. We will inform you as soon as your booking is accepted or declined."
+msgstr "注意: これは仮の予約日時です。予約が承認または却下され次第、直ちにご連絡いたします。"
+
+msgid "Back to"
+msgstr "戻る"
+
+msgid "Email"
+msgstr "メール"
+
+msgid "Dear"
+msgstr "親愛なる"
+
+msgid "Best regards,"
+msgstr "敬具,"
+
+msgid "Thank you for booking with us"
+msgstr "ご予約いただきありがとうございます"
+
+msgid "Your booking has been confirmed with the following details"
+msgstr "以下の詳細でご予約が確定しました"
+
+msgid "Your Verification Code"
+msgstr "ご確認コード"
+
+msgid "Your verification code is"
+msgstr "確認コードは"
+
+msgid "Your new verification code is"
+msgstr "新しい確認コードは"
+
+msgid "A new verification code has been sent to your email."
+msgstr "新しい確認コードがメールで送信されました。"
+
+msgid "The verification code is incorrect. Please try again."
+msgstr "確認コードが間違っています。もう一度お試しください。"
+
+msgid "Passwords do not match"
+msgstr "パスワードが一致しません"
+
+msgid "Email already existed"
+msgstr "すでに存在するメールアドレスです"
+
+msgid "Email or password does not valid"
+msgstr "メールアドレスまたはパスワードが有効ではありません"
+
+msgid "Personal Information"
+msgstr "個人情報"
+
+msgid "Appointment Information"
+msgstr "予約情報"
+
+msgid "Insurance Information"
+msgstr "保険情報"
+
+msgid "Account registration successful"
+msgstr "アカウント登録が成功しました"
+
+msgid "Symptom checker"
+msgstr "症状チェッカー"
+
+msgid "Symptom Checker"
+msgstr "症状チェッカー"
+
+msgid "Waiting"
+msgstr "待機中"
+
+msgid "Approved"
+msgstr "予約確定"
+
+msgid "Reserved Time"
+msgstr "来診時間"
+
+msgid "India"
+msgstr "インド"
+
+msgid "All"
+msgstr "全て"
+
+msgid "Rejected"
+msgstr "キャンセル"
+
+msgid "Hospital Details"
+msgstr "病院詳細"
+
+msgid "Respond Information"
+msgstr "応答情報"
+
+msgid "We will contact you soon to inform you of your visit schedule."
+msgstr "診察の日時をすぐにお知らせします。"
+
+msgid "Profile"
+msgstr "プロフィール"
+
+msgid "hospitals"
+msgstr "つの病院"
+
+msgid "Hospitals"
+msgstr "病院"
+
+msgid "Language You Prefer To Speak At The Hospital"
+msgstr "病院で使用したい言語"
+
+msgid "Not selected"
+msgstr "未選択"
+
+msgid "Preferred Language"
+msgstr "優先言語"
+
+msgid "Current password"
+msgstr "現在のパスワード"
+
+msgid "Enter current password"
+msgstr "現在のパスワードを入力してください"
+
+msgid "Enter new password"
+msgstr "新しいパスワードを入力してください"
+
+msgid "Re-enter new password"
+msgstr "新しいパスワードを再入力してください"
+
+msgid "Japanese Yen (￥)"
+msgstr "日本円(￥)"
+
+msgid "Enter firstname"
+msgstr "名を入力してください"
+
+msgid "Enter surname"
+msgstr "姓を入力してください"
+
+msgid "Display Language"
+msgstr "表示言語"
+
+msgid "insurance"
+msgstr "保険" 
+
+msgid "Date Created"
+msgstr "作成日"
+
+msgid "No insurance information found"
+msgstr "保険情報が見つかりませんでした"
+
+msgid "Sort by Name"
+msgstr "名前で並び替え"
+
+msgid "Sort by Rating"
+msgstr "評価で並び替え"
+
+msgid "Sort by Distance"
+msgstr "距離で並び替え"
+
+msgid "Booked Hospitals"
+msgstr "予約済みの病院"
+
+msgid "Booked hospital information could not be found"
+msgstr "予約済みの病院情報が見つかりませんでした"
+
+msgid "Appointment at"
+msgstr "予約場所："
+
+msgid "You can now access your appointment details for more information."
+msgstr "ご予約情報から、より詳細な情報をご確認いただけます。"
+
+msgid "You can access the appointment details to see the reason for the rejection."
+msgstr "ご予約情報から、この予約の却下理由をご確認いただけます。"
+
+msgid "Vitabi Admin"
+msgstr "Vitabi管理者"
+
+msgid "No hospital information found"
+msgstr "病院情報が見つかりません"
+
+msgid "Booker"
+msgstr "予約者"
+
+msgid "Approve"
+msgstr "承認する"
+
+msgid "Reject"
+msgstr "拒否する"
+
+msgid "Disapprove"
+msgstr "非承認"
+
+msgid "No saved hospitals found"
+msgstr "保存された病院は見つかりません"
+
+msgid "You have sent a booking request, please wait for a response."
+msgstr "病院の予約を申請しました。返信をお待ちください。"
+
+msgid "Your Booking Request Approved"
+msgstr "病院の予約が承認されました"
+
+msgid "Your booking request has been approved for the following reason"
+msgstr "次の理由であなたの予約申請が承認されました"
+
+msgid "Your Booking Request Rejected"
+msgstr "あなたの予約申請は却下されました"
+
+msgid "Your booking request has been rejected for the following reason"
+msgstr "次の理由であなたの予約申請は却下されました"
+
+msgid "Cancel an appointment"
+msgstr "予約をキャンセルする"
+
+msgid "Your appointment date is"
+msgstr "あなたの予約日程は"
+
+msgid "Suggested hospital is"
+msgstr "おすすめの病院は"
+
+msgid "You have an appointment at"
+msgstr "で予定があります"
+
+msgid "Time From"
+msgstr "開始時間"
+
+msgid "Appointment Date"
+msgstr "予約日"
+
+msgid "To"
+msgstr "終了時間"
+
+msgid "Reason"
+msgstr "理由"
+
+msgid "Approve Reason"
+msgstr "承認理由"
+
+msgid "Approve Booking"
+msgstr "予約の承認"
+
+msgid "It may take 10 seconds"
+msgstr "しばらくお待ちください"
+
+msgid "Please select a time in the future"
+msgstr "現地時間で、現在より先の時間を選択してください"
+
+msgid "Please select a valid time"
+msgstr "有効な時間を選択してください"
+
+msgid "Please select a time when the hospital is open!"
+msgstr "選択された時間は営業時間外です。"
+
+msgid "Please select date during the hospital is open!"
+msgstr "選択された曜日は営業時間外です。"
+
+msgid "End time must be at least 2 hours later."
+msgstr "予約時間は余裕を持って、2時間以上にしてください。"
+
+msgid "Language you prefer to speak at the hospital"
+msgstr "病院で使用を希望する言語"
+
+msgid "Enter insurance company"
+msgstr "保険会社を入力してください"
+
+msgid "Enter policy number"
+msgstr "ポリシー番号を入力してください"
+
+msgid "No insurance selected"
+msgstr "保険が選択されていません"
+
+msgid "Please be aware that in some countries, you may be charged for using the ambulance service."
+msgstr "国によっては、救急車サービスの利用料金が請求される場合があることにご注意ください。"
+
+msgid "Make an appointment for a hospital visit. If your condition is severe, call an ambulance using the appropriate emergency number for your region."
+msgstr "病院の受診を予約してください。症状が深刻な場合は、お住まいの地域の緊急番号を使用して救急車を呼んでください。"
+
+msgid "Appointment Request Received"
+msgstr "予約リクエストを受け取りました"
+
+msgid "Gender"
+msgstr "性別"
+
+msgid "If you want to cancel your booking, please click"
+msgstr "予約をキャンセルしたい場合はクリックしてください"
+
+msgid "If you want to cancel your booking, please click here"
+msgstr "誤って病院を予約してした場合は、こちらからキャンセル手続きが可能です。"
+
+msgid "Please be aware that your booking is not yet complete. We are processing your appointment request with your preferred time and place. We will notify you as soon as your booking is approved."
+msgstr "まだ予約は完了していません。現在、ご希望の日時と場所で予約を処理中です。予約が確定次第、追ってご連絡いたします。"
+
+msgid "If you have any questions or feedback, please feel free to reply to this message."
+msgstr "ご意見やご不明点がある場合は、どうぞお気軽に本メールへご返信くださいませ。"
+
+msgid "Thank you again for using Vitabi!"
+msgstr "改めてこの度はVitabiをご利用いただき、ありがとうございます！"
+
+msgid "Select Country"
+msgstr "国を選択"
+
+msgid "All Insurances"
+msgstr "すべての保険"
+
+msgid "Subject"
+msgstr "主題"
+
+msgid "CEO of Vitabi"
+msgstr "株式会社Vitabi 代表取締役"
+
+msgid "This is Vitabi Co., Ltd."
+msgstr "株式会社Vitabiでございます。"
+
+msgid "Best regards"
+msgstr "よろしくお願いします"
+
+msgid "Note: This is your booking date, we will get back to you soon after we check whether your booking date is accepted or not"
+msgstr "注: これは予約日です。予約日が承認されたかどうかを確認した後、すぐにご連絡いたします。"
+
+msgid "Booking Successfully"
+msgstr "予約が完了しました"
+
+msgid "Hello Mr."
+msgstr "こんにちは"
+
+msgid "Hello Ms."
+msgstr "こんにちは"
+
+msgid "Your Appointment Request Has Been Approved"
+msgstr "予約リクエストが承認されました"
+
+msgid "Your Appointment Has Been Confirmed with a New Hospital"
+msgstr "新しい病院への予約が確認されました"
+
+msgid "We are writing to inform you that your reservation request for"
+msgstr "への予約リクエストが承認されましたので、ご連絡いたしました。"
+
+msgid "has been approved"
+msgstr "承認されました"
+
+msgid "Here are the details of your visit"
+msgstr "以下はご予約の詳細です"
+
+msgid "Your Appointment Has Been Rejected"
+msgstr "ご予約が正常に行われませんでした"
+
+msgid "Approved Hospital"
+msgstr "承認された病院"
+
+msgid "Select Gender"
+msgstr "性別を選択"
+
+msgid "John"
+msgstr "太郎"
+
+msgid "Smith"
+msgstr "佐藤"
+
+msgid "Visiting Time"
+msgstr "訪問時間"
+
+msgid "Symptom"
+msgstr "症状"
+
+msgid "Please also bring the following three items with you when you go to the hospital"
+msgstr "また、病院へ行く際には、以下の3点をお持ちください"
+
+msgid "Your passport or photo ID"
+msgstr "パスポートまたは写真付き身分証明書"
+
+msgid "Your insurance document with policy number (if you have one)"
+msgstr "保険証および保険証番号 (お持ちの場合)"
+
+msgid "Insurance claim form (if you have one)"
+msgstr "保険請求書 (お持ちの場合)"
+
+msgid "If you have any comments or questions, please feel free to reply to this email."
+msgstr "ご意見やご不明点がある場合は、どうぞお気軽に本メールへご返信くださいませ。"
+
+msgid "We hope you recovers quickly."
+msgstr "様の早いご回復をお祈りしております。"
+
+msgid "Sender Name"
+msgstr "送信者名"
+
+msgid "Here is the information you have provided"
+msgstr "下記は、ご予約の際に様から提供いただいた情報です"
+
+msgid "This is an automatically sent acknowledgment email for users who have just booked a hospital appointment via Vitabi"
+msgstr "本メールは、Vitabiを通じて病院の予約を行ったユーザーに向けて自動送信される確認メールです。"
+
+msgid "View"
+msgstr "ビュー"
+
+msgid "Sort by Status"
+msgstr "ステータスごとに並べ替え"
+
+msgid "Wait a moment"
+msgstr "しばらくお待ちください"
+
+msgid "Example: After eating Pad Thai at a street stall in Bangkok yesterday, I started having constant stomach aches and diarrhea."
+msgstr "例: 昨日バンコクの屋台でパッタイを食べてから、ずっとお腹痛と下痢が続いています。"
+
+msgid "What is your symptom?"
+msgstr "あなたの症状を教えてください。"
+
+msgid "How long does it last?"
+msgstr "症状が現れてどのくらい経過してますか？"
+
+msgid "Please provide as much information as possible to facilitate your appointment processing."
+msgstr "本情報をもとに予約手続きを行うため、症状を可能な限り詳細に教えてください。"
+
+msgid "Example: 5 days, 3 hours, or just a few hours ago."
+msgstr "例: 5日前、3時間前、つい数時間前からなど。"
+
+msgid "Viet Nam"
+msgstr "ベトナム"
+
+msgid "Cambodia"
+msgstr "カンボジア"
+
+msgid "Monday"
+msgstr "月曜日"
+
+msgid "Tuesday"
+msgstr "火曜日"
+
+msgid "Wednesday"
+msgstr "水曜日"
+
+msgid "Thursday"
+msgstr "木曜日"
+
+msgid "Friday"
+msgstr "金曜日"
+
+msgid "Saturday"
+msgstr "土曜日"
+
+msgid "Sunday"
+msgstr "日曜日"
+
+msgid "Sunday: Closed"
+msgstr "日曜日：受付時間外"
+
+msgid "You don't select any insurance"
+msgstr "保険を選択していません。"
+
+msgid "Resume booking a hospital"
+msgstr "病院の予約を再開する"
+
+msgid "We'll reach you soon to let you know when you should visit it"
+msgstr "すぐに連絡して、いつ訪問するかをお知らせします"
+
+msgid "You can now access your appointment information for more information"
+msgstr "予約情報にアクセスして詳細を確認できるようになりました"
+
+msgid "You can access the appointment information to see the reason for rejecting this appointment"
+msgstr "予定情報にアクセスして、この予定を拒否した理由を確認できます"
+
+msgid "This appointment has been canceled. For details, please contact our support"
+msgstr "この予定はキャンセルされました。詳細についてはサポートまでお問い合わせください"
+
+msgid "Statiscals"
+msgstr "統計"
+
+msgid "Appointments Management"
+msgstr "予約管理"
+
+msgid "Appointment Approval"
+msgstr "任命の承認"
+
+msgid "Resources"
+msgstr "リソース"
+
+msgid "Working Hours"
+msgstr "労働時間"
+
+msgid "Hospital Images"
+msgstr "病院画像"
+
+msgid "Statistical Analysis"
+msgstr "統計分析"
+
+msgid "Distance Info"
+msgstr "距離情報"
+
+msgid "Logged in as:"
+msgstr "次のようにログインしています:"
+
+msgid "List of Appointments"
+msgstr "予定のリスト"
+
+msgid "Pending"
+msgstr "保留中"
+
+msgid "Canceled"
+msgstr "キャンセル"
+
+msgid "Done"
+msgstr "終わり"
+
+msgid "Search for..."
+msgstr "検索する..."
+
+msgid "Date"
+msgstr "日付"
+
+msgid "Hospital Phone"
+msgstr "病院の電話"
+
+msgid "Current Status"
+msgstr "現在のステータス"
+
+msgid "Status"
+msgstr "ステータス"
+
+msgid "Action"
+msgstr "アクション"
+
+msgid "Detail"
+msgstr "詳細"
+
+msgid "Booking Detail"
+msgstr "予約の詳細"
+
+msgid "Contact Number"
+msgstr "連絡先番号"
+
+msgid "Requested Date"
+msgstr "依頼日"
+
+msgid "User Name"
+msgstr "ユーザー名"
+
+msgid "Birthday"
+msgstr "誕生日"
+
+msgid "Gmail"
+msgstr "Gメール"
+
+msgid "Close"
+msgstr "閉じる"
+
+msgid "View Booking"
+msgstr "予約を見る"
+
+msgid "Edit Booking"
+msgstr "予約の編集"
+
+msgid "Cashless Payment Supported"
+msgstr "キャッシュレス決済対応"
+
+msgid "Insurance supported (NOT CASHLESS)"
+msgstr "保険対応（キャッシュレス不可）"
+
+msgid "Insurance not supported"
+msgstr "保険はサポートされていません"
+
+msgid "Cancel Appointment"
+msgstr "予約をキャンセルする"
+
+msgid "Save Changes"
+msgstr "変更内容を保存"
+
+msgid "Cancel Booking"
+msgstr "予約をキャンセルする"
+
+msgid "Cancel Reason"
+msgstr "キャンセル理由"
+
+msgid "Submit Reason"
+msgstr "提出理由"
+
+msgid "Reject Booking"
+msgstr "予約を拒否する"
+
+msgid "Reject Reason"
+msgstr "拒否理由"
+
+msgid "Confirmed"
+msgstr "確認済み"
+
+msgid "All Day"
+msgstr "一日中"
+
+msgid "Custom Hours"
+msgstr "任意の時間を選択"
+
+msgid "Custom Distance"
+msgstr "任意の距離を選択"
+
+msgid "Enter distance in km"
+msgstr "距離をkm単位で入力してください"
+
+msgid "Indonesia"
+msgstr "インドネシア"
+
+msgid "Laos"
+msgstr "ラオス"
+
+msgid "Myanmar"
+msgstr "ミャンマー"
+
+msgid "Malaysia"
+msgstr "マレーシア"
+
+msgid "Philippines"
+msgstr "フィリピン"
+
+msgid "Singapore"
+msgstr "シンガポール"
+
+msgid "Thailand"
+msgstr "タイ"
+
+msgid "Taiwan"
+msgstr "台湾"
+
+msgid "United States"
+msgstr "アメリカ"
+
+msgid "United States of America"
+msgstr "アメリカ"
+
+msgid "Korea"
+msgstr "韓国"
+
+msgid "South Korea"
+msgstr "韓国"
+
+msgid "Successfully Booked"
+msgstr "正常に予約されました"
+
+msgid "Appointment Detail"
+msgstr "予約の詳細"
+
+msgid "You have booked a hospital, please wait for a response."
+msgstr "病院を予約しましたので、返信をお待ちください。"
+
+msgid "Vitabi - Account"
+msgstr "Vitabi - アカウント"
+
+msgid "Vitabi - Change Password"
+msgstr "Vitabi - パスワードの変更"
+
+msgid "Vitabi - Login"
+msgstr "Vitabi - ログイン"
+
+msgid "Vitabi - Medical Info"
+msgstr "Vitabi - 医療情報"
+
+msgid "Vitabi - My Data"
+msgstr "Vitabi - 私のデータ"
+
+msgid "Vitabi - Password and Security"
+msgstr "Vitabi - パスワードとセキュリティ"
+
+msgid "Vitabi - Personal"
+msgstr "Vitabi - パーソナル"
+
+msgid "Vitabi - Setting"
+msgstr "Vitabi - 設定"
+
+msgid "Vitabi - Signup"
+msgstr "Vitabi - サインアップ"
+
+msgid "Vitabi - Authentication"
+msgstr "Vitabi - 認証"
+
+msgid "Vitabi - Signup Input"
+msgstr "Vitabi - サインアップ入力"
+
+msgid "Vitabi - Update Personal Info"
+msgstr "Vitabi - 個人情報の更新"
+
+msgid "Vitabi - Update Personal Setting"
+msgstr "Vitabi - 個人設定の更新"
+
+msgid "Vitabi - Admin Page"
+msgstr "Vitabi - 管理者ページ"
+
+msgid "Vitabi - Booking (1/3)"
+msgstr "Vitabi - 予約 (1/3)"
+
+msgid "Vitabi - Booking (2/3)"
+msgstr "Vitabi - 予約 (2/3)"
+
+msgid "Vitabi - Email Verification"
+msgstr "Vitabi - メール認証"
+
+msgid "Email Verification"
+msgstr "メール認証"
+
+msgid "Vitabi - Booking (3/3)"
+msgstr "Vitabi - 予約 (3/3)"
+
+msgid "Vitabi - Final Confirmation"
+msgstr "Vitabi - 最終確認"
+
+msgid "Vitabi - Booked Hospital Detail"
+msgstr "Vitabi - 予約済みの病院の詳細"
+
+msgid "Vitabi - Bookings"
+msgstr "Vitabi - 予約"
+
+msgid "Vitabi - Bookings List"
+msgstr "Vitabi - 予約リスト"
+
+msgid "Vitabi - Filter"
+msgstr "Vitabi - フィルター"
+
+msgid "Vitabi - Find Hospital"
+msgstr "Vitabi - 病院を探す"
+
+msgid "Vitabi - History"
+msgstr "Vitabi - 歴史"
+
+msgid "Vitabi - Hospital Info"
+msgstr "Vitabi - 病院情報"
+
+msgid "Vitabi - Home"
+msgstr "Vitabi - ホームページ"
+
+msgid "Vitabi - Insurance"
+msgstr "Vitabi - 保険"
+
+msgid "Vitabi - Saved Hospital"
+msgstr "Vitabi - 保存された病院"
+
+msgid "A new appointment has been made by"
+msgstr "新たな予定が決まりました"
+
+msgid "Here is the information provided by the user"
+msgstr "ユーザーから提供された情報は次のとおりです"
+
+msgid "Please follow up with the hospital and confirm the appointment."
+msgstr "病院に連絡して予約を確認してください。"
+
+msgid "New Appointment Made"
+msgstr "新しい予約が行われました"
+
+msgid "PRIVACY POLICY"
+msgstr "プライバシーポリシー"
+
+msgid "Welcome to Vitabi, a smart platform for searching healthcare specialists and booking available appointments with them. Vitabi is a Japanese company having a place of business in Nanryo Midori-ku, Nagoya, Aichi, Japan with registration number 2180001162209. We at Vitabi Inc. (“Vitabi,” “we,” “us,” “our”) respect your privacy."
+msgstr "Vitabiへようこそ。Vitabiは、医療専門家を検索し、予約を取るためのスマートプラットフォームです。Vitabiは日本企業であり、登録番号2180001162209で、愛知県名古屋市緑区南陵に本社を構えています。Vitabi株式会社（「Vitabi」、「私たち」、「我々」、「私たちの」）はあなたのプライバシーを尊重します。"
+
+msgid "This Privacy Policy (the “Policy”) explains our privacy practices for the technology-based service (the “Service”) that we offer through our Internet web-site and resource vitabi.us (the “Website“) or web Vitabi application (the “App“). It describes how we collect personal information, use it and share it, and the rights and options available to you with respect to your information."
+msgstr "このプライバシーポリシー（「ポリシー」）は、私たちがインターネットウェブサイトおよびリソースvitabi.us（「ウェブサイト」）またはウェブVitabiアプリケーション（「アプリ」）を通じて提供する技術ベースのサービス（「サービス」）に関する私たちのプライバシー慣行を説明します。個人情報をどのように収集し、使用し、共有するか、そしてあなたの情報に関して利用可能な権利とオプションについて説明します。"
+
+msgid "Providing us with your personal information is a choice you make. We appreciate that and thank you for making this choice. You are not legally obligated to provide us with this information but we do need it in order to provide you with the Service."
+msgstr "あなたの個人情報を提供するかどうかはあなたの選択です。その選択に感謝し、ありがとうございます。法的にこの情報を提供する義務はありませんが、サービスを提供するために必要です。"
+
+msgid "This policy constitutes part of our Vitabi End-Users’ Terms of Use and Vitabi Practitioners’ Terms of Use (together the “Terms of Use“) as they may be amended."
+msgstr "このポリシーは、Vitabiエンドユーザー利用規約およびVitabiプラクティショナー利用規約（総称して「利用規約」）の一部を構成し、変更されることがあります。"
+
+msgid "In Short…"
+msgstr "簡単に言うと…"
+
+msgid "The following key points of the Privacy Policy are only brought for your convenience. They do not substitute the full Policy."
+msgstr "以下のプライバシーポリシーの重要なポイントは、あなたの便宜のために提供されています。完全なポリシーの代わりにはなりません。"
+
+msgid "Responsible Officer:"
+msgstr "責任者:"
+
+msgid "You can contact our designated Data Protection Officer at the following address: vitabi.info@gmail.com"
+msgstr "次のアドレスで指定されたデータ保護責任者に連絡できます: vitabi.info@gmail.com"
+
+msgid "Information we collect:"
+msgstr "収集する情報:"
+
+msgid "We collect information you actively provide us (for example when you register to the Service) including your name, last name, policy number, email, mobile phone number, and birthday. Our third-party billing providers will collect your payment method and billing information. We also may collect certain billing information. We also collect analytical information about your use of the Service (e.g., the frequency and scope of your use of the Service) and information about your device and geolocation provided you have given us your permission."
+msgstr "私たちは、サービスに登録する際などにあなたが積極的に提供する情報（名前、姓、保険番号、メール、携帯電話番号、誕生日など）を収集します。第三者の請求プロバイダーが支払い方法と請求情報を収集します。また、特定の請求情報を収集することもあります。さらに、サービスの利用頻度や範囲などの分析情報、デバイス情報、および許可を得た場合の位置情報も収集します。"
+
+msgid "What is your data used for and with what legal basis?"
+msgstr "あなたのデータは何に使われ、その法的根拠は何ですか?"
+
+msgid "In order to provide the service, we use the information we collect (and information received from physicians) primarily to provide you with the functions of the Service including sending updates and other communications related to the Service itself. On the basis of our legitimate interest, we may also use the data (i) to improve and personalize the Service and develop new products, (ii) for statistical purposes provided that your information is first anonymized and aggregated in accordance with legal requirements and industry standards, and (iii) to send you commercial communications for marketing purposes. You have the right to object at any time to the processing of your personal data for treatments based on legitimate interest, especially for use for marketing purposes by means of an email to: vitabi.info@gmail.com with the subject: OPPOSITION. Based on your consent, information from your geolocation may also be used."
+msgstr "サービスを提供するために、私たちは収集した情報（および医師から受け取った情報）を主に使用して、サービスの機能を提供し、サービス自体に関連する更新やその他のコミュニケーションを送信します。正当な利益に基づき、データを使用することもあります。（i）サービスを改善およびパーソナライズし、新しい製品を開発するため、（ii）情報が最初に法的要件および業界標準に従って匿名化および集約されることを条件に統計目的のため、（iii）マーケティング目的で商業的コミュニケーションを送信するためです。正当な利益に基づく処理、特にマーケティング目的での使用については、いつでも反対する権利があります。反対する場合は、件名に「反対」と書いてメールでvitabi.info@gmail.comまでご連絡ください。あなたの同意に基づいて、位置情報も使用される場合があります。"
+
+msgid "Recipients:"
+msgstr "受信者:"
+
+msgid "To operate, maintain, and provide the Service, we must share your information (including information received from physicians) with your insurance companies, with Assistance Companies (as defined in the expanded information), with physicians to request appointments, and with other external service providers subject to execution of contracts that adequately guarantee the confidentiality of the information."
+msgstr "サービスを運営、維持、提供するために、保険会社、アシスタンス会社（詳細情報で定義）、予約をリクエストする医師、および情報の機密性を適切に保証する契約を実行する外部サービスプロバイダーと情報（医師から受け取った情報を含む）を共有する必要があります。"
+
+msgid "Rights:"
+msgstr "権利:"
+
+msgid "You can request access, rectification, deletion, opposition, revocation of your consents, portability (where appropriate), limitation of treatment, or file a claim with the Data Protection Agency or with us previously so that we can help you. Address your request to the addresses indicated in the “Responsible Officer” section: vitabi.info@gmail.com."
+msgstr "アクセス、修正、削除、反対、同意の撤回、ポータビリティ（該当する場合）、処理の制限を要求するか、データ保護機関または当社に以前に提出した請求を提出できます。要求を「責任者」セクションに示されたアドレスに送信してください：vitabi.info@gmail.com。"
+
+msgid "Aggregated information:"
+msgstr "集約された情報:"
+
+msgid "We may use the information we collect from you to create information that is not personally identifiable, such as statistical or aggregated information, and make it available to others for any purpose."
+msgstr "あなたから収集した情報を使用して、統計情報や集約情報など、個人を特定できない情報を作成し、他の目的で他者に提供することがあります。"
+
+msgid "Retention:"
+msgstr "保持:"
+
+msgid "We keep your information (including with respect to insurance policies) for as long as is legally necessary for the purpose for which it was first obtained. If you revoke your consent for us to process your data, we will erase your personal data from our systems, keeping only those data that are necessary to fulfill our legal or contractual obligations."
+msgstr "あなたの情報（保険ポリシーに関するものを含む）は、最初に取得された目的のために法的に必要な期間保持します。あなたがデータの処理に対する同意を撤回した場合、私たちは法的または契約上の義務を履行するために必要なデータのみを保持し、あなたの個人データをシステムから削除します。"
+
+msgid "Security:"
+msgstr "セキュリティ:"
+
+msgid "We implement measures to reduce the risks of damage and unauthorized access or use of information, but they do not provide absolute information security."
+msgstr "情報の損傷や不正アクセスのリスクを軽減するための措置を実施していますが、絶対的な情報セキュリティを提供するものではありません。"
+
+msgid "If you need to expand the above information you can consult the following:"
+msgstr "上記の情報を詳しく知りたい場合は、以下を参照してください:"
+
+msgid "Vitabi – Privacy Policy"
+msgstr "Vitabi - プライバシーポリシー"
+
+msgid "Information you actively provide us"
+msgstr "あなたが積極的に提供する情報"
+
+msgid "The Service is available only to registered users. You may register with the Platform directly."
+msgstr "サービスは登録ユーザーのみが利用できます。プラットフォームに直接登録することができます。"
+
+msgid "Registration:"
+msgstr "登録:"
+
+msgid "If you register with the Platform directly, we will seek basic information from you such as your name, email address, mobile phone number, birthday, and other information that personally identifies you or could be used to personally identify you (the “Personal Information“)."
+msgstr "プラットフォームに直接登録する場合、名前、メールアドレス、携帯電話番号、誕生日などの基本情報および個人を特定する情報（「個人情報」）を求めます。"
+
+msgid "Payment information:"
+msgstr "支払い情報:"
+
+msgid "Our third-party billing providers will collect your payment method and billing information for the purpose of collecting the fees applicable to you. The payment information we may store, if permitted by you, includes your payment card type and the last four digits of the payment card."
+msgstr "第三者の請求プロバイダーが、適用される料金を回収するために、あなたの支払い方法と請求情報を収集します。あなたが許可した場合、支払いカードの種類とカードの最後の4桁を含む支払い情報を保存することがあります。"
+
+msgid "Mobile phone number:"
+msgstr "携帯電話番号:"
+
+msgid "We collect your mobile phone number. We will use that number to send you Service alerts and notifications via text messages (SMS) and pop-up notifications."
+msgstr "携帯電話番号を収集し、SMSやポップアップ通知でサービスのアラートや通知を送信するために使用します。"
+
+msgid "Inquiries:"
+msgstr "お問い合わせ:"
+
+msgid "If you contact us for questions or complaints or for technical support, we will collect the information related to your inquiry. This may include your user ID on the Service, email address, and other contact information depending on the nature of your inquiry."
+msgstr "質問、苦情、または技術サポートのために私たちに連絡する場合、その問い合わせに関連する情報を収集します。これには、サービスのユーザーID、メールアドレス、および問い合わせの性質に応じた他の連絡先情報が含まれる場合があります。"
+
+msgid "Information we collect"
+msgstr "収集する情報"
+
+msgid "Medical data:"
+msgstr "医療データ:"
+
+msgid "We may collect medical data solely to the extent needed to provide you with our services. This data may include the doctors, dentists, or other healthcare specialists, professionals, providers, or organizations (collectively “Practitioner(s)”) you have visited and/or Practitioners recommended to you by us, your reasons for visit, your dates of visit, and other medical and health information you choose to share with us by completing medical history forms or otherwise. We may also receive access from Practitioners to some medical data with respect to you (such as diagnosis and/or treatment details) collected or aggregated by such Practitioners solely for the purpose of providing you with the services. For the avoidance of doubt, all Practitioners are external (third party) service providers and not part of our personnel, and we will not have liability for any part of the medical data and diagnosis with respect to you which may be collected by any Practitioner."
+msgstr "私たちは、あなたにサービスを提供するために必要な範囲でのみ医療データを収集することがあります。このデータには、訪問した医師、歯科医師、その他の医療専門家、専門家、プロバイダー、または組織（総称して「プラクティショナー」）や、私たちが推奨するプラクティショナー、訪問の理由、訪問日、および医療履歴フォームの記入などで共有することを選択したその他の医療および健康情報が含まれる場合があります。また、プラクティショナーから収集または集約された一部の医療データ（診断および/または治療の詳細など）にアクセスすることがあります。なお、すべてのプラクティショナーは外部（第三者）サービスプロバイダーであり、当社の人員ではなく、プラクティショナーによって収集されるあなたに関する医療データおよび診断についての責任は負いません。"
+
+msgid "Geolocation information:"
+msgstr "位置情報:"
+
+msgid "We collect your precise geolocation when you use the App and your approximate location when you use the Website provided that you have authorized or consented to it."
+msgstr "アプリを使用する際に正確な位置情報を収集し、ウェブサイトを使用する際におおよその位置情報を収集します。ただし、これにはあなたの許可または同意が必要です。"
+
+msgid "Analytic Information:"
+msgstr "分析情報:"
+
+msgid "When you access or use the Service, we use analytics tools of third parties to automatically collect information about your use of the Service. This information includes your session durations, the content you accessed on the Service, your interactions and user-interface clicks with respect to such content, referring URLs, and the frequency and scope of your use of the Service including session recordings which include your real-time behavior when using the Service (the session recording do not include personal data that may identify you)."
+msgstr "サービスにアクセスまたは使用する際、第三者の分析ツールを使用して、サービスの利用に関する情報を自動的に収集します。この情報には、セッションの持続時間、サービス上でアクセスしたコンテンツ、そのコンテンツに対するインタラクションおよびユーザーインターフェースクリック、参照URL、サービスの利用頻度および範囲が含まれ、セッション記録にはサービスを使用しているときのリアルタイムの行動が含まれます（セッション記録にはあなたを特定できる個人データは含まれません）。"
+
+msgid "Device information:"
+msgstr "デバイス情報:"
+
+msgid "We may collect information about your personal computer or mobile device, including its model, its operating system, unique device identifiers, the browser you use, its version and language (i.e., locale) preferences, mobile network information, and the Internet Protocol (IP) address through which you accessed the Service."
+msgstr "あなたの個人コンピュータまたはモバイルデバイスに関する情報（モデル、オペレーティングシステム、ユニークデバイス識別子、使用しているブラウザ、バージョンと言語（つまりロケール）の設定、モバイルネットワーク情報、サービスにアクセスしたIPアドレスなど）を収集することがあります。"
+
+msgid "Other information:"
+msgstr "その他の情報:"
+
+msgid "We may also collect additional information which may be Personal Information as otherwise described to you at the point of collection or pursuant to your consent. You may still access and use part of the Service if you choose not to provide us with any Personal Information, but features of the Service that require your Personal Information will not be accessible to you."
+msgstr "収集時点で説明されるか、あなたの同意に基づいて追加情報を収集することがあります。個人情報を提供しないことを選択しても、サービスの一部にアクセスして使用することができますが、個人情報が必要な機能にはアクセスできません。"
+
+msgid "CHILDREN’S PRIVACY"
+msgstr "子供のプライバシー"
+
+msgid "The Service is not intended for children under the age of 18 or people who lack or have limited capacity to act. We do not knowingly or intentionally collect information about children who are under 18 years of age except as provided by their legal custodians for the purpose of providing such children with Service."
+msgstr "サービスは、18歳未満の子供や行動能力のないまたは制限された人を対象としていません。法的後見人が提供する場合を除き、18歳未満の子供に関する情報を意図的または意図的に収集しません。"
+
+msgid "USE OF COLLECTED INFORMATION"
+msgstr "収集された情報の使用"
+
+msgid "Contract:"
+msgstr "契約:"
+
+msgid "Your consent to your contract to provide the service serves as the legal basis for processing your information. You may withdraw consent at any time without affecting the lawfulness of data processing we carried out based on your consent before such withdrawal."
+msgstr "サービスを提供するための契約に対するあなたの同意が、情報処理の法的根拠となります。撤回前に同意に基づいて行われたデータ処理の合法性に影響を与えることなく、いつでも同意を撤回することができます。"
+
+msgid "We use the information we collect to fulfill our contract with you for the following purposes:"
+msgstr "収集した情報を使用して、以下の目的であなたとの契約を履行します:"
+
+msgid "Operating the Service and providing its features and functionalities."
+msgstr "サービスの運営およびその機能と機能の提供。"
+
+msgid "Handling the administrative aspects of the Service such as billing you for applicable fees."
+msgstr "適用される料金の請求など、サービスの管理面の処理。"
+
+msgid "Sending you updates, notifications, and other communications related to the Service (including alerts)."
+msgstr "サービスに関連する更新、通知、およびその他の通信の送信（アラートを含む）。"
+
+msgid "Providing you with support, handling complaints, and contacting you when necessary."
+msgstr "サポートの提供、苦情の処理、および必要に応じての連絡。"
+
+msgid "Enforcing the Terms of Use and this Policy and preventing misuse of the Service."
+msgstr "利用規約および本ポリシーの施行とサービスの誤用の防止。"
+
+msgid "Complying with any applicable law and assisting law enforcement agencies and competent authorities if we believe it is necessary or justified."
+msgstr "適用される法律を遵守し、必要または正当と考えられる場合は法執行機関および権限ある当局を支援する。"
+
+msgid "Taking any action in any case of dispute involving you with respect or in relation to the Service."
+msgstr "サービスに関連してあなたに関する紛争が発生した場合の対応。"
+
+msgid "Legitimate interest:"
+msgstr "正当な利益:"
+
+msgid "We have weighed your right to privacy based on the need to adapt to your needs and also offer you our products and thus we also process your data for:"
+msgstr "あなたのニーズに適応し、製品を提供する必要性に基づいてプライバシーの権利を検討した結果、以下の目的でデータを処理します:"
+
+msgid "Sending you information bulletins as well as the improvement and customizing the Service and developing new services."
+msgstr "情報誌の送信、サービスの改善およびカスタマイズ、新しいサービスの開発。"
+
+msgid "Generating statistical and aggregated information about users of the Service."
+msgstr "サービス利用者に関する統計情報および集約情報の生成。"
+
+msgid "Sending commercial communications about our own products and services similar to those contracted."
+msgstr "契約したものに類似した自社製品およびサービスに関する商業通信の送信。"
+
+msgid "MEDICAL DATA"
+msgstr "医療データ"
+
+msgid "Under the laws of specific jurisdictions (such as HIPAA in the United States), the medical data collected by Vitabi may be considered “protected health information” (PHI) or similarly defined terms. To the extent not prohibited by applicable law, Vitabi may use and disclose your PHI in such ways as instructed or permitted by your Practitioner(s)."
+msgstr "特定の管轄区域の法律（米国のHIPAAなど）に基づき、Vitabiが収集する医療データは「保護された健康情報（PHI）」または類似の定義用語と見なされる場合があります。適用される法律によって禁止されていない限り、VitabiはあなたのPHIをプラクティショナーの指示または許可された方法で使用および開示することができます。"
+
+msgid "In the event that Vitabi shall collect any Protected Health Information (PHI) as such term is defined under HIPAA from US subjects or from individuals to whom HIPAA or US laws in general apply, Company will ask such subjects to e-sign an authorization (the “Vitabi Authorization”) with the decision to e-sign the Vitabi Authorization being entirely voluntary. By choosing to e-sign the Vitabi Authorization, you will agree that Vitabi may use and disclose your PHI in the same way it uses and discloses your Personal Information that is not PHI. These uses and disclosures are described in this Privacy Policy. To the extent any provision in the Vitabi Authorization shall be inconsistent with this Privacy Policy or other provisions of the Terms of Use, then the provisions in the Vitabi Authorization shall only apply with respect to your PHI. If you do not e-sign the Vitabi Authorization, then your Personal Information that is not PHI shall be governed by this Privacy Policy and your Personal Information that is PHI shall be used and disclosed solely in such ways as instructed or permitted by your Practitioner(s)."
+msgstr "VitabiがHIPAAに基づいて定義される保護された健康情報（PHI）を米国の対象者またはHIPAAまたは一般的な米国の法律が適用される個人から収集する場合、会社はその対象者に対してVitabi承認を電子署名するよう依頼します。Vitabi承認に電子署名する決定は完全に任意です。Vitabi承認に電子署名することを選択することにより、あなたはVitabiがPHIでない個人情報を使用および開示するのと同じ方法でPHIを使用および開示することに同意します。これらの使用および開示については、このプライバシーポリシーに記載されています。Vitabi承認のいずれかの規定がこのプライバシーポリシーまたは利用規約の他の規定と矛盾する場合、その矛盾する規定はPHIに関してのみ適用されます。Vitabi承認に電子署名しない場合、PHIでない個人情報はこのプライバシーポリシーに従い、PHIはプラクティショナーの指示または許可された方法でのみ使用および開示されます。"
+
+msgid "SHARING INFORMATION COLLECTED"
+msgstr "収集した情報の共有"
+
+msgid "We may share the information outlined in this Policy with others in any of the following instances:"
+msgstr "次の場合に、このポリシーに記載された情報を他者と共有することがあります:"
+
+msgid "With our contractors and service providers (such as data storage providers and billing providers) in order to operate, maintain, and enhance the Service;"
+msgstr "サービスを運営、維持、および強化するために、契約者およびサービスプロバイダー（データストレージプロバイダーや請求プロバイダーなど）と共有します。"
+
+msgid "With the Practitioners who need to know your medical data in order to assist you and provide the relevant medical services;"
+msgstr "あなたを支援し、関連する医療サービスを提供するために、あなたの医療データを知る必要があるプラクティショナーと共有します。"
+
+msgid "If you have breached the Terms of Use, abused your rights to use the Service, or violated any applicable law. Your information may be shared with competent authorities and with any third party if we believe it is necessary or justified;"
+msgstr "利用規約に違反した場合、サービスの使用権を乱用した場合、または適用される法律に違反した場合。必要または正当と判断した場合、情報を権限ある当局および第三者と共有することがあります。"
+
+msgid "If the operation of the Service is organized within a different framework or through another legal structure or entity (such as due to a merger or acquisition);"
+msgstr "サービスの運営が異なる枠組みや別の法的構造またはエンティティ（合併や買収など）を通じて行われる場合。"
+
+msgid "We may share Personal Information with our corporate group entities for internal administrative purposes, but their use of such information must comply with the Policy;"
+msgstr "内部管理目的で、個人情報を企業グループのエンティティと共有することがありますが、その情報の使用はポリシーに準拠する必要があります。"
+
+msgid "We may share Personal Information (possibly including information received from Practitioners, specifically your diagnosis and treatment details) with your insurance company as required for the purpose of providing you with our services;"
+msgstr "サービスを提供するために必要な場合、個人情報（プラクティショナーから受け取った情報を含む可能性があり、特に診断および治療の詳細）を保険会社と共有することがあります。"
+
+msgid "We may share Personal Information with “Assistance Companies” which are third parties to which we may refer you in order to provide assistance services in relatively urgent cases requiring hospitalization or evacuation and which may need to receive your Personal Information (including health data and possibly including information received from Practitioners, specifically your diagnosis and treatment details) in order to properly assess medical and other situations and provide the necessary assistance."
+msgstr "入院や避難を要する緊急時に支援サービスを提供するために紹介する可能性がある第三者の「支援会社」と個人情報を共有することがあります。この場合、支援会社は医療状況やその他の状況を適切に評価し、必要な支援を提供するために、個人情報（健康データおよびプラクティショナーから受け取った情報を含む可能性があり、特に診断および治療の詳細）を受け取る必要があります。"
+
+msgid "YOUR RIGHTS: ACCESSING, UPDATING, OR DELETING YOUR PERSONAL INFORMATION AND OBTAINING A COPY OF IT"
+msgstr "あなたの権利：個人情報へのアクセス、更新、削除、およびそのコピーの取得"
+
+msgid "You may ask to access the Personal Information about you that is stored in our systems or have us update, correct, or delete such information. You may also be entitled to obtain from us the personal data you provided us (which for the avoidance of doubt will not include aggregated data we obtained from other sources even if also applicable to you) in a structured, commonly used, and machine-readable format and have the right to transmit those data to another controller. If you wish to exercise any of these rights, contact us using the App or Website in the “My Account” main section “Manage Your Account” sub-section, or by email to vitabi.info@gmail.com."
+msgstr "私たちのシステムに保存されているあなたに関する個人情報へのアクセス、更新、修正、または削除を要求することができます。また、提供した個人データを構造化された一般的に使用される機械可読形式で取得し、それを別の管理者に転送する権利もあります（疑念を避けるために、他の情報源から取得した集約データは含まれません）。これらの権利を行使したい場合は、「マイアカウント」のメインセクション「アカウント管理」サブセクションを使用してアプリまたはウェブサイトから、またはメールでvitabi.info@gmail.comに連絡してください。"
+
+msgid "OPPOSITION TO COMMERCIAL PURPOSES AND TREATMENTS BASED ON LEGITIMATE INTEREST"
+msgstr "商業目的および正当な利益に基づく処理に対する反対"
+
+msgid "Among other things, we process your personal data and profile for marketing purposes. You have the right to object at any time to processing your personal data for such marketing and for purposes based on legitimate interest. If you raise such an objection for marketing purposes, we will no longer process your personal data for such purposes."
+msgstr "その他の事項の中でも、マーケティング目的であなたの個人データおよびプロファイルを処理します。マーケティングおよび正当な利益に基づく処理に対して、いつでも反対する権利があります。マーケティング目的で反対する場合、その目的での個人データの処理を中止します。"
+
+msgid "AGGREGATED INFORMATION"
+msgstr "集約情報"
+
+msgid "We may freely use the information we collect as outlined above to compile anonymized or aggregated information that does not identify you. We may share, sell, or otherwise communicate and make available such anonymized or aggregated information to any other third party at our sole discretion."
+msgstr "上記のように収集した情報を自由に使用して、あなたを特定しない匿名化または集約された情報を作成することがあります。このような匿名化または集約された情報を第三者に提供、販売、またはその他の方法で利用可能にすることがあります。"
+
+msgid "COOKIES"
+msgstr "クッキー"
+
+msgid "Cookies are small text files sent to your web browser when you access a website. Different types of cookies are used for different purposes, such as to collect statistical information about your use of a website. We use cookies for analytics purposes explained in the “Information we collect” section above. We do so through Google Analytics cookies and analytics tools of other third parties. If you wish to block cookies, you may do so through your browser’s settings or by installing a cookie-blocking application for your mobile device. You can delete cookies that are already on your computer, and you can set your browser to prevent them from being placed thereafter. Please refer to the browser’s help menu for further information. Please also bear in mind that disabling cookies may adversely indirectly affect your user experience on the Platform."
+msgstr "クッキーは、ウェブサイトにアクセスした際にウェブブラウザに送信される小さなテキストファイルです。クッキーの種類によって異なる目的に使用されます。たとえば、ウェブサイトの使用に関する統計情報を収集するためなどです。私たちは、上記の「収集する情報」セクションで説明した分析目的でクッキーを使用しています。Google Analyticsのクッキーおよび他の第三者の分析ツールを使用してこれを行います。クッキーをブロックする場合は、ブラウザの設定やモバイルデバイス用のクッキーブロックアプリケーションをインストールして行うことができます。すでにコンピュータにあるクッキーを削除し、その後クッキーが配置されないようにブラウザを設定することもできます。詳細については、ブラウザのヘルプメニューを参照してください。また、クッキーを無効にすると、プラットフォームのユーザーエクスペリエンスに悪影響を与える可能性があることを覚えておいてください。"
+
+msgid "TRANSFER OF DATA OUTSIDE YOUR TERRITORY"
+msgstr "地域外へのデータ転送"
+
+msgid "We may store and process information in Israel and other countries, such as EU states. We may also process information using cloud services. The laws in such territories may provide a lesser degree of data protection than the laws of your own country. You agree to the transfer of your information to such other countries for the purpose of processing as described in this Policy, including through cloud services."
+msgstr "私たちは、イスラエルおよびその他の国（EU加盟国など）で情報を保存および処理することがあります。クラウドサービスを使用して情報を処理することもあります。そのような地域の法律は、あなたの国の法律よりも低いレベルのデータ保護を提供する場合があります。本ポリシーで説明した処理の目的で、クラウドサービスを含むそのような他の国への情報の転送に同意します。"
+
+msgid "INFORMATION SECURITY"
+msgstr "情報セキュリティ"
+
+msgid "We implement measures to reduce the risks of damage, loss of information, and unauthorized access or use of information. These measures do not provide absolute information security. Therefore, it is not guaranteed and you cannot expect that the Service will be immune from information security risks."
+msgstr "情報の損傷、情報の紛失、不正アクセスまたは不正使用のリスクを軽減するための措置を実施していますが、これらの措置は絶対的な情報セキュリティを提供するものではありません。したがって、サービスが情報セキュリティリスクに免疫があることを保証するものではなく、期待することはできません。"
+
+msgid "CALIFORNIA RESIDENTS"
+msgstr "カリフォルニア州の住民"
+
+msgid "The following disclosure is made to residents of California pursuant to California Online Privacy Act (CA Civil Code § 22575): When you use our Service, other parties such as Google may collect personally identifiable information about your activities over time and across different websites or online services. We do not respond to browsers’ “Do Not Track” requests."
+msgstr "次の開示は、カリフォルニアオンラインプライバシー法（CA民法第22575条）に基づいてカリフォルニア州の住民に対して行われます：サービスを使用する際、Googleなどの他の当事者が、時間をかけておよび異なるウェブサイトまたはオンラインサービスを通じてあなたの活動に関する個人を特定できる情報を収集する場合があります。ブラウザの「追跡しない」要求には応答しません。"
+
+msgid "EUROPEAN CITIZENS"
+msgstr "欧州連合（EU）の市民"
+
+msgid "The following disclosures are made to citizens of member states of the European Union (EU) pursuant to the European General Data Protection Regulation (GDPR):"
+msgstr "次の開示は、欧州一般データ保護規則（GDPR）に基づいて、欧州連合（EU）加盟国の市民に対して行われます："
+
+msgid "Right to be informed:"
+msgstr "通知を受ける権利："
+
+msgid "If requested, we will provide you with a privacy notice to tell you how we are using your personal data."
+msgstr "要求があれば、私たちがあなたの個人データをどのように使用しているかを知らせるプライバシー通知を提供します。"
+
+msgid "Right of access:"
+msgstr "アクセス権："
+
+msgid "You have the right to obtain access to your own personal data at any time so you are aware of and can verify the lawfulness of processing. Information will be supplied within one month of receipt of the request. This can be extended by a further two months where requests are complex or numerous. This will be provided free of charge unless you ask for multiple copies or the request is manifestly unfounded or excessive. We can also refuse your request if it adversely affects the rights and freedoms of others or is manifestly unfounded or excessive. You can make a subject access request by contacting us using the App or Website in the “My Account” main section “Manage Your Account” sub-section."
+msgstr "あなたは、いつでも自分の個人データへのアクセスを取得し、その処理の合法性を認識し、確認する権利を有します。情報は、要求を受け取ってから1か月以内に提供されます。要求が複雑または多数の場合はさらに2か月延長できます。複数のコピーを要求するか、要求が明らかに根拠がないまたは過剰でない限り、無料で提供されます。他者の権利および自由に悪影響を与える場合、または要求が明らかに根拠がないまたは過剰である場合には、要求を拒否することもできます。「マイアカウント」のメインセクション「アカウント管理」サブセクションを使用してアプリまたはウェブサイトから連絡することにより、主体アクセス要求を行うことができます。"
+
+msgid "Right of rectification:"
+msgstr "修正権："
+
+msgid "You have the right to have your personal data rectified if it is inaccurate or incomplete. If we have disclosed this to third parties, we will tell you if this is appropriate and we will inform them of the rectification where possible. We must respond within one month, extendable by two months where the request for rectification is complex."
+msgstr "あなたの個人データが不正確または不完全な場合、修正する権利があります。これを第三者に開示した場合、適切であればあなたに通知し、可能な限り修正を通知します。要求が複雑な場合はさらに2か月延長できるが、1か月以内に応答する必要があります。"
+
+msgid "Right of erasure:"
+msgstr "消去権："
+
+msgid "You have the right to request the deletion of personal data where there is no compelling reason for its continued processing or if we are processing it in an unlawful manner – for example, if we are using it for a different purpose than originally stated."
+msgstr "継続的な処理の正当な理由がない場合、または不法な方法で処理している場合（たとえば、元々述べた目的とは異なる目的で使用している場合）に、個人データの削除を要求する権利があります。"
+
+msgid "Right to restrict data processing:"
+msgstr "データ処理を制限する権利："
+
+msgid "Under certain circumstances, you have a right to ‘block’ or suppress processing of personal data. When processing is restricted, we are permitted to store the personal data but not further process it. We can retain just enough information about you to ensure that the restriction is respected in the future."
+msgstr "特定の状況下では、個人データの処理を「ブロック」または抑制する権利があります。処理が制限されている場合、個人データを保存することは許可されていますが、さらに処理することは許可されていません。将来の制限が尊重されることを確保するために、あなたに関する情報を十分に保持することができます。"
+
+msgid "Right to data portability:"
+msgstr "データポータビリティの権利："
+
+msgid "You can obtain and reuse your personal data for your own purposes across different services. This right applies where the processing is based on your consent or for the performance of a contract; and when processing is carried out by automated means."
+msgstr "個人データを取得し、異なるサービスで自分の目的のために再利用することができます。この権利は、処理があなたの同意に基づいている場合、または契約の履行のためである場合、および処理が自動化された手段で行われる場合に適用されます。"
+
+msgid "Right to object:"
+msgstr "反対権："
+
+msgid "You have the right to object to:"
+msgstr "あなたは以下に反対する権利があります："
+
+msgid "Processing based on legitimate interests or the performance of a task in the public interest/exercise of official authority (including profiling);"
+msgstr "正当な利益に基づく処理または公共の利益/公権力の行使のための業務の遂行（プロファイリングを含む）；"
+
+msgid "Direct marketing (including profiling); and"
+msgstr "ダイレクトマーケティング（プロファイリングを含む）；および"
+
+msgid "Processing for purposes of scientific/historical research and statistics."
+msgstr "科学的/歴史的研究および統計の目的のための処理。"
+
+msgid "If we process personal data for the performance of a legal task or our organization's legitimate interests, you must have an objection on “grounds relating to your particular situation”. We must stop processing the personal data unless:"
+msgstr "法的な業務の遂行または組織の正当な利益のために個人データを処理する場合、特定の状況に関連する理由で反対する必要があります。次の場合を除き、個人データの処理を停止する必要があります："
+
+msgid "We can demonstrate compelling legitimate grounds for the processing which override the interests, rights, and freedoms of the individual; or"
+msgstr "処理のための強制的な正当な理由が個人の利益、権利、および自由を上回ることを示すことができる場合；または"
+
+msgid "The processing is for the establishment, exercise, or defense of legal claims."
+msgstr "処理が法的請求の確立、行使、または防御のためである場合。"
+
+msgid "Right to withdraw consent at any time:"
+msgstr "いつでも同意を撤回する権利："
+
+msgid "You may contact Vitabi to request this. Although we may not be able to accept your request for certain types of data, please contact us if you wish to discuss this further."
+msgstr "これを要求するためにVitabiに連絡することができます。特定の種類のデータについて要求を受け入れることができない場合がありますが、詳細を話し合いたい場合はご連絡ください。"
+
+msgid "Right to complain:"
+msgstr "苦情を申し立てる権利："
+
+msgid "You have the right to complain in any matter relating to our service, including how we use your personal data. Please contact us at vitabi.info@gmail.com. You can also contact our CEO: Nhat Lieu nhatlieu2004@gmail.com."
+msgstr "私たちのサービスに関連するあらゆる問題について、あなたは苦情を申し立てる権利があります。個人データの使用方法を含め、ご連絡ください：vitabi.info@gmail.com。また、CEOのNhat Lieuにも連絡できます：nhatlieu2004@gmail.com。"
+
+msgid "DATA RETENTION"
+msgstr "データ保持"
+
+msgid "We retain Personal Information for as long as it is legally required for the purposes set forth above. We may delete any information from our systems without notice to you once we deem it is no longer necessary for the purposes set forth above."
+msgstr "上記の目的のために法的に必要な限り個人情報を保持します。上記の目的のために必要でなくなったと判断した場合、通知することなくシステムから情報を削除することがあります。"
+
+msgid "If you withdraw your consent to us processing your Personal Information, we will erase it from our systems (unless the data is required for Vitabi to establish, exercise, or defend against legal claims)."
+msgstr "あなたが個人情報の処理に対する同意を撤回した場合、システムからその情報を消去します（ただし、Vitabiが法的請求を確立、行使、または防御するためにそのデータが必要な場合を除く）。"
+
+msgid "In particular, Personal Information provided with respect to your insurance policies will be deleted once no longer needed for us to provide you with services (for example, once the relevant policy expires) unless you have received medical services covered by the policy, in which case we will retain the Personal Information related to that policy as and to the extent required by applicable law."
+msgstr "特に、保険ポリシーに関する個人情報は、サービスの提供に必要なくなった場合（たとえば、関連するポリシーの期限が切れた場合）に削除されます。ただし、ポリシーに基づく医療サービスを受けた場合は、適用される法律に基づいてそのポリシーに関連する個人情報を保持します。"
+
+msgid "Please note that uninstalling the App from your device will not necessarily cause your Personal Information to be deleted from our systems or from the Service. Most data will be deleted once no longer needed in order to provide you with services (e.g., after your relevant insurance policy expires); however, if you used our services in order to receive any medical services, the data will be retained in accordance with legal requirements."
+msgstr "デバイスからアプリをアンインストールしても、必ずしもシステムまたはサービスから個人情報が削除されるわけではありません。ほとんどのデータは、サービスの提供に必要なくなった時点で削除されます（例：関連する保険ポリシーの期限が切れた後）。ただし、医療サービスを受けるために当社のサービスを利用した場合、そのデータは法的要件に従って保持されます。"
+
+msgid "SURVEYS"
+msgstr "アンケート"
+
+msgid "From time to time, we may send you surveys or requests to provide feedback (such as scoring service quality) for the purpose of improving service quality. By receiving our services, you provide your express approval to receive such surveys and requests for feedback; However, answering such surveys and/or providing feedback will always be optional, not mandatory (and not a condition to receive the services), and at your sole discretion."
+msgstr "サービスの質を向上させるために、時々アンケートやフィードバック（サービスの質を評価するなど）をお願いすることがあります。当社のサービスを受けることにより、そのようなアンケートやフィードバックの要求を受け取ることに明示的に同意します。ただし、アンケートに回答したりフィードバックを提供することは常に任意であり、必須ではなく（サービスを受けるための条件ではありません）、あなたの単独の裁量に委ねられます。"
+
+msgid "NEWSLETTERS"
+msgstr "ニュースレター"
+
+msgid "We may send newsletters, but only to registered users and all newsletters we send will contain an “unsubscribe” link."
+msgstr "ニュースレターを送信することがありますが、登録ユーザーのみに送信され、送信されるすべてのニュースレターには「購読解除」リンクが含まれます。"
+
+msgid "CHANGES TO THIS PRIVACY POLICY"
+msgstr "このプライバシーポリシーの変更"
+
+msgid "We may change this Policy, in which case we will seek your consent to those changes. If you do not consent to the amended Policy, we may terminate your account and block your access to and use of the Service. Your following usage of the Platform shall also be deemed as acceptance of the amended Policy."
+msgstr "このポリシーを変更することがあります。その場合、変更に対するあなたの同意を求めます。変更されたポリシーに同意しない場合、アカウントを終了し、サービスへのアクセスおよび使用をブロックすることがあります。プラットフォームの使用を継続することは、変更されたポリシーの受け入れと見なされます。"
+
+msgid "LANGUAGE"
+msgstr "言語"
+
+msgid "All Insurance"
+msgstr "すべての保険"
+
+msgid "All Country"
+msgstr "すべての国"
+
+msgid "Find Care Wherever You Are"
+msgstr "旅先でも安心して病院を予約"
+
+msgid "Select Your Insurance"
+msgstr "あなたの保険を選択"
+
+msgid "This Policy was originally written in English and we may translate it into other languages for your convenience. In any contradiction between the versions of these Terms of Use, the provisions of the English version shall prevail."
+msgstr "このポリシーは元々英語で書かれており、便宜のために他の言語に翻訳することがあります。これらの利用規約のバージョン間に矛盾がある場合は、英語版の規定が優先されます。"
+
+msgid "CONTACT US"
+msgstr "お問い合わせ"
+
+msgid "You may contact us with any questions or comments at: vitabi.info@gmail.com. Our postal address is: Vitabi Inc., 111 Banchi Nanryo Midori-ku, Nagoya, Aichi, #204 Okehazama-so Bldg.2, Japan"
+msgstr "質問やコメントがある場合は、vitabi.info@gmail.comまでご連絡ください。郵送先住所：Vitabi Inc., 111 Banchi Nanryo Midori-ku, Nagoya, Aichi, #204 Okehazama-so Bldg.2, Japan"
+
+msgid "Effective date of the policy:"
+msgstr "ポリシーの発効日："
+
+msgid "August 1, 2024"
+msgstr "2024年8月1日"
+
+msgid "Or"
+msgstr "または"
+
+msgid "Sign In"
+msgstr "サインイン"
+
+msgid "Privacy Policy and Terms and Conditions"
+msgstr "プライバシーポリシーおよび利用規約"
+

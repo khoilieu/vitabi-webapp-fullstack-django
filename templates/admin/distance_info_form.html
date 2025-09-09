@@ -1,0 +1,7 @@
+<h2>{% if form.instance.pk %}Edit{% else %}Add{% endif %} Distance Info</h2>
+<form method="post" novalidate>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Save</button>
+    <a href="{% url 'distance_info_list' %}" class="btn btn-secondary">Back to List</a>
+</form>

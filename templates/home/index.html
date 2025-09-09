@@ -1,0 +1,435 @@
+{% load static %} 
+{% load i18n %}
+{% load custom_filters %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		<link rel="icon" href="{% static "home/favicon.png" %}" type="image/x-icon">
+		<title>{% trans 'Vitabi - Hospital Booking App for Overseas Travelers' %}</title>
+		<meta name="description" content="{% trans 'Vitabi is a platform that offers hospital reservation services for overseas travelers. Easily book local medical facilities through our app and manage your health with confidence.' %}">
+
+		<meta property="og:title" content="Vitabi">
+		<meta property="og:description" content="{% trans 'Find Care Wherever You Are' %}">
+		<meta property="og:image" content="{{ image_url }}">
+		<meta property="og:url" content="https://vitabi.us">
+		<meta property="og:type" content="website">
+	
+
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Vitabi">
+		<meta name="twitter:description" content="{% trans 'Find Care Wherever You Are' %}">
+		<meta name="twitter:image" content="{{ image_url }}">
+		<meta name="twitter:url" content="https://vitabi.us">
+
+		<link rel="stylesheet" href="{% static "home/index.css" %}">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+		<link rel="icon" href="{% static "home/favicon.png" %}" type="image/x-icon">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-NBX832CK');</script>
+		<!-- End Google Tag Manager -->
+
+		<script type="text/javascript">
+			(function(c,l,a,r,i,t,y){
+				c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+				t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+				y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+			})(window, document, "clarity", "script", "nqixhxf3g6");
+		</script>
+
+		<!-- Noto Sans JP フォントを追加 -->
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+		<style>
+			body {
+				font-family: 'Noto Sans JP', sans-serif; /* フォントを適用 */
+			}
+		</style>
+	</head>
+	<style>
+		.main-bottom-content {
+			height: 55vh;
+			overflow-y: auto;
+			overflow-x: hidden;
+			scrollbar-width: none;
+		}
+
+		.card:last-child {
+			margin-bottom: 160px;
+		}
+
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgb(0, 0, 0);
+			background-color: rgba(0, 0, 0, 0.9);
+		}
+		
+		.modal-content {
+			margin: auto;
+			display: block;
+			width: 80%;
+			max-width: 700px;
+		}
+
+		.img {
+			width: 65px;
+			height: 40px;
+			margin-bottom: 4px;
+		}
+
+		#findHospitalBtn1 {
+			transition: opacity 0.3s, color 0.3s;
+		}
+
+		#findHospitalBtn1:hover {
+			opacity: 0.7;
+		}
+	</style>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			function showLoading() {
+				document.getElementById("loading-overlay").style.display = "flex";
+			}
+		
+			function hideLoading() {
+				document.getElementById("loading-overlay").style.display = "none";
+				location.reload();
+			}
+		
+			const findHospitalButton1 = document.getElementById('findHospitalBtn1');
+			const findHospitalButton2 = document.getElementById('findHospitalBtn2');
+			const resumeBookingButton1 = document.getElementById('resumeBookingBtn1');
+			const resumeBookingButton2 = document.getElementById('resumeBookingBtn2');
+			const loadingOverlay = document.getElementById('loading-overlay');
+		
+			if (findHospitalButton1) {
+				findHospitalButton1.addEventListener('click', function () {
+					showLoading();
+				});
+			}
+			if (resumeBookingButton1) {
+				resumeBookingButton1.addEventListener('click', function () {
+					showLoading();
+				});
+			}
+			if (resumeBookingButton2) {
+				resumeBookingButton2.addEventListener('click', function () {
+					showLoading();
+				});
+			}
+		
+			if (loadingOverlay) {
+				loadingOverlay.addEventListener('click', function (event) {
+					if (event.target === loadingOverlay) {
+						hideLoading();
+					}
+				});
+			}
+		});	
+	</script>
+	<body>
+		<div id="loading-overlay" style="display: none; justify-content: center; align-items: center; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 9999; background-color: rgba(255, 255, 255, 0.8);">
+			<div class="spinner-container" style="text-align: center; position: relative;">				
+				<span class="spinner-border spinner-border-md" aria-hidden="true"></span>
+				<br>
+				<span role="status" class="fw-bold">{% trans "Loading..." %}</span>
+				<br>
+				<span role="status" class="fw-bold">{% trans "Wait a moment" %}</span>
+			</div>
+		</div>
+		
+		
+		<section>
+			<header>
+			{% comment %} <h1 class="h1">Vitabi</h1> {% endcomment %}
+			<img src="{% static "home/logoVitabi.png" %}" class="img">
+
+			<div class="main-top-right" style="display: flex; justify-content: space-between; align-items: center; flex-direction: row; width: 140px;">
+				{% if request.user.is_authenticated %}
+						<img class="main-top-right" style="cursor: pointer; width: 35px; height: 35px;" onclick="window.location.href = '{% url "account" %}'" src="{%static 'home/Icon.svg'%}" alt="Icon">
+					{% else %}
+						<img class="main-top-right" style="cursor: pointer; width: 35px; height: 35px;" onclick="window.location.href = '{% url "login" %}'" src="{%static 'home/Icon.svg'%}" alt="Icon">
+				{% endif %}
+
+				<div class="dropdown">
+					<form id="language-form" action="{% url 'change_language' %}" method="post">
+						{% csrf_token %}
+						<input type="hidden" id="next" name="next" value="{{ request.path }}">
+						<a class="btn btn-secondary dropdown-toggle d-flex justify-content-center align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							{% if current_language == 'en' %}
+								<img src="{{ MEDIA_URL }}language_photos/englishflag.jpg" class="language-flag" style="width: 20px; height: 20px; margin-right: 5px;"><strong>EN</strong>
+							{% elif current_language == 'jp' %}
+								<img src="{{ MEDIA_URL }}language_photos/japanflag.jpg" class="language-flag" style="width: 20px; height: 20px; margin-right: 5px;"><strong>JP</strong>
+							{% elif current_language == 'vn' %}
+								<img src="{{ MEDIA_URL }}language_photos/Vietnamese_Flag.jpeg" class="language-flag" style="width: 20px; height: 20px; margin-right: 5px;"><strong>VN</strong>
+							{% endif %}
+						</a>
+						<ul class="dropdown-menu">
+							<li><button type="submit" name="language" value="en" class="dropdown-item language-option"><img src="{{ MEDIA_URL }}language_photos/englishflag.jpg" class="language-flag" style="width: 20px; height: 20px;"> English</button></li>
+							<li><button type="submit" name="language" value="jp" class="dropdown-item language-option"><img src="{{ MEDIA_URL }}language_photos/japanflag.jpg" class="language-flag" style="width: 20px; height: 20px;"> 日本語</button></li>
+							<li><button type="submit" name="language" value="vn" class="dropdown-item language-option"><img src="{{ MEDIA_URL }}language_photos/Vietnamese_Flag.jpeg" class="language-flag" style="width: 20px; height: 20px;"> Tiếng Việt</button></li>
+						</ul>
+					</form>					
+				</div>
+			</div>                                                     
+			</header>
+
+			<main style="background: url('{% static "home/background.png" %}') no-repeat center center; ">
+				<div class="main-top">
+					<div class="main-top-left">
+						{% comment %} {% if request.user.is_authenticated %}
+							<h1>{{ greeting }} <br> {{ firstname }} {{ surname }}</h1>
+						{% else %}
+							<h1>{{ greeting }}</h1>
+						{% endif %} {% endcomment %}
+						{% if current_language == 'jp' %}
+							<h1 style="font-size: 32px !important; font-weight: 900; color: #FFFFFF; text-shadow: 1px 1px 0 #000000;"> 旅先でも安心して<br>病院を予約
+						{% elif current_language == 'en' %}
+							<h1 style="font-size: 32px !important; font-weight: 900; color: #FFFFFF; text-shadow: 1px 1px 0 #000000;"> Find Care<br>Wherever You Are
+						{% else %}
+							<h1 style="font-size: 32px !important; font-weight: 900; color: #FFFFFF; text-shadow: 1px 1px 0 #000000;"> {% trans "Find Care Wherever You Are" %}
+						{% endif %}
+					</div>
+				</div>
+
+				<div class="main-middle">
+					{% comment %} <h2>{% trans "How can we help you?" %}</h2> {% endcomment %}
+					{% comment %} <div class="input-form">
+						<div class="form-group">
+							<select type="text" id="country" name="country" class="form-control" placeholder="{% trans "Enter a country you are looking for" %}">
+						</div>
+						<div class="form-group">
+							<select type="text" id="insurance" name="insurance" class="form-control" placeholder="{% trans "Your insurance" %}">
+						</div>
+					</div> {% endcomment %}
+
+					<form id="hospitalFilterForm" action="{%url 'findHospital' %}" method="get" style="display: flex; flex-flow: column; padding 16px; width: 314px; height: 222px; background: #FFFFFF; border-radius: 5px; display: flex; justify-content: center; align-items: center;">
+						<div class="mb-3" style="margin-bottom: 10px; margin-top: 16px;">
+							<select name="country" id="country-select" class="form-select" style="border-radius: 0px; padding: 10px 15px; font-weight: 500; color: #414141; appearance: none; outline: none; width: 287px; height: 51px;" required>
+								<option disabled selected>{% trans "Select Country" %}</option>
+								<option value="">{% trans "All Country" %}</option>
+								{% for code,name,count in countries%}
+									<option value="{{ code }}">{{ name }}</option>
+								{% endfor %}
+							</select>
+						</div>
+						<div class="mb-3" style="margin-bottom: 10px;">
+							<select id="insurance-select" name="insurance" class="form-select" style="border-radius: 0px; padding: 10px 15px; font-weight: 500; color: #414141; width: 287px; height: 51px;">
+								<option value="">{% trans "All Insurance" %}</option>
+								{% for insurance, translated_name in insurances %}
+									<option value="{{ insurance }}">{{ translated_name }}</option>
+								{% endfor %}
+							</select>
+						</div>
+
+						<div id="find-hospital" class="main d-grid gap-3" style="margin-bottom: 16px;">
+							{% comment %} <button type="button" style="border-width: 2px !important;" class="btn btn-outline-dark btn-lg fw-bold" onclick="window.location='{% url 'diagnose_start' %}'"><a href="{% url 'diagnose_start' %}">{% trans "Symptom checker" %}</a></button> {% endcomment %}
+							<button id="findHospitalBtn1" type="submit" style="border-width: 2px !important; width: 286px; height: 51px; background-color: #0235DA !important; color: #fff !important; text-decoration: none; font-size: 18px; font-weight: 700;" class="btn btn-lg fw-bold">
+								{% trans "Find a hospital" %}
+							</button>
+							{% comment %} {% if show_resume_button %}
+								<button id="resumeBookingBtn1" type="button" style="border-width: 2px !important; background-color: #000 !important; text-decoration: none;" class="btn btn-outline-dark btn-lg fw-bold" onclick="window.location='{% url 'findHospital' %}?resume=true'">
+									<a id="resumeBookingBtn2" style="text-decoration: none; color: white;" href="{% url 'findHospital' %}?resume=true">{% trans "Resume booking a hospital" %}</a>
+								</button>
+							{% endif %} {% endcomment %}
+						</div>
+					</form>
+				</div>
+
+				{% if not request.user.is_authenticated %}
+				<p style="margin-top: 15px; font-weight: 900; color: black; text-shadow: 0.5px 0.5px 0 white;">
+					{% trans "Or" %} <a href="{% url 'login' %}" style="text-decoration: underline; font-weight: 900; color: black; text-shadow: 0.5px 0.5px 0 white;">{% trans "Sign In" %}</a>
+				</p>
+				{% endif %}
+
+				{% comment %} <div class="main-bottom" style="margin-bottom: 90px;">
+					{% if request.user.is_authenticated %}
+					<h2>{% trans "Your Latest Activities" %}</h2>
+					<div class="main-bottom-content" style=>
+							{% for session in combined_sessions %}
+								{% if session|model_name == "SymptomCheckSession" %}
+									<a href="{% url 'conclusion-detail' session.id_conclusion %}" class="card" style="text-decoration: none;">
+										<h5 class="card-header" style="font-size: medium;">{% trans "Symptom Checker" %}</h5>
+										<div class="card-body">
+											<p class="date">{{ session.created_at|date:"Y/m/d,  H:i A" }}</p>
+											<h5 class="card-title" style="font-size: small;">{{ session.conclusion_text }}</h5>
+											<div class="percentage-css">
+												<span class="percentage {% if session.odds_percentage|to_float <= 25 %}percentage-low{% elif session.odds_percentage|to_float > 25 and session.odds_percentage|to_float <= 50 %}percentage-medium{% elif session.odds_percentage|to_float > 50 and session.odds_percentage|to_float <= 80 %}percentage-high{% else %}percentage-very-high{% endif %}">
+													{{ session.odds_percentage }}
+												</span>
+											</div>
+										</div>
+									</a>
+								{% elif session|model_name == "HospitalBooking" %}
+									<a href="{% url 'bookedHospitalDetail' session.id %}" class="card" style="text-decoration: none;" id="booked-hospital-detail">
+										<h5 class="card-header" style="font-size: medium;">{% trans "Book Hospital Visit" %}</h5>
+										<div class="card-body">
+											<h4 class="card-title" style="font-size: medium; line-height: 25px;">{% trans "Appointment at" %} {{ session.hospital.name }}</h4>
+											<p class="date">{{ session.created_at|date:"Y/m/d, H:i A" }}</p>
+											{% if session.status == "waiting" %}
+												<h5 class="card-title text-secondary" style="font-size: small;">{% trans "Waiting" %}</h5>
+												<p class="card-text">{% trans "We'll reach you soon to let you know when you should visit it" %}.</p>
+											{% elif session.status == "approved" %}
+												<h5 class="card-title text-success" style="font-size: small;">{% trans "Approved" %}</h5>
+												<p class="card-text">{% trans "You can now access your appointment information for more information" %}.</p>
+											{% elif session.status == "rejected" %}
+												<h5 class="card-title text-danger" style="font-size: small;">{% trans "Rejected" %}</h5>
+												<p class="card-text">{% trans "You can access the appointment information to see the reason for rejecting this appointment" %}.</p>
+											{% elif session.status == "canceled" %}
+												<h5 class="card-title text-danger" style="font-size: small;">{% trans "Canceled" %}</h5>
+												<p class="card-text">{% trans "This appointment has been canceled. For details, please contact our support" %}.</p>
+											{% endif %}
+										</div>
+									</a>
+								{% endif %}
+							{% endfor %}
+					{% endif %}
+					</div>
+				</div> {% endcomment %}
+			</main>
+
+			<div class="footer">
+				<a href="{% url "home" %}" class="nav-link" style="width: 70px;">
+					<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="16"
+					height="16"
+					fill="currentColor"
+					class="bi bi-house"
+					viewBox="0 0 16 16"
+					>
+					<path
+					d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
+					/>
+					</svg>
+					<span>{% trans "Home" %}</span>
+				</a>
+				<a href="{% url "care" %}" class="nav-link" style="width: 70px;">
+					<svg
+					  xmlns="http://www.w3.org/2000/svg"
+					  width="16"
+					  height="16"
+					  fill="currentColor"
+					  class="bi bi-calendar-event"
+					  viewBox="0 0 16 16"
+					>
+					  <path
+						d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"
+					  />
+					  <path
+						d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
+					  />
+					</svg>
+					<span>{% trans "Bookings" %}</span>
+				</a>
+				<a href="{% url "mydata" %}" class="nav-link" style="width: 70px;">
+					<svg
+					  xmlns="http://www.w3.org/2000/svg"
+					  width="16"
+					  height="16"
+					  fill="currentColor"
+					  class="bi bi-card-list"
+					  viewBox="0 0 16 16"
+					>
+					  <path
+						d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"
+					  />
+					  <path
+						d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"
+					  />
+					</svg>
+					<span>{% trans "My Data" %}</span>
+				</a>
+			</div>
+
+	  {% if messages %}
+      <div id="messageModal" class="modal" style="background-color: transparent; display: none;" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-centered" style="width: 100%;">
+            <div class="modal-content text-center border-2 border-dark">
+              {% for message in messages %}
+                <div class="modal-body">
+                    <p style="margin: 0" class="mb-2"><span class="text-dark fw-bold">{{ message }}</span><br><span class="note">{% trans "Note: This is your booking date, we will get back to you soon after we check whether your booking date is accepted or not" %}</span></p>
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+      </div>
+      {% endif %}
+		</section>
+	</body>
+	{% if user.is_authenticated and user.patient.is_patient %}
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBX832CK"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->	
+	{% endif %}
+</html>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hospitalItems = document.querySelectorAll(".result");
+
+    hospitalItems.forEach(function (item) {
+      item.addEventListener("mouseover", function () {
+        this.style.transform = "scale(1.02)";
+      });
+
+      item.addEventListener("mouseout", function () {
+        this.style.transform = "scale(1)";
+      });
+    });
+  });
+
+  document.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', event => {
+        document.getElementById('language-form').submit();
+    });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const languageButtons = document.querySelectorAll('.language-option');
+    const nextField = document.getElementById('next');
+    
+    languageButtons.forEach(function(button) {
+      button.addEventListener('click', function (e) {
+        const currentLangPrefix = window.location.pathname.split('/')[1];
+        const chosenLanguage = this.value;
+        
+        let newLangPrefix = chosenLanguage;
+        
+        const newPath = window.location.pathname.replace('/' + currentLangPrefix, '/' + newLangPrefix);
+        nextField.value = window.location.origin + newPath + window.location.search;
+        
+        e.preventDefault();
+        document.getElementById('language-form').submit();
+      });
+    });
+  });  
+
+  window.onload = function() {
+    const messageModal = document.getElementById('messageModal');
+    if (messageModal) {
+        messageModal.style.display = 'block'; 
+
+        setTimeout(function() {
+            messageModal.style.display = 'none'; 
+        }, 5000);
+
+        messageModal.addEventListener('click', function() {
+          messageModal.style.display = 'none'; 
+        });
+    }
+  };
+</script>

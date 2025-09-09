@@ -1,0 +1,305 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <link rel="icon" href="{% static "home/favicon.png" %}" type="image/x-icon">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="{% static "account/signup1.css" %}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-NBX832CK');</script>
+		<!-- End Google Tag Manager -->
+
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "nqixhxf3g6");
+  </script>
+</head>
+<style>
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+</style>
+  <body>
+    <section>
+        <header>
+            <a href="{% url "register" %}"><img src="{% static "home/arrow-left.svg" %}" alt="Back-arrow" style="width: 22px; height: 22px;"></a>
+            <div class="top">
+                <h1 class="fs-5">{% trans "Register" %} (2/3)</h1>      
+            </div>
+            <a class="stop-arrow" href="{% url "login" %}"><button type="button" class="btn-close" aria-label="Close"></button></a>
+        </header>
+
+        <!-- Privacy Policy Modal -->
+        <div id="privacyPolicyModal" data-bs-backdrop="false" class="modal" style="background-color: transparent; display: none;" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered" style="width: 100%;">
+              <div class="modal-content text-center border-2 border-dark">
+                  <div class="modal-body">
+                      <div style="overflow-y: auto; max-height: 400px; text-align: justify; padding: 20px;">
+                        <h1 class="text-dark fw-bold">PRIVACY POLICY</h1><br>
+                        <p>Welcome to Vitabi, a smart platform for searching healthcare specialists and booking available appointments with them. Vitabi is a Japanese company having a place of business in Nanryo Midori-ku, Nagoya, Aichi, Japan with registration number 2180001162209. We at Vitabi Inc. (“Vitabi,” “we,” “us,” “our”) respect your privacy.</p>
+                        <p>This Privacy Policy (the “Policy”) explains our privacy practices for the technology-based service (the “Service”) that we offer through our Internet web-site and resource vitabi.us (the “Website“) or web Vitabi application (the “App“). It describes how we collect personal information, use it and share it, and the rights and options available to you with respect to your information.</p>
+                        <p>Providing us with your personal information is a choice you make. We appreciate that and thank you for making this choice. You are not legally obligated to provide us with this information but we do need it in order to provide you with the Service.</p>
+                        <p>This policy constitutes part of our Vitabi End-Users’ Terms of Use and Vitabi Practitioners’ Terms of Use (together the “Terms of Use“) as they may be amended.</p>
+                        <h3 class="text-dark fw-bold">In Short…</h3>
+                        <p>The following key points of the Privacy Policy are only brought for your convenience. They do not substitute the full Policy.</p>
+                        <ol>
+                            <li><strong>Responsible Officer:</strong> You can contact our designated Data Protection Officer at the following address: vitabi.info@gmail.com</li>
+                            <li><strong>Information we collect:</strong> We collect information you actively provide us (for example when you register to the Service) including your name, last name, policy number, email, mobile phone number, and birthday. Our third-party billing providers will collect your payment method and billing information. We also may collect certain billing information. We also collect analytical information about your use of the Service (e.g., the frequency and scope of your use of the Service) and information about your device and geolocation provided you have given us your permission.</li>
+                            <li><strong>What is your data used for and with what legal basis?</strong> In order to provide the service, we use the information we collect (and information received from physicians) primarily to provide you with the functions of the Service including sending updates and other communications related to the Service itself. On the basis of our legitimate interest, we may also use the data (i) to improve and personalize the Service and develop new products, (ii) for statistical purposes provided that your information is first anonymized and aggregated in accordance with legal requirements and industry standards, and (iii) to send you commercial communications for marketing purposes. You have the right to object at any time to the processing of your personal data for treatments based on legitimate interest, especially for use for marketing purposes by means of an email to: vitabi.info@gmail.com with the subject: OPPOSITION. Based on your consent, information from your geolocation may also be used.</li>
+                            <li><strong>Recipients:</strong> To operate, maintain, and provide the Service, we must share your information (including information received from physicians) with your insurance companies, with Assistance Companies (as defined in the expanded information), with physicians to request appointments, and with other external service providers subject to execution of contracts that adequately guarantee the confidentiality of the information.</li>
+                            <li><strong>Rights:</strong> You can request access, rectification, deletion, opposition, revocation of your consents, portability (where appropriate), limitation of treatment, or file a claim with the Data Protection Agency or with us previously so that we can help you. Address your request to the addresses indicated in the “Responsible Officer” section: vitabi.info@gmail.com.</li>
+                            <li><strong>Aggregated information:</strong> We may use the information we collect from you to create information that is not personally identifiable, such as statistical or aggregated information, and make it available to others for any purpose.</li>
+                            <li><strong>Retention:</strong> We keep your information (including with respect to insurance policies) for as long as is legally necessary for the purpose for which it was first obtained. If you revoke your consent for us to process your data, we will erase your personal data from our systems, keeping only those data that are necessary to fulfill our legal or contractual obligations.</li>
+                            <li><strong>Security:</strong> We implement measures to reduce the risks of damage and unauthorized access or use of information, but they do not provide absolute information security.</li>
+                        </ol>
+                        <p>If you need to expand the above information you can consult the following:</p>
+                        <h3><strong>Vitabi – Privacy Policy</strong></h3><br>
+                        <h4 class="text-dark fw-bold">Information you actively provide us</h4>
+                        <p>The Service is available only to registered users. You may register with the Platform directly.</p>
+                        <p><strong>Registration:</strong> If you register with the Platform directly, we will seek basic information from you such as your name, email address, mobile phone number, birthday, and other information that personally identifies you or could be used to personally identify you (the “Personal Information“).</p>
+                        <p><strong>Payment information:</strong> Our third-party billing providers will collect your payment method and billing information for the purpose of collecting the fees applicable to you. The payment information we may store, if permitted by you, includes your payment card type and the last four digits of the payment card.</p>
+                        <p><strong>Mobile phone number:</strong> We collect your mobile phone number. We will use that number to send you Service alerts and notifications via text messages (SMS) and pop-up notifications.</p>
+                        <p><strong>Inquiries:</strong> If you contact us for questions or complaints or for technical support, we will collect the information related to your inquiry. This may include your user ID on the Service, email address, and other contact information depending on the nature of your inquiry.</p>
+                        <h4 class="text-dark fw-bold">Information we collect</h4>
+                        <p><strong>Medical data:</strong> We may collect medical data solely to the extent needed to provide you with our services. This data may include the doctors, dentists, or other healthcare specialists, professionals, providers, or organizations (collectively “Practitioner(s)”) you have visited and/or Practitioners recommended to you by us, your reasons for visit, your dates of visit, and other medical and health information you choose to share with us by completing medical history forms or otherwise. We may also receive access from Practitioners to some medical data with respect to you (such as diagnosis and/or treatment details) collected or aggregated by such Practitioners solely for the purpose of providing you with the services. For the avoidance of doubt, all Practitioners are external (third party) service providers and not part of our personnel, and we will not have liability for any part of the medical data and diagnosis with respect to you which may be collected by any Practitioner.</p>
+                        <p><strong>Geolocation information:</strong> We collect your precise geolocation when you use the App and your approximate location when you use the Website provided that you have authorized or consented to it.</p>
+                        <p><strong>Analytic Information:</strong> When you access or use the Service, we use analytics tools of third parties to automatically collect information about your use of the Service. This information includes your session durations, the content you accessed on the Service, your interactions and user-interface clicks with respect to such content, referring URLs, and the frequency and scope of your use of the Service including session recordings which include your real-time behavior when using the Service (the session recording do not include personal data that may identify you).</p>
+                        <p><strong>Device information:</strong> We may collect information about your personal computer or mobile device, including its model, its operating system, unique device identifiers, the browser you use, its version and language (i.e., locale) preferences, mobile network information, and the Internet Protocol (IP) address through which you accessed the Service.</p>
+                        <p><strong>Other information:</strong> We may also collect additional information which may be Personal Information as otherwise described to you at the point of collection or pursuant to your consent. You may still access and use part of the Service if you choose not to provide us with any Personal Information, but features of the Service that require your Personal Information will not be accessible to you.</p>
+                        <h4 class="text-dark fw-bold">CHILDREN’S PRIVACY</h4>
+                        <p>The Service is not intended for children under the age of 18 or people who lack or have limited capacity to act. We do not knowingly or intentionally collect information about children who are under 18 years of age except as provided by their legal custodians for the purpose of providing such children with Service.</p>
+                        <h4 class="text-dark fw-bold">USE OF COLLECTED INFORMATION</h4>
+                        <p><strong>Contract:</strong> Your consent to your contract to provide the service serves as the legal basis for processing your information. You may withdraw consent at any time without affecting the lawfulness of data processing we carried out based on your consent before such withdrawal.</p>
+                        <p>We use the information we collect to fulfill our contract with you for the following purposes:</p>
+                        <ul>
+                            <li>Operating the Service and providing its features and functionalities.</li>
+                            <li>Handling the administrative aspects of the Service such as billing you for applicable fees.</li>
+                            <li>Sending you updates, notifications, and other communications related to the Service (including alerts).</li>
+                            <li>Providing you with support, handling complaints, and contacting you when necessary.</li>
+                            <li>Enforcing the Terms of Use and this Policy and preventing misuse of the Service.</li>
+                            <li>Complying with any applicable law and assisting law enforcement agencies and competent authorities if we believe it is necessary or justified.</li>
+                            <li>Taking any action in any case of dispute involving you with respect or in relation to the Service.</li>
+                        </ul>
+                        <p><strong>Legitimate interest:</strong> We have weighed your right to privacy based on the need to adapt to your needs and also offer you our products and thus we also process your data for:</p>
+                        <ul>
+                            <li>Sending you information bulletins as well as the improvement and customizing the Service and developing new services.</li>
+                            <li>Generating statistical and aggregated information about users of the Service.</li>
+                            <li>Sending commercial communications about our own products and services similar to those contracted.</li>
+                        </ul>
+                        <h4 class="text-dark fw-bold">MEDICAL DATA</h4>
+                        <p>Under the laws of specific jurisdictions (such as HIPAA in the United States), the medical data collected by Vitabi may be considered “protected health information” (PHI) or similarly defined terms. To the extent not prohibited by applicable law, Vitabi may use and disclose your PHI in such ways as instructed or permitted by your Practitioner(s).</p>
+                        <p>In the event that Vitabi shall collect any Protected Health Information (PHI) as such term is defined under HIPAA from US subjects or from individuals to whom HIPAA or US laws in general apply, Company will ask such subjects to e-sign an authorization (the “Vitabi Authorization”) with the decision to e-sign the Vitabi Authorization being entirely voluntary. By choosing to e-sign the Vitabi Authorization, you will agree that Vitabi may use and disclose your PHI in the same way it uses and discloses your Personal Information that is not PHI. These uses and disclosures are described in this Privacy Policy. To the extent any provision in the Vitabi Authorization shall be inconsistent with this Privacy Policy or other provisions of the Terms of Use, then the provisions in the Vitabi Authorization shall only apply with respect to your PHI. If you do not e-sign the Vitabi Authorization, then your Personal Information that is not PHI shall be governed by this Privacy Policy and your Personal Information that is PHI shall be used and disclosed solely in such ways as instructed or permitted by your Practitioner(s).</p>
+                        <h4 class="text-dark fw-bold">SHARING INFORMATION COLLECTED</h4>
+                        <p>We may share the information outlined in this Policy with others in any of the following instances:</p>
+                        <ul>
+                            <li>With our contractors and service providers (such as data storage providers and billing providers) in order to operate, maintain, and enhance the Service;</li>
+                            <li>With the Practitioners who need to know your medical data in order to assist you and provide the relevant medical services;</li>
+                            <li>If you have breached the Terms of Use, abused your rights to use the Service, or violated any applicable law. Your information may be shared with competent authorities and with any third party if we believe it is necessary or justified;</li>
+                            <li>If the operation of the Service is organized within a different framework or through another legal structure or entity (such as due to a merger or acquisition);</li>
+                            <li>We may share Personal Information with our corporate group entities for internal administrative purposes, but their use of such information must comply with the Policy;</li>
+                            <li>We may share Personal Information (possibly including information received from Practitioners, specifically your diagnosis and treatment details) with your insurance company as required for the purpose of providing you with our services;</li>
+                            <li>We may share Personal Information with “Assistance Companies” which are third parties to which we may refer you in order to provide assistance services in relatively urgent cases requiring hospitalization or evacuation and which may need to receive your Personal Information (including health data and possibly including information received from Practitioners, specifically your diagnosis and treatment details) in order to properly assess medical and other situations and provide the necessary assistance.</li>
+                        </ul>
+                        <h4 class="text-dark fw-bold">YOUR RIGHTS: ACCESSING, UPDATING, OR DELETING YOUR PERSONAL INFORMATION AND OBTAINING A COPY OF IT</h4>
+                        <p>You may ask to access the Personal Information about you that is stored in our systems or have us update, correct, or delete such information. You may also be entitled to obtain from us the personal data you provided us (which for the avoidance of doubt will not include aggregated data we obtained from other sources even if also applicable to you) in a structured, commonly used, and machine-readable format and have the right to transmit those data to another controller. If you wish to exercise any of these rights, contact us using the App or Website in the “My Account” main section “Manage Your Account” sub-section, or by email to vitabi.info@gmail.com.</p>
+                        <h4 class="text-dark fw-bold">OPPOSITION TO COMMERCIAL PURPOSES AND TREATMENTS BASED ON LEGITIMATE INTEREST</h4>
+                        <p>Among other things, we process your personal data and profile for marketing purposes. You have the right to object at any time to processing your personal data for such marketing and for purposes based on legitimate interest. If you raise such an objection for marketing purposes, we will no longer process your personal data for such purposes.</p>
+                        <h4 class="text-dark fw-bold">AGGREGATED INFORMATION</h4>
+                        <p>We may freely use the information we collect as outlined above to compile anonymized or aggregated information that does not identify you. We may share, sell, or otherwise communicate and make available such anonymized or aggregated information to any other third party at our sole discretion.</p>
+                        <h4 class="text-dark fw-bold">COOKIES</h4>
+                        <p>Cookies are small text files sent to your web browser when you access a website. Different types of cookies are used for different purposes, such as to collect statistical information about your use of a website. We use cookies for analytics purposes explained in the “Information we collect” section above. We do so through Google Analytics cookies and analytics tools of other third parties. If you wish to block cookies, you may do so through your browser’s settings or by installing a cookie-blocking application for your mobile device. You can delete cookies that are already on your computer, and you can set your browser to prevent them from being placed thereafter. Please refer to the browser’s help menu for further information. Please also bear in mind that disabling cookies may adversely indirectly affect your user experience on the Platform.</p>
+                        <h4 class="text-dark fw-bold">TRANSFER OF DATA OUTSIDE YOUR TERRITORY</h4>
+                        <p>We may store and process information in Israel and other countries, such as EU states. We may also process information using cloud services. The laws in such territories may provide a lesser degree of data protection than the laws of your own country. You agree to the transfer of your information to such other countries for the purpose of processing as described in this Policy, including through cloud services.</p>
+                        <h4 class="text-dark fw-bold">INFORMATION SECURITY</h4>
+                        <p>We implement measures to reduce the risks of damage, loss of information, and unauthorized access or use of information. These measures do not provide absolute information security. Therefore, it is not guaranteed and you cannot expect that the Service will be immune from information security risks.</p>
+                        <h4 class="text-dark fw-bold">CALIFORNIA RESIDENTS</h4>
+                        <p>The following disclosure is made to residents of California pursuant to California Online Privacy Act (CA Civil Code § 22575): When you use our Service, other parties such as Google may collect personally identifiable information about your activities over time and across different websites or online services. We do not respond to browsers’ “Do Not Track” requests.</p>
+                        <h4 class="text-dark fw-bold">EUROPEAN CITIZENS</h4>
+                        <p>The following disclosures are made to citizens of member states of the European Union (EU) pursuant to the European General Data Protection Regulation (GDPR):</p>
+                        <ul>
+                            <li><strong>Right to be informed:</strong> If requested, we will provide you with a privacy notice to tell you how we are using your personal data.</li>
+                            <li><strong>Right of access:</strong> You have the right to obtain access to your own personal data at any time so you are aware of and can verify the lawfulness of processing. Information will be supplied within one month of receipt of the request. This can be extended by a further two months where requests are complex or numerous. This will be provided free of charge unless you ask for multiple copies or the request is manifestly unfounded or excessive. We can also refuse your request if it adversely affects the rights and freedoms of others or is manifestly unfounded or excessive. You can make a subject access request by contacting us using the App or Website in the “My Account” main section “Manage Your Account” sub-section.</li>
+                            <li><strong>Right of rectification:</strong> You have the right to have your personal data rectified if it is inaccurate or incomplete. If we have disclosed this to third parties, we will tell you if this is appropriate and we will inform them of the rectification where possible. We must respond within one month, extendable by two months where the request for rectification is complex.</li>
+                            <li><strong>Right of erasure:</strong> You have the right to request the deletion of personal data where there is no compelling reason for its continued processing or if we are processing it in an unlawful manner – for example, if we are using it for a different purpose than originally stated.</li>
+                            <li><strong>Right to restrict data processing:</strong> Under certain circumstances, you have a right to ‘block’ or suppress processing of personal data. When processing is restricted, we are permitted to store the personal data but not further process it. We can retain just enough information about you to ensure that the restriction is respected in the future.</li>
+                            <li><strong>Right to data portability:</strong> You can obtain and reuse your personal data for your own purposes across different services. This right applies where the processing is based on your consent or for the performance of a contract; and when processing is carried out by automated means.</li>
+                            <li><strong>Right to object:</strong> You have the right to object to:
+                                <ul>
+                                    <li>Processing based on legitimate interests or the performance of a task in the public interest/exercise of official authority (including profiling);</li>
+                                    <li>Direct marketing (including profiling); and</li>
+                                    <li>Processing for purposes of scientific/historical research and statistics.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        If we process personal data for the performance of a legal task or our organization's legitimate interests, you must have an objection on “grounds relating to your particular situation”. We must stop processing the personal data unless:
+                        <ul>
+                            <li>We can demonstrate compelling legitimate grounds for the processing which override the interests, rights, and freedoms of the individual; or</li>
+                            <li>The processing is for the establishment, exercise, or defense of legal claims.</li>
+                        </ul>
+                        <p><strong>Right to withdraw consent at any time:</strong> You may contact Vitabi to request this. Although we may not be able to accept your request for certain types of data, please contact us if you wish to discuss this further.</p>
+                        <p><strong>Right to complain:</strong> You have the right to complain in any matter relating to our service, including how we use your personal data. Please contact us at vitabi.info@gmail.com. You can also contact our CEO: Nhat Lieu nhatlieu2004@gmail.com.</p>
+                        <h4 class="text-dark fw-bold">DATA RETENTION</h4>
+                        <p>We retain Personal Information for as long as it is legally required for the purposes set forth above. We may delete any information from our systems without notice to you once we deem it is no longer necessary for the purposes set forth above.</p>
+                        <p>If you withdraw your consent to us processing your Personal Information, we will erase it from our systems (unless the data is required for Vitabi to establish, exercise, or defend against legal claims).</p>
+                        <p>In particular, Personal Information provided with respect to your insurance policies will be deleted once no longer needed for us to provide you with services (for example, once the relevant policy expires) unless you have received medical services covered by the policy, in which case we will retain the Personal Information related to that policy as and to the extent required by applicable law.</p>
+                        <p>Please note that uninstalling the App from your device will not necessarily cause your Personal Information to be deleted from our systems or from the Service. Most data will be deleted once no longer needed in order to provide you with services (e.g., after your relevant insurance policy expires); however, if you used our services in order to receive any medical services, the data will be retained in accordance with legal requirements.</p>
+                        <h4 class="text-dark fw-bold">SURVEYS</h4>
+                        <p>From time to time, we may send you surveys or requests to provide feedback (such as scoring service quality) for the purpose of improving service quality. By receiving our services, you provide your express approval to receive such surveys and requests for feedback; However, answering such surveys and/or providing feedback will always be optional, not mandatory (and not a condition to receive the services), and at your sole discretion.</p>
+                        <h4 class="text-dark fw-bold">NEWSLETTERS</h4>
+                        <p>We may send newsletters, but only to registered users and all newsletters we send will contain an “unsubscribe” link.</p>
+                        <h4 class="text-dark fw-bold">CHANGES TO THIS PRIVACY POLICY</h4>
+                        <p>We may change this Policy, in which case we will seek your consent to those changes. If you do not consent to the amended Policy, we may terminate your account and block your access to and use of the Service. Your following usage of the Platform shall also be deemed as acceptance of the amended Policy.</p>
+                        <h4 class="text-dark fw-bold">LANGUAGE</h4>
+                        <p>This Policy was originally written in English and we may translate it into other languages for your convenience. In any contradiction between the versions of these Terms of Use, the provisions of the English version shall prevail.</p>
+                        <h4 class="text-dark fw-bold">CONTACT US</h4>
+                        <p>You may contact us with any questions or comments at: vitabi.info@gmail.com. Our postal address is: Vitabi Inc., 111 Banchi Nanryo Midori-ku, Nagoya, Aichi, #204 Okehazama-so Bldg.2, Japan</p>
+                        <p><strong>Effective date of the policy:</strong> August 1, 2024</p>
+                      </div>
+                      <button type="button" style="border-width: 1px !important; font-size: 12px;  margin-top: 15px" class="btn btn-dark btn-lg sort-button" data-bs-dismiss="modal">{% trans "Close" %}</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+
+        <main>
+            <form class="form" method="POST" action="{% url 'verify_account_register' %}" style="margin: 20px 0;">
+                {% csrf_token %}
+                <div class="form-header">
+                    <h2>{% trans "VERIFY ACCOUNT" %}</h2>
+                    <p>{% trans "Enter 5-digit code we have sent to your email" %}</p>
+                </div>
+                
+                <div class="code-inputs" id="code-inputs" style="margin-top: 40px;">
+                        <input type="text" style="color: #000; font-size: 20px" id="digit-1" name="digit-1" inputmode="numeric" pattern="[0-9]*" maxlength="1" required>
+                        <input type="text" style="color: #000; font-size: 20px" id="digit-2" name="digit-2" inputmode="numeric" pattern="[0-9]*" maxlength="1" required>
+                        <input type="text" style="color: #000; font-size: 20px" id="digit-3" name="digit-3" inputmode="numeric" pattern="[0-9]*" maxlength="1" required>
+                        <input type="text" style="color: #000; font-size: 20px" id="digit-4" name="digit-4" inputmode="numeric" pattern="[0-9]*" maxlength="1" required>
+                        <input type="text" style="color: #000; font-size: 20px" id="digit-5" name="digit-5" inputmode="numeric" pattern="[0-9]*" maxlength="1" required>
+                </div>
+                
+                <div class="resend-section">
+                    {% if messages %}
+                      {% for message in messages %}
+                          {% if 'invalidCode' in message.tags %}
+                          <p style="color: #dc2626">{{ message }}</p>
+                          {% endif %}
+                          {% if 'resetCode' in message.tags %}
+                          <p style="color: #fbbf24">{{ message }}</p>
+                          {% endif %}
+                      {% endfor %}
+                    {% endif %}
+                    <p>{% trans "Didn't not receive the code?" %}</p>
+                    <a href="{% url 'resend_verification_code_register' %}" style="color: #000; font-size: 20px">{% trans "Resend Code" %}</a>
+                </div>
+                
+                <input type="submit" id="submit" style="cursor: pointer;" value={%trans "Next"%}>
+                <p class="terms">{% trans "by clicking next, you agree to our" %} <a href="" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal" style="color: #000">{% trans "Privacy Policy and Terms and Conditions" %}</a></p>
+            </form>
+        </main>
+
+        <div class="footer">
+            <a href="{% url "home" %}" class="nav-link" style="width: 70px;">
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-house"
+              viewBox="0 0 16 16"
+              >
+              <path
+              d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
+              />
+              </svg>
+              <span>{% trans "Home" %}</span>
+            </a>
+            <a href="{% url "care" %}" class="nav-link" style="width: 70px;">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-calendar-event"
+                viewBox="0 0 16 16"
+              >
+                <path
+                d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"
+                />
+                <path
+                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
+                />
+              </svg>
+              <span>{% trans "Bookings" %}</span>
+            </a>
+            <a href="{% url "mydata" %}" class="nav-link" style="width: 70px;">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-card-list"
+                viewBox="0 0 16 16"
+              >
+                <path
+                d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"
+                />
+                <path
+                d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"
+                />
+              </svg>
+              <span>{% trans "My Data" %}</span>
+            </a>
+        </div>
+    </section>
+  </body>
+  {% if user.is_authenticated and user.patient.is_patient %}
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBX832CK"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->	
+	{% endif %}
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const inputs = document.querySelectorAll('#code-inputs input');
+        inputs.forEach((input, idx) => {
+            input.addEventListener('keyup', function(e) {
+                if (e.target.value.length === 1 && idx < inputs.length - 1) {
+                    inputs[idx + 1].focus();
+                }
+            });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.stop-arrow').forEach(function(link) {
+          link.addEventListener('click', function (e) {
+            e.preventDefault(); 
+            var confirmation = confirm('Are you sure you want to cancel?');
+    
+            if (confirmation) {
+              var href = this.getAttribute('href'); 
+              window.location.href = href; 
+            }
+          });
+        });
+      });
+  </script>
+

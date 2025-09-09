@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+.env
+env/
+ENV/
+.venv/
+
+.DS_Store
+
+.idea/
+.vscode/
+*.swp
+
+Icon?

@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Error Page</title>
+  </head>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      font-family: serif;
+      background: #94a3b8;
+    }
+    .modal-result {
+      width: 342px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 3px solid #eaeaea;
+      margin-bottom: 10px;
+    }
+    .stop-arrow {
+      font-size: 24px;
+      color: #007bff;
+      cursor: pointer;
+      color: red;
+    }
+    .error-modal {
+      padding: 20px;
+      text-align: center;
+    }
+    .error-message {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .home-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .home-button:hover {
+      background-color: #0056b3;
+    }
+
+    path {
+      transition: color 0.3s ease;
+    }
+
+    path:hover {
+      color: #ccc;
+    }
+
+    .stop-arrow {
+      font-size: 24px;
+      color: #007bff;
+      cursor: pointer;
+      color: red;
+    }
+  </style>
+  <body>
+    <div class="modal-result">
+      <div class="modal-header">
+        <br />
+        <a href="{% url 'home' %}" class="stop-arrow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="currentColor"
+            class="bi bi-x-circle-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"
+            />
+          </svg>
+        </a>
+      </div>
+      <div class="error-modal">
+        <div class="error-message">We're sorry, an error has occurred.</div>
+        <button
+          onclick="window.location.href='{% url 'home' %}';"
+          class="home-button"
+        >
+          Go to Home
+        </button>
+      </div>
+    </div>
+  </body>
+  {% if user.is_authenticated and user.patient.is_patient %}
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBX832CK"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->	
+	{% endif %}	
+</html>

@@ -1,0 +1,253 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <link rel="icon" href="{% static "home/favicon.png" %}" type="image/x-icon">
+    <title>Book3</title>
+    <link rel="stylesheet" href="{% static "home/book3.css" %}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NBX832CK');</script>
+	<!-- End Google Tag Manager -->
+
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "nqixhxf3g6");
+    </script>
+</head>
+<style>
+    .form-check-input:checked {
+        background-color: #cbd5e1;
+        border-color: #cbd5e1;
+    }
+</style>
+  <body>
+    <section>
+        <header>
+            <a href="{% url "book1" hospital.id %}"><img src="{% static "home/arrow-left.svg" %}" alt="Back-arrow" style="width: 22px; height: 22px;"></a>
+            <div class="top">
+                <h1 class="fs-5">{% trans "Appointment Information" %} (2/3)</h1>      
+            </div>
+            <a class="stop-arrow" href="{% url "hospitalInfo" hospital_id %}"><button type="button" class="btn-close" aria-label="Close"></button></a>
+        </header>
+
+
+        <main>
+            <label id="title">{% trans "Hospital" %}</label>
+
+            <div class="hosptitalinfo" style="margin-bottom: 30px;">
+
+                <div class="hospital-card">
+                    {% if hospital.images.all %}
+                        <img style="height: 250px" src="{{ hospital.images.all.0.photo.url }}" alt="Image for {{ hospital.name }}" onclick="enlargeImage(this)"/>
+                    {% else %}
+                        <p>{% trans "No images available" %}</p>
+                    {% endif %}                 
+                </div>
+                <div class="hospital-description">
+                    <h1 style="text-align: left; font-size: large !important;">{{ hospital.name }}</h1>
+                    <ul style="list-style-type: none; padding-left: 0; text-align: left;" class="float-start mt-2 mb-1">
+                        {% for hours in formatted_working_hours %}
+                            <li style="padding: 5px 0; font-size: 10px;">
+                                <span style="font-weight: bold;" class="float-start">{{ hours.day }}</span>: {{ hours.time }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <form class="form" method="POST" action="">
+                {% csrf_token %}
+                <div class="preferredtime">
+                    <label for="firstdate"><span style="color: red;">*</span> {% trans "1st Preferred Time" %}  <span style="color: red; font-style: italic;">{% trans "Required" %}</span></label>
+                    {% if error_message8 %}
+                        <p class="text-danger mt-1" style="font-size: 11px; text-align: start;">- {{ error_message8 }}</p>
+                    {% endif %}
+                    <div class="first" style="margin-bottom: 20px;">
+                        <div class="firstpreferreddate">
+                            <input type="date" name="firstdate" id="firstdate" value="{{firstdate}}" class="form-control" required>
+                        </div>
+                        {% if error_message1 %}
+                            <p class="text-danger" style="font-size: 11px; text-align: start;">- {{ error_message1 }}</p>
+                        {% endif %}
+                        {% if error_message4 %}
+                            <p class="text-danger" style="font-size: 11px; text-align: start;">- {{ error_message4 }}</p>
+                        {% endif %}
+                        {% if error_message5 %}
+                            <p class="text-danger" style="font-size: 11px; text-align: start;">- {{ error_message5 }}</p>
+                        {% endif %}
+                        <div class="firstpreferredtime">
+                            <input type="time" name="firstdatefrom" id="firstdatefrom" value="{{ firstdatefrom }}" class="form-control" required>
+                            <p>~</p>
+                            <input type="time" name="firstdateto" id="firstdateto" value="{{ firstdateto }}" class="form-control" required>
+                        </div>
+                    </div>
+                    
+
+                    <div class="form-check d-flex align-items-center justify-content-around">
+                        <input type="checkbox" class="form-check-input" id="toggleSecondDate" name="toggleSecondDate" style="width: 20px; height: 20px;">
+                        <label class="form-check-label ms-3" for="toggleSecondDate">{% trans "Also Add 2nd Preferred Time" %}</label>
+                    </div>
+                    
+                    <div id="secondDatePopup" style="display: none;">
+                        {% if error_message9 %}
+                            <p class="text-danger mt-1" style="font-size: 11px; text-align: start;">- {{ error_message9 }}</p>
+                        {% endif %}
+                        <div class="second" style="margin-bottom: 10px; border-radius: 5px; padding: 10px;">
+                            <div class="secondpreferreddate">
+                                <input type="date" name="seconddate" value="{{seconddate}}" id="seconddate" class="form-control">
+                            </div>
+                            {% if error_message2 %}
+                                <p class="text-danger" style="font-size: 11px; text-align: start;">- {{ error_message2 }}</p>
+                            {% endif %}
+                            {% if error_message6 %}
+                                <p class="text-danger" style="font-size: 11px; text-align: start;">- {{ error_message6 }}</p>
+                            {% endif %}
+                            {% if error_message7 %}
+                                <p class="text-danger" style="font-size: 11px; text-align: start;">- {{ error_message7 }}</p>
+                            {% endif %}
+                            <div class="secondpreferredtime">
+                                <input type="time" name="seconddatefrom" value="{{seconddatefrom}}" id="seconddatefrom" class="form-control">
+                                <p>~</p>
+                                <input type="time" name="seconddateto" value="{{seconddateto}}" id="seconddateto" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        document.getElementById("toggleSecondDate").addEventListener("change", function() {
+                            var popup = document.getElementById("secondDatePopup");
+                            var seconddate = document.getElementById("seconddate");
+                            var seconddatefrom = document.getElementById("seconddatefrom");
+                            var seconddateto = document.getElementById("seconddateto");
+                            if (this.checked) {
+                                popup.style.display = "block";
+                            } else {
+                                popup.style.display = "none";
+                                seconddate.value = "";
+                                seconddatefrom.value = "";
+                                seconddateto.value = "";
+                            }
+                        });
+
+                        window.onload = function() {
+                            var errorMessages = ["{{ error_message9 }}", "{{ error_message2 }}", "{{ error_message6 }}", "{{ error_message7 }}"];
+                            var popup = document.getElementById("secondDatePopup");
+                            if (errorMessages.some(function(msg) { return msg.trim() !== ""; })) {
+                                popup.style.display = "block";
+                                document.getElementById("toggleSecondDate").checked = true;
+                            }
+                        };
+                    </script>
+                    {% comment %} <label for="seconddate">{% trans "2nd Preferred Date/Time" %}</label>
+                    {% if error_message9 %}
+                        <p class="text-danger mt-1" style="font-size: 11px; text-align: start;">- {{ error_message9 }}</p>
+                    {% endif %}
+                    <div class="second" style="margin-bottom: 10px;">
+                        <div class="secondpreferreddate">
+                            <input type="date" name="seconddate" value="{{seconddate}}" id="seconddate" class="form-control">
+                        </div>
+                        {% if error_message2 %}
+                            <p class="text-danger" style="font-size: 11px; text-align: start;">- {{ error_message2 }}</p>
+                        {% endif %}
+                        {% if error_message6 %}
+                            <p class="text-danger" style="font-size: 11px; text-align: start;">- {{ error_message6 }}</p>
+                        {% endif %}
+                        {% if error_message7 %}
+                            <p class="text-danger" style="font-size: 11px; text-align: start;">- {{ error_message7 }}</p>
+                        {% endif %}
+                        <div class="secondpreferredtime">
+                            <input type="time" name="seconddatefrom" value="{{seconddatefrom}}" id="seconddatefrom" class="form-control">
+                            <p>~</p>
+                            <input type="time" name="seconddateto" value="{{seconddateto}}" id="seconddateto" class="form-control">
+                        </div>
+                    </div> {% endcomment %}
+                </div>
+            
+                <label class="detail" style="margin-bottom: 0px;"><span style="color: red;">*</span> {% trans "What is your symptom?" %}</label>
+                <label class="detail" style="margin-bottom: 10px; margin-top: 0px; font-size: smaller;">{% trans "Please provide as much information as possible to facilitate your appointment processing." %}</label>
+                <textarea class="moreinfo" name="symptom" style="min-height: 120px;" placeholder="{% trans "Example: After eating Pad Thai at a street stall in Bangkok yesterday, I started having constant stomach aches and diarrhea." %}" required>{{ symptom }}</textarea>
+
+                <label class="detail" style="margin-bottom: 0px;"><span style="color: red;">*</span> {% trans "How long does it last?" %}</label>
+                <textarea class="moreinfo" style="margin-bottom: 50px;" name="duration" placeholder="{% trans "Example: 5 days, 3 hours, or just a few hours ago." %}" required>{{ duration }}</textarea>
+            
+        </main>
+
+        <div class="footer">
+            <button type="submit" id="book3" style="width: 100%;">{% trans "Next" %}</button>
+        </div>
+        </form>
+    </section>
+  </body>
+  {% if user.is_authenticated and user.patient.is_patient %}
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBX832CK"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->	
+	{% endif %}
+</html>
+<script>
+    
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var firstdateInput = document.getElementById("firstdate");
+        if (!firstdateInput.value) {
+            var today = new Date();
+            var yyyy = today.getFullYear();
+            var mm = ("0" + (today.getMonth() + 1)).slice(-2);
+            var dd = ("0" + today.getDate()).slice(-2);
+            firstdateInput.value = yyyy + '-' + mm + '-' + dd;
+        }
+
+        var firstdatefromInput = document.getElementById("firstdatefrom");
+        var firstdatetoInput = document.getElementById("firstdateto");
+        var now = new Date(); 
+        now.setMinutes(now.getMinutes() + 5);
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        var timeFromString = (hour < 10 ? "0" + hour : hour) + ':' + (minute < 10 ? "0" + minute : minute);
+        now.setMinutes(now.getMinutes() + 295); 
+        var timeToString = ((hour + 1) < 10 ? "0" + (hour + 2) : (hour + 2)) + ':' + (minute < 10 ? "0" + minute : minute);
+        
+        if (!firstdatefromInput.value) {
+            firstdatefromInput.value = timeFromString;
+        }
+        if (!firstdatetoInput.value) {
+            firstdatetoInput.value = timeToString;
+        }
+
+        document.querySelectorAll('.stop-arrow').forEach(function(link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); 
+                var confirmation = confirm('Are you sure you want to cancel?');
+    
+                if (confirmation) {
+                    var href = this.getAttribute('href'); 
+                    window.location.href = href; 
+                }
+            });
+        });
+
+        document.getElementById("firstdatefrom").addEventListener("change", function() {
+            var firstdatefrom = this.value;
+            document.getElementById("firstdateto").min = firstdatefrom;
+        });
+
+        document.getElementById("seconddatefrom").addEventListener("change", function () {
+            var seconddatefrom = this.value;
+            document.getElementById("seconddateto").min = seconddatefrom;
+        });
+    });    
+</script>

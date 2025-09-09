@@ -1,0 +1,367 @@
+{% load custom_filters %}
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		<link rel="icon" href="{% static "home/favicon.png" %}" type="image/x-icon">
+		<title>Bookings</title>
+		<link rel="stylesheet" href="{% static "home/care.css" %}">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-NBX832CK');</script>
+		<!-- End Google Tag Manager -->
+
+		<script type="text/javascript">
+			(function(c,l,a,r,i,t,y){
+				c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+				t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+				y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+			})(window, document, "clarity", "script", "nqixhxf3g6");
+		</script>
+	</head>
+	<style>
+			{% if hospital_booking or selected_status %}
+			main {
+				padding-right: 10%;
+				padding-left: 10%;
+				padding-top: 10%;
+				padding-bottom: 10%;
+				height: calc(100vh - 120px);
+				overflow-y: auto;
+				overflow-x: hidden;
+				scrollbar-width: none;
+			}
+			{% else %}
+			main {
+				padding-right: 10%;
+				padding-left: 10%;
+				padding-top: 10%;
+				padding-bottom: 10%;
+				height: calc(100vh - 120px);
+				overflow-y: auto;
+				overflow-x: hidden;
+				scrollbar-width: none;
+			}
+			{% endif %}
+		
+		  .insurance-item {
+			height: 630px;
+			background-color: #fff;
+			border-radius: 8px;
+			{% comment %} box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); {% endcomment %}
+			margin-bottom: 20px;
+			padding: 20px;
+			border: 2px solid #3b82f6;
+		  }
+
+		  header {
+			padding-right: 20px;
+			padding-left: 20px;
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+			height: 60px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: row;
+			position: fixed;
+			top: 0;
+			right: auto;
+			left: auto;
+			width: 100%;
+			max-width: 400px;
+			background-color: #ffffff;
+			border: 1px solid #ccc;
+			z-index: 1050; 
+		  }
+		
+		  .insurance-info h2 {
+			margin-top: 0;
+			color: #007BFF;
+		  }
+		
+		  .insurance-info p {
+			margin: 5px 0;
+			color: #555;
+		  }
+		
+		  .date {
+			color: #333;
+		  }
+		
+		  .company {
+			font-style: italic;
+		  }
+		
+		  .policy {
+			font-weight: bold;
+			color: #333;
+		  }
+	  
+		  .carousel-inner{
+			  height: 630px;
+		  }
+	  
+		.no-info {
+			  color: #999;
+			  font-size: 18px;
+			  text-align: center;
+		  }
+	  
+		  .hospital-info {
+			max-height: 290px;
+		  overflow-y: auto;
+		  scrollbar-width: none;
+		  flex-wrap: wrap;
+			padding: 0;
+		  }
+	  
+		  .hospital-info::-webkit-scrollbar {
+			  display: none;
+		  }
+
+		  .img {
+			width: 65px;
+			height: 40px;
+			margin-bottom: 4px;
+		  }
+	  
+		  
+		</style>
+	<body>
+		<section>
+			<header>
+                {% comment %} <h1>Vitabi</h1> {% endcomment %}
+				<img src="{% static "home/logoVitabi.png" %}" class="img">
+				<div class="main-top-right" style="display: flex; justify-content: space-between; align-items: center; flex-direction: row; width: 140px;">
+					{% if request.user.is_authenticated %}
+							<img class="main-top-right" style="cursor: pointer; width: 35px; height: 35px;" onclick="window.location.href = '{% url "account" %}'" src="{%static 'home/Icon.svg'%}" alt="Icon">
+						{% else %}
+							<img class="main-top-right" style="cursor: pointer; width: 35px; height: 35px;" onclick="window.location.href = '{% url "login" %}'" src="{%static 'home/Icon.svg'%}" alt="Icon">
+					{% endif %}
+
+					<div class="dropdown">
+						<form id="language-form" action="{% url 'change_language' %}" method="post">
+							{% csrf_token %}
+							<input type="hidden" id="next" name="next" value="{{ request.path }}">
+							<a class="btn btn-secondary dropdown-toggle d-flex justify-content-center align-items-center" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								{% if current_language == 'en' %}
+									<img src="{{ MEDIA_URL }}language_photos/englishflag.jpg" alt="{{ current_language }}" class="language-flag" style="width: 20px; height: 20px; margin-right: 5px;"><strong>EN</strong>
+								{% elif current_language == 'jp' %}
+									<img src="{{ MEDIA_URL }}language_photos/japanflag.jpg" alt="{{ current_language }}" class="language-flag" style="width: 20px; height: 20px; margin-right: 5px;"><strong>JP</strong>
+								{% elif current_language == 'vn' %}
+									<img src="{{ MEDIA_URL }}language_photos/Vietnamese_Flag.jpeg" alt="{{ current_language }}" class="language-flag" style="width: 20px; height: 20px; margin-right: 5px;"><strong>VN</strong>
+								{% endif %}
+							</a>                    
+							<ul class="dropdown-menu">
+								<li><button type="submit" name="language" value="en" class="dropdown-item language-option"><img src="{{ MEDIA_URL }}language_photos/englishflag.jpg" class="language-flag" style="width: 20px; height: 20px;"> English</button></li>
+								<li><button type="submit" name="language" value="jp" class="dropdown-item language-option"><img src="{{ MEDIA_URL }}language_photos/japanflag.jpg" class="language-flag" style="width: 20px; height: 20px;"> 日本語</button></li>
+								<li><button type="submit" name="language" value="vn" class="dropdown-item language-option"><img src="{{ MEDIA_URL }}language_photos/Vietnamese_Flag.jpeg" class="language-flag" style="width: 20px; height: 20px;"> Tiếng Việt</button></li>
+							</ul>
+						</form>
+					</div>   
+				</div>
+            </header>
+
+			<main>
+				{% if grouped_bookings or selected_status %}
+				<h1 id="title">{% trans "Bookings" %}</h1>
+				
+				<div class="booking-list">
+					{% for country_code, date_bookings in grouped_bookings.items %}
+						<h1 style="margin-bottom: 4px !important; font-size: 20px !important; font-weight: bold !important;">{{ country_code|country_name }}</h1>
+						{% for booking_date, bookings in date_bookings.items %}
+							<h2 style="margin-bottom: 5px; font-size: 15px !important; font-weight: bold !important;">{{ booking_date|date:"Y/m/d" }}</h2>
+							{% for hospitalBooking in bookings %}
+								<div class="card mb-3 d-flex flex-row" onclick="window.location.href='{% url 'bookedHospitalDetail' hospitalBooking.id %}'" style="cursor: pointer;">
+									<img src="{{ hospitalBooking.hospital.images.first.photo.url }}" class="card-img-left" alt="{{ hospitalBooking.hospital.name }}" style="width: 25%; height: auto; aspect-ratio: 1 / 1; object-fit: cover;">
+									<div class="card-body" style="width: 60%; font-size: smaller; padding: 8px !important;">
+										<strong><p class="card-title" style="margin-bottom: 5px;">{{ hospitalBooking.hospital.name }}</p></strong>
+										<hr style="margin-top: 0px; margin-bottom: 2px;">
+										<p class="card-text">
+											<strong>{% trans "Name" %}:</strong> {{ hospitalBooking.firstname }} {{ hospitalBooking.surname }}<br>
+											<strong>{% if hospitalBooking.status == "approved" %}{% trans "Reserved Time" %}:{% else %}{% trans "Preferred Time" %}:{% endif %}</strong>
+											<br>
+											{% if hospitalBooking.status == "approved" %}
+												{{ hospitalBooking.first_date_reserved|date:"Y/m/d" }} {{ hospitalBooking.first_date_from_reserved|time:"H:i" }}~{{ hospitalBooking.first_date_to_reserved|time:"H:i" }}<br>
+											{% else %}
+												{{ hospitalBooking.first_date|date:"Y/m/d" }} {{ hospitalBooking.first_date_from|time:"H:i" }}~{{ hospitalBooking.first_date_to|time:"H:i" }}<br>
+											{% endif %}
+											<strong>{% trans "Status" %}:</strong>
+											{% if hospitalBooking.status == "waiting" %}
+												<span class="badge text-bg-secondary">{% trans "Waiting" %}</span><br>
+											{% elif hospitalBooking.status == "approved" %}
+												<span class="badge text-bg-success">{% trans "Approved" %}</span><br>
+											{% elif hospitalBooking.status == "rejected" %}
+												<span class="badge text-bg-danger">{% trans "Rejected" %}</span><br>
+											{% elif hospitalBooking.status == "canceled" %}
+												<span class="badge text-bg-danger">{% trans "Canceled" %}</span><br>
+											{% endif %}
+										</p>
+									</div>
+								</div>
+							{% endfor %}
+						{% endfor %}
+					{% endfor %}
+				</div>									
+				{% else %}
+				<h1 id="title">{% trans "Bookings" %}</h1>
+				<div class="main-top">
+					<img src="{% static "home/calendar.svg" %}" alt="Calendar" width="25%">
+				</div>
+				<div class="main-bottom">
+					<h1 style="margin-bottom: 10px !important; font-size: 20px !important; font-weight: bold !important;">{% trans "Manage Your Hospital Visits" %}</h1>
+					<p style="text-align: center;">{% trans "Book a hospital appointment for yourself or a family member. We'll quickly connect you directly with the appropriate medical specialist." %}</p>
+					<p style="text-align: center;">{% trans "By integrating your insurance details during booking, we automatically handle claims with your insurance company, ensuring you don't have to pay any medical expenses out of pocket." %}</p>
+			
+					<div class="d-grid gap-3" style="margin-top: 20px;">
+						<button type="button" style="border-width: 2px; width: 250px;" class="btn btn-dark btn-lg fw-bold" onclick="window.location.href = '{% url "findHospital" %}'">{% trans "Book an appointment" %}</button>
+					</div>
+				</div>
+				{% endif %}
+			</main>			
+			
+
+			<div class="footer">
+				<a href="{% url "home" %}" class="nav-link" style="width: 70px;">
+					<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="16"
+					height="16"
+					fill="currentColor"
+					class="bi bi-house"
+					viewBox="0 0 16 16"
+					>
+					<path
+					d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
+					/>
+					</svg>
+					<span>{% trans "Home" %}</span>
+				</a>
+				<a href="{% url "care" %}" class="nav-link" style="width: 70px;">
+					<svg
+					  xmlns="http://www.w3.org/2000/svg"
+					  width="16"
+					  height="16"
+					  fill="currentColor"
+					  class="bi bi-calendar-event"
+					  viewBox="0 0 16 16"
+					>
+					  <path
+						d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"
+					  />
+					  <path
+						d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
+					  />
+					</svg>
+					<span>{% trans "Bookings" %}</span>
+				</a>
+				<a href="{% url "mydata" %}" class="nav-link" style="width: 70px;">
+					<svg
+					  xmlns="http://www.w3.org/2000/svg"
+					  width="16"
+					  height="16"
+					  fill="currentColor"
+					  class="bi bi-card-list"
+					  viewBox="0 0 16 16"
+					>
+					  <path
+						d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"
+					  />
+					  <path
+						d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"
+					  />
+					</svg>
+					<span>{% trans "My Data" %}</span>
+				</a>
+			</div>
+		</section>
+	</body>
+	{% if user.is_authenticated and user.patient.is_patient %}
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBX832CK"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->	
+	{% endif %}	
+</html>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const languageButtons = document.querySelectorAll('.language-option');
+    const nextField = document.getElementById('next');
+    
+    languageButtons.forEach(function(button) {
+      button.addEventListener('click', function (e) {
+        const currentLangPrefix = window.location.pathname.split('/')[1];
+        const chosenLanguage = this.value;
+        
+        let newLangPrefix = chosenLanguage;
+        
+        const newPath = window.location.pathname.replace('/' + currentLangPrefix, '/' + newLangPrefix);
+        nextField.value = window.location.origin + newPath + window.location.search;
+        
+        e.preventDefault();
+        document.getElementById('language-form').submit();
+      });
+    });
+  });  
+
+  function filterStatus() {
+    var status = document.getElementById('statusFilter').value;
+    window.location.href = "{% url 'care' %}?status=" + status;
+  }
+
+  function showMoreInfo() {
+    var moreInfo = document.getElementById("moreInfo");
+    var showMoreLink = document.getElementById("showMoreLink");
+    var showLessLink = document.getElementById("showLessLink");
+
+    if (moreInfo && showMoreLink && showLessLink) {
+        moreInfo.style.display = "inline";
+        showMoreLink.style.display = "none";
+        showLessLink.style.display = "inline";
+    }
+  }
+
+  function showLessInfo() {
+      var moreInfo = document.getElementById("moreInfo");
+      var showMoreLink = document.getElementById("showMoreLink");
+      var showLessLink = document.getElementById("showLessLink");
+
+      if (moreInfo && showMoreLink && showLessLink) {
+          moreInfo.style.display = "none";
+          showMoreLink.style.display = "inline";
+          showLessLink.style.display = "none";
+      }
+  }  
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const hospitalListItems = document.querySelectorAll(".hospital-item");
+    hospitalListItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+        window.location.href = this.getAttribute("data-url");
+      });
+    });
+  });
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const hospitalItems = document.querySelectorAll(".hospital-item");
+
+    hospitalItems.forEach(function (item) {
+      item.addEventListener("mouseover", function () {
+        this.style.transform = "scale(0.95)";
+      });
+
+      item.addEventListener("mouseout", function () {
+        this.style.transform = "scale(1)";
+      });
+    });
+  });
+</script>

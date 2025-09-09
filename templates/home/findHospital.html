@@ -1,0 +1,854 @@
+{% load static %}
+{% load i18n %}
+{% load custom_filters %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{% static "home/favicon.png" %}" type="image/x-icon">
+    <title>Find Hospital</title>
+    <link rel="stylesheet" href="{% static "home/findHospital.css" %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-NBX832CK');</script>
+		<!-- End Google Tag Manager -->
+
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "nqixhxf3g6");
+  </script>
+  </head>
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      scrollbar-width: none;
+    }
+    
+    .container {
+      min-height: 680px;
+      width: 342px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+    }
+    
+    .navigation-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .sort-button,
+    .filter-button {
+      background-color: #fff;
+      color: #000;
+      border: 2px solid #000;
+      border-radius: 5px;
+      padding: 5px 20px;
+      margin-bottom: 5px;
+      font-size: 16px;
+      cursor: pointer;
+
+      transition: color 0.3s ease;
+      transition: background-color 0.3s ease;
+      flex: 1;
+    }
+    
+    .sort-button:hover,
+    .filter-button:hover {
+      color: #262626;
+      background-color: #d6d3d1;
+    }
+    
+    .location-text {
+      border: 1px solid #000;
+      border-radius: 10px;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 19px;
+      width: 87%;
+      cursor: pointer;
+    }
+    
+    .location-text:hover .arrow {
+      animation: arrowBounce 0.5s ease-in-out infinite;
+    }
+    
+    .arrow {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+    
+    .hospital-item {
+      margin-top: 10px;
+      display: flex;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      margin-bottom: 10px;
+      position: relative;
+      cursor: pointer;
+      height: 210px;
+    }
+
+    .hospital-item:last-child {
+			margin-bottom: 160px;
+		}
+    
+    .hospital-photo {
+      width: 110px;
+      height: auto;
+      object-fit: cover;
+    }
+    
+    .hospital-info {
+      padding: 10px;
+      flex-grow: 1;
+    }
+    
+    .hospital-info h2 {
+      margin: 10px 0;
+      {% comment %} white-space: nowrap; {% endcomment %}
+      overflow: hidden;
+      text-overflow: ellipsis; 
+      font-size: 18px;
+      font-weight: 600;
+      max-width: 195px;
+    }
+    
+    .hospital-rating {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #0056b3;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-weight: bold;
+    }
+    
+    .hospital-japanese {
+      max-width: 110px;
+      width: 100%;
+      font-size: 12px;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      background-color: rgba(0, 0, 5, 0.5);
+      color: #fff;
+      padding: 5px 10px;
+      font-weight: bold;
+    }
+
+    .hospita-direct {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      color: #fff;
+      padding: 5px 10px;
+      font-weight: bold;
+    }
+    
+    .hospital-name {
+      font-size: 18px;
+      color: #333;
+      margin: 5px 0;
+    }
+    
+    .hospital-item p {
+      font-size: 10px;
+      color: #27272a;
+      margin: 3px 0;
+    }
+    
+    .hospital-info h3 {
+      margin-right: 10px;
+      margin-top: 10px;
+      display: inline-block;
+      border-radius: 3px;
+      font-weight: bold;
+      color: #0056b3;
+      font-size: 12px;
+    }
+    
+    /* Footer CSS */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: auto;
+      right: auto;
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      justify-content: space-around;
+      height: 60px;
+      flex-direction: row;
+      align-items: center;
+      /* box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.2); */ /* 上の影を削除 */
+
+      color: #555;
+      padding-right: 20px;
+      padding-left: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+    }
+    
+    .footer a {
+      color: #555;
+    }
+    
+    .nav-link {
+      text-decoration: none;
+      color: #000;
+      text-align: center;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    
+    .nav-link img {
+      display: block;
+      margin: 0 auto;
+      width: 30px;
+      height: auto;
+    }
+    
+    .nav-link span {
+      display: block;
+      font-size: 14px;
+    }
+    
+    .heart {
+      font-size: 40px;
+      color: black;
+      cursor: pointer;
+    }
+    
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .hospital-list-container {
+      justify-content: center;
+      display: flex;  
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+      scrollbar-width: none;
+      flex-wrap: wrap;
+    }
+    
+    .hospital-list-container::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .favorite-button {
+      color: #27272a;
+      margin-right: 7px;
+      cursor: pointer;
+      background-color: #a1a1aa;
+      border-radius: 20px;
+      padding: 5px 7px 2px 7px;
+    }
+    
+    .favorite-button:hover {
+      background-color: #d4d4d8;
+      color: #ef4444;
+    }
+    
+    .delete-favorite-button {
+      color: #ef4444;
+      margin-right: 7px;
+      cursor: pointer;
+      background-color: #d4d4d8;
+      border-radius: 20px;
+      padding: 5px 7px 2px 7px;
+    }
+    
+    .delete-favorite-button:hover {
+      background-color: #a1a1aa;
+      color: #27272a;
+    }
+    
+    .modal {
+      position: absolute;
+      {% comment %} margin-left: -17px; {% endcomment %}
+      {% comment %} top: 0; {% endcomment %}
+      z-index: 1001;
+      width: 390px;
+      {% comment %} display: flex;
+      align-items: center;
+      justify-content: center; {% endcomment %}
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .modal-content {
+      background-color: #fefefe;
+      border: 1px solid #888;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .alert {
+      margin: 0;
+      padding: 5px;
+      color: #155724;
+      background-color: #d4edda;
+      border-color: #c3e6cb;
+      text-align: center;
+    }
+    
+    .alert h5 {
+      margin: 10px 0;
+    }
+    
+    .alert button {
+    }
+    
+    section {
+      height: fit-content;
+      width: 400px;
+      border: 1px solid #ccc;
+    }
+    
+    header {
+      padding-right: 20px;
+      padding-left: 20px;
+      /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); */ /* 下の影を削除 */
+
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      position: fixed;
+      top: 0;
+      right: auto;
+      left: auto;
+      width: 100%;
+      max-width: 400px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+    }
+    
+    #title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 15px !important;
+    }
+    
+    h1 {
+      margin: 0px !important;
+      font-size: 26px !important;
+    }
+    
+    h2 {
+      margin-bottom: 10px !important;
+      font-size: 14.5px !important;
+    }
+    
+    main {
+      padding-right: 7%;
+      padding-left: 7%;
+      padding-top: 8%;
+      padding-bottom: 20%;
+      overflow-x: none;
+      height: calc(100vh - 100px); 
+    }    
+
+    .no-info {
+      margin-top: 10px;
+      color: #999;
+      font-size: 18px;
+      text-align: center;
+    }
+  </style>
+  <body data-distance-text="{% trans 'Distance' %}" data-duration-text="{% trans 'Duration' %}">
+    <section>
+     
+        <header>
+          <nav class="navbar-light" style="width: 100%; border-bottom: 0px; ">
+            <form action="">
+              <div class="input-group">
+                  <input type="search" class="form-control" placeholder="{% trans "Hospital Name, City, or Country" %}" aria-label="Search" aria-describedby="search-addon" name="q" value="{{ request.GET.q }}">
+                  <button type="submit" class="btn btn-outline-success" data-mdb-ripple-init>{% trans "Search" %}</button>
+              </div>
+            </form>
+          </nav>
+        </header>
+        <main style="padding-top: 5% !important;">
+          <div class="buttons-container d-flex align-items-center" style="justify-content: space-between;">
+            <div style="margin-left: 5px;">
+              {% if hospitals %}
+                <p style="margin: 0px;">{{ hospitals|length }} {% trans "Hospitals" %}</p>
+              {% endif %}
+            </div>
+            <div style="display: flex;">
+              <div class="dropdown">
+                <button id="sort-button" class="sort-button" style="width: auto;" type="button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {% trans "Sort" %}
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button onclick="sortHospitalsByName()" class="dropdown-item language-option">{% trans "Sort by Name" %}</button></li>
+                  <li><button onclick="sortHospitalsByRating()" class="dropdown-item language-option">{% trans "Sort by Rating" %}</button></li>
+                  <li><button onclick="sortHospitalsByDistance()" class="dropdown-item language-option">{% trans "Sort by Distance" %}</button></li>
+                </ul>
+              </div>
+              <div>
+                <button id="filter-button" class="filter-button" style="width: auto;" type="button" onclick="window.location.href = '{% url 'filter' %}'">
+                  {% trans "Filter" %} <i class="fas fa-filter fa-sm"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="hospital-list-container" id="hospital-list">
+              {% if hospitals %}
+              {% for hospital in hospitals %}
+              <div class="hospital-item {% if hospital.id in favourite_hospitals_ids %}favourite{% endif %}" data-url="{% url 'hospitalInfo' hospital.id %}" data-latitude="{{ hospital.latitude }}" data-longitude="{{ hospital.longitude }}" id="hospital-{{ hospital.id }}" {% if hospital.id in favourite_hospitals_ids %}data-favourite="true"{% endif %}>
+                {% with hospital.images.first as image %}
+                  {% if image %}
+                      <img class="hospital-photo" src="{{ image.photo.url }}" alt="Image for {{ hospital.name }}" />
+                  {% else %}
+                    <img class="hospital-photo" alt="{{hospital.name}}" />
+                  {% endif %}
+                {% endwith %}
+                <div class="hospital-info">
+                  <div class="hospital-rating">{{ hospital.rating }}</div>
+                  {% if current_language == "jp" %}
+                    {% for language in hospital.supported_languages.all %}
+                        {% if language.name == "Japanese" %}
+                            <div class="hospital-japanese">{% trans "JAPANESE AVAILABLE" %}</div>
+                        {% endif %}
+                    {% endfor %}
+                  {% elif current_language == "en" %}
+                    {% for language in hospital.supported_languages.all %}
+                        {% if language.name == "English" %}
+                            <div class="hospital-english">{% trans "ENGLISH AVAILABLE" %}</div>
+                        {% endif %}
+                    {% endfor %}
+                  {% endif %}
+                  <h2>{{ hospital.name }}</h2>
+                  <p style="font-weight: 700; font-size: 12px;">{{ hospital.country.name }} | 
+                  {% if open_status|get_value:hospital.id %} 
+                    <span class="text-success">{% trans "Open" %}</span>
+                  {% else %}
+                    <span class="text-danger">{% trans "Closed" %}</span>
+                  {% endif %}
+                  </p>
+                  <p class="distance">{% trans "Calculating..." %}</p>
+                  <p>{% trans "Open" %}: 
+                    <select style="padding: 3px; border-radius: 6px; max-width: 150px;" id="working_hours_{{ hospital.id }}">
+                        {% for hours in hospital_working_hours|get_item:hospital.id %}
+                            <option>{{ hours.day }}: {{ hours.time }}</option>
+                        {% endfor %}
+                    </select>
+                  </p>
+                  <div class="hospita-direct">
+                    {% if hospital.direct_billing == True %}
+                      <h3>{% trans "Direct Billing Available" %}</h3>
+                    {% endif %}
+                    {% if hospital.id in favourite_hospitals_ids %}
+                      <a class="delete-favorite-button" style="float: right;" href="{% url 'remove_from_favourites' hospital.id %}?page=findHospital">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                          </svg>
+                      </a>
+                    {% else %}
+                        <a class="favorite-button" style="float: right;" href="{% url 'add_to_favourites' hospital.id %}?page=findHospital">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                <path d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                            </svg>
+                        </a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+              {% else %}
+                <br>
+                <p class="no-info">{% trans "No hospital information found" %}</p>
+              {% endif %}
+            </div>
+          </div>
+        </main>    
+        <div class="footer">
+          <a href="{% url "home" %}" class="nav-link" style="width: 70px; padding: 0px;">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-house"
+            viewBox="0 0 16 16"
+            >
+            <path
+            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
+            />
+            </svg>
+            <span>{% trans "Home" %}</span>
+          </a>
+          <a href="{% url "care" %}" class="nav-link" style="width: 70px; padding: 0px;">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-calendar-event"
+              viewBox="0 0 16 16"
+            >
+              <path
+              d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"
+              />
+              <path
+              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
+              />
+            </svg>
+            <span>{% trans "Bookings" %}</span>
+          </a>
+          <a href="{% url "mydata" %}" class="nav-link" style="width: 70px; padding: 0px;">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-card-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+              d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"
+              />
+              <path
+              d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"
+              />
+            </svg>
+            <span>{% trans "My Data" %}</span>
+          </a>
+        </div>
+    </section>
+  </body>
+  {% if user.is_authenticated and user.patient.is_patient %}
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBX832CK"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->	
+	{% endif %}		
+</html>
+
+<script>
+  let isSortedAscending = true;
+  document.addEventListener("DOMContentLoaded", function () {
+    const hospitalListItems = document.querySelectorAll(".hospital-item");
+    hospitalListItems.forEach(function (item) {
+      item.addEventListener("click", function (event) {
+        if (event.target.tagName.toLowerCase() !== 'select') {
+          window.location.href = this.getAttribute("data-url");
+        }
+      });
+    });
+  
+    hospitalListItems.forEach(function (item) {
+      item.addEventListener("mouseover", function () {
+        this.style.transform = "scale(1.01)";
+      });
+  
+      item.addEventListener("mouseout", function () {
+        this.style.transform = "scale(1)";
+      });
+    });
+    
+    sendUserLocation();
+
+    setTimeout(() => {
+      sortHospitalsByOpenStatusAndDistance();
+    }, 2000); 
+  }); 
+
+  function updateSortButtonText(sortType) {
+    const sortButton = document.getElementById('sort-button');
+    let sortOrder = isSortedAscending ? '<i class="fas fa-sort-amount-up-alt fa-sm"></i>' : '<i class="fas fa-sort-amount-down-alt fa-sm"></i>';
+  
+    switch (sortType) {
+      case 'name':
+        sortButton.innerHTML = `{% trans "Sort by Name" %} ${sortOrder}`;
+        break;
+      case 'rating':
+        sortButton.innerHTML = `{% trans "Sort by Rating" %} ${sortOrder}`;
+        break;
+      case 'distance':
+        sortButton.innerHTML = `{% trans "Sort by Distance" %} ${sortOrder}`;
+        break;
+      case 'open_status':
+        sortButton.innerHTML = `{% trans "Sort by Status" %} ${sortOrder}`;
+        break;
+      default:
+        sortButton.innerHTML = `{% trans "Sort" %}`;
+    }
+  }
+
+  function sortHospitalsByOpenStatusAndDistance() {
+    const hospitalListContainer = document.getElementById('hospital-list');
+    let hospitals = Array.from(hospitalListContainer.querySelectorAll('.hospital-item'));
+  
+    let favouriteHospitals = hospitals.filter(hospital => hospital.dataset.favourite === 'true');
+    let otherHospitals = hospitals.filter(hospital => hospital.dataset.favourite !== 'true');
+  
+    otherHospitals.sort((a, b) => {
+        let isOpenA = a.querySelector('span.text-success') ? 1 : 0;
+        let isOpenB = b.querySelector('span.text-success') ? 1 : 0;
+  
+        if (isOpenA !== isOpenB) {
+            return isOpenB - isOpenA;
+        }
+  
+        let distanceA = parseFloat(a.getAttribute('data-distance-value')) || Number.MAX_VALUE;
+        let distanceB = parseFloat(b.getAttribute('data-distance-value')) || Number.MAX_VALUE;
+  
+        return isSortedAscending ? distanceA - distanceB : distanceB - distanceA;
+    });
+  
+    let sortedHospitals = [...favouriteHospitals, ...otherHospitals];
+    sortedHospitals.forEach(hospital => hospitalListContainer.appendChild(hospital));
+  
+    isSortedAscending = !isSortedAscending;
+    currentSort = 'open_status_distance';
+    updateSortButtonText(currentSort);
+  }
+
+
+  function sortHospitalsByName() {
+    const hospitalListContainer = document.getElementById('hospital-list');
+    let hospitals = Array.from(hospitalListContainer.querySelectorAll('.hospital-item'));
+  
+    let favouriteHospitals = hospitals.filter(hospital => hospital.dataset.favourite === 'true');
+    let otherHospitals = hospitals.filter(hospital => hospital.dataset.favourite !== 'true');
+  
+    otherHospitals.sort((a, b) => {
+      let nameA = a.querySelector('h2').textContent.toUpperCase();
+      let nameB = b.querySelector('h2').textContent.toUpperCase();
+      return isSortedAscending ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+    });
+  
+    let sortedHospitals = [...favouriteHospitals, ...otherHospitals];
+    sortedHospitals.forEach(hospital => hospitalListContainer.appendChild(hospital));
+  
+    isSortedAscending = !isSortedAscending;
+    currentSort = 'name';
+    updateSortButtonText(currentSort);
+  }
+
+
+  function sortHospitalsByRating() {
+    const hospitalListContainer = document.getElementById('hospital-list');
+    let hospitals = Array.from(hospitalListContainer.querySelectorAll('.hospital-item'));
+  
+    let favouriteHospitals = hospitals.filter(hospital => hospital.dataset.favourite === 'true');
+    let otherHospitals = hospitals.filter(hospital => hospital.dataset.favourite !== 'true');
+  
+    otherHospitals.sort((a, b) => {
+      let ratingA = parseFloat(a.querySelector('.hospital-rating').textContent);
+      let ratingB = parseFloat(b.querySelector('.hospital-rating').textContent);
+      return isSortedAscending ? ratingA - ratingB : ratingB - ratingA;
+    });
+  
+    let sortedHospitals = [...favouriteHospitals, ...otherHospitals];
+    sortedHospitals.forEach(hospital => hospitalListContainer.appendChild(hospital));
+  
+    isSortedAscending = !isSortedAscending;
+    currentSort = 'rating';
+    updateSortButtonText(currentSort);
+  }
+
+  function sortHospitalsByDistance() {
+    const hospitalListContainer = document.getElementById('hospital-list');
+    let hospitals = Array.from(hospitalListContainer.querySelectorAll('.hospital-item'));
+  
+    let favouriteHospitals = hospitals.filter(hospital => hospital.dataset.favourite === 'true');
+    let otherHospitals = hospitals.filter(hospital => hospital.dataset.favourite !== 'true');
+  
+    otherHospitals.sort((a, b) => {
+        let distanceA = parseFloat(a.getAttribute('data-distance-value')) || Number.MAX_VALUE;
+        let distanceB = parseFloat(b.getAttribute('data-distance-value')) || Number.MAX_VALUE;
+        return isSortedAscending ? distanceA - distanceB : distanceB - distanceA;
+    });
+  
+    let sortedHospitals = [...favouriteHospitals, ...otherHospitals];
+    sortedHospitals.forEach(hospital => hospitalListContainer.appendChild(hospital));
+  
+    isSortedAscending = !isSortedAscending;
+    currentSort = 'distance';
+    updateSortButtonText(currentSort);
+  }
+
+  {% comment %} function sendUserLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            const userLocation = `${position.coords.latitude},${position.coords.longitude}`;
+
+            fetch("/en/findHospital/", { 
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": getCookie("csrftoken"), 
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ "user_location": userLocation }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+    }
+  }
+
+  function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+  } {% endcomment %}
+
+  function sendUserLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                const userLocation = `${position.coords.latitude},${position.coords.longitude}`;
+
+                const hospitalItems = document.querySelectorAll('.hospital-item');
+                hospitalItems.forEach(item => {
+                    const lat = item.getAttribute('data-latitude');
+                    const lon = item.getAttribute('data-longitude');
+
+                    if (lat && lon) {
+                        const distance = calculateDistance(position.coords.latitude, position.coords.longitude, lat, lon);
+                        item.setAttribute('data-distance-value', distance);
+                        item.querySelector('.distance').textContent = `{% trans "Distance" %}: ${distance.toFixed(2)} km`;
+
+                        const hospitalId = item.id.split('-')[1];
+                        saveDistanceData(hospitalId, distance.toFixed(2));
+                    } else {
+                        item.querySelector('.distance').textContent = '{% trans "Distance information not available" %}';
+                    }
+                });
+            },
+            function(error) {
+                console.error('Error getting location:', error);
+                {% comment %} alert('{% trans "Unable to retrieve your location. Please check your browser settings and try again." %}'); {% endcomment %}
+            }
+        );
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+        {% comment %} alert('{% trans "Geolocation is not supported by this browser." %}'); {% endcomment %}
+    }
+  }
+
+  function saveDistanceData(hospitalId, distance) {
+    console.log(`saveDistanceData called for hospital ${hospitalId} with distance ${distance}`);
+    fetch('{% url "save_distance_data" %}', {
+        method: 'POST',
+        headers: {
+            'X-CSRFToken': getCookie('csrftoken'),
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            hospital_id: hospitalId,
+            distance_text: `${distance} km`
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log(`Distance data saved for hospital ${hospitalId}`);
+        } else {
+            console.error(`Failed to save distance data for hospital ${hospitalId}`, data);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+  }
+
+  function calculateDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371; 
+    const dLat = deg2rad(lat2 - lat1);
+    const dLon = deg2rad(lon2 - lon1);
+    const a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+      Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    const distance = R * c;
+    return distance;
+  }
+
+  function deg2rad(deg) {
+    return deg * (Math.PI / 180);
+  }
+
+  function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const filterFormData = {{ filter_form_data|safe }};
+    for (const [key, value] of Object.entries(filterFormData)) {
+      const input = document.querySelector(`[name="${key}"]`);
+      if (input) {
+        input.value = value;
+      }
+    }
+  });
+</script>

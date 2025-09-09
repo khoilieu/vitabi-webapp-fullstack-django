@@ -1,0 +1,362 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  scrollbar-width: none;
+}
+
+.container {
+  min-height: 680px;
+  width: 342px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.navigation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.sort-button,
+.filter-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sort-button,
+.filter-button {
+  transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.sort-button:hover,
+.filter-button:hover {
+  color: #262626;
+  background-color: #d6d3d1;
+}
+
+.location-text {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 19px;
+  width: 87%;
+  cursor: pointer;
+}
+
+.location-text:hover .arrow {
+  animation: arrowBounce 0.5s ease-in-out infinite;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.buttons-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.buttons-container a {
+  text-decoration: none;
+  text-align: center;
+}
+
+.sort-button,
+.filter-button {
+  flex: 1;
+}
+
+.hospital-item {
+  margin-top: 10px;
+  display: flex;
+  width: 337px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hospital-item:last-child {
+  margin-bottom: 160px;
+}
+
+.hospital-photo {
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+}
+
+.hospital-info {
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.hospital-info h2 {
+  margin: 10px 0;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  max-width: 195px;
+}
+
+.hospital-rating {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #0056b3;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.hospital-english {
+  max-width: 110px;
+  width: 100%;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 5, 0.5);
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.hospital-name {
+  font-size: 18px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.hospital-item p {
+  font-size: 10px;
+  color: #27272a;
+  margin: 3px 0;
+}
+
+.hospital-info h3 {
+  margin-top: 10px;
+  display: inline-block;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #0056b3;
+  font-size: 12px;
+}
+
+/* Footer CSS */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: auto;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: space-around;
+  height: 60px;
+  flex-direction: row;
+  align-items: center;
+  /* box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.2); */ /* 上の影を削除 */
+
+  color: #555;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+
+.footer a {
+  color: #555;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-link img {
+  display: block;
+  margin: 0 auto;
+  width: 30px;
+  height: auto;
+}
+
+.nav-link span {
+  display: block;
+  font-size: 14px;
+}
+
+.heart {
+  font-size: 40px;
+  color: black;
+  cursor: pointer;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.truncated {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
+.hospital-list-container {
+  max-height: 600px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.hospital-list-container::-webkit-scrollbar {
+  display: none;
+}
+
+.favorite-button {
+  color: #27272a;
+  margin-right: 7px;
+  cursor: pointer;
+  background-color: #a1a1aa;
+  border-radius: 20px;
+  padding: 5px 7px 2px 7px;
+}
+
+.favorite-button:hover {
+  background-color: #d4d4d8;
+  color: #ef4444;
+}
+
+.delete-favorite-button {
+  color: #ef4444;
+  margin-right: 7px;
+  cursor: pointer;
+  background-color: #d4d4d8;
+  border-radius: 20px;
+  padding: 5px 7px 2px 7px;
+}
+
+.delete-favorite-button:hover {
+  background-color: #a1a1aa;
+  color: #27272a;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  z-index: 1001;
+  width: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.alert {
+  margin: 0;
+  padding: 5px;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  text-align: center;
+}
+
+.alert h5 {
+  margin: 10px 0;
+}
+
+.alert button {
+}
+
+section {
+  height: fit-content;
+  width: 400px;
+  border: 1px solid #ccc;
+}
+
+header {
+  padding-right: 20px;
+  padding-left: 20px;
+  /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); */ /* 下の影を削除 */
+
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+  top: 0;
+  right: auto;
+  left: auto;
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+
+#title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px !important;
+}
+
+h1 {
+  margin: 0px !important;
+  font-size: 26px !important;
+}
+
+h2 {
+  margin-bottom: 10px !important;
+  font-size: 22px !important;
+}
+
+main {
+  padding-right: 7%;
+  padding-left: 7%;
+  padding-top: 8%;
+  padding-bottom: 20%;
+  height: calc(100vh - 100px);
+}

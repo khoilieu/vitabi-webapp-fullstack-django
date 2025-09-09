@@ -1,0 +1,674 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <link rel="icon" href="{% static "home/favicon.png" %}" type="image/x-icon">
+		<title>Booked Hospital Detail</title>
+		<link rel="stylesheet" href="{% static "home/hospitalInfo.css" %}">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+		<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&libraries=places"></script>
+    <!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-NBX832CK');</script>
+		<!-- End Google Tag Manager -->
+
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "nqixhxf3g6");
+  </script>
+	</head>
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      scrollbar-width: none;
+    }
+    
+    section {
+      height: fit-content;
+      width: 400px;
+      border: 1px solid #ccc;
+      border-bottom: none;
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Header CSS */
+    header {
+      padding-right: 20px;
+      padding-left: 20px;
+      /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); */ /* 下の影を削除 */
+      border: 1px solid #ccc;
+
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      position: fixed;
+      top: 0;
+      right: auto;
+      left: auto;
+      width: 100%;
+      max-width: 400px;
+      height: 60px;
+      background-color: #ffffff;
+      z-index: 1050;
+    }
+    
+    h1 {
+      margin: 0px !important;
+      font-size: 26px !important;
+    }
+    
+    h2 {
+      font-size: 22px !important;
+    }
+
+    p {
+      margin-bottom: 5px;
+    }
+    
+    /* Main CSS */
+    main {
+      padding-right: 10%;
+      padding-left: 10%;
+      padding-top: 10%;
+      padding-bottom: 10%;
+      height: calc(100vh - 120px);
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: none;
+    }
+    
+    .favorite-button {
+      color: #27272a;
+      cursor: pointer;
+      background-color: #a1a1aa;
+      border-radius: 20px;
+      padding: 5px 7px 2px 7px;
+    }
+    
+    .favorite-button:hover {
+      background-color: #d4d4d8;
+      color: #ef4444;
+    }
+    
+    .delete-favorite-button {
+      color: #ef4444;
+      cursor: pointer;
+      background-color: #d4d4d8;
+      border-radius: 20px;
+      padding: 5px 7px 2px 7px;
+    }
+    
+    .delete-favorite-button:hover {
+      background-color: #a1a1aa;
+      color: #27272a;
+    }
+    
+    .name-rate {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+    
+    .hospital-rating {
+      background-color: #0056b3;
+      color: #fff;
+      border-radius: 10px;
+      font-weight: bold;
+      padding: 5px 13px;
+      margin-top: 5px;
+    }
+    
+    .hospital-images {
+      display: flex;
+      overflow: auto;
+      margin-bottom: 10px;
+      width: 380px;
+    }
+    
+    .slider {
+      overflow: hidden;
+      max-width: 330px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    
+    .slide {
+      min-width: 100%;
+      transition: opacity 0.5s ease;
+      position: relative;
+      height: 200px;
+    }
+    
+    .slide img {
+      width: 100%;
+      display: block;
+    }
+    
+    .slider .prev,
+    .slider .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: transparent;
+      color: #525252;
+      border: none;
+      font-size: 30px;
+      border-radius: 0;
+      padding: 10px;
+      z-index: 100;
+    }
+    
+    .slider .prev {
+      left: 10px;
+    }
+    
+    .slider .next {
+      right: 10px;
+    }
+    
+    .availability p,
+    .billing-info h3,
+    .billing-info ol {
+      margin: 5px 0;
+    }
+    
+    .english-available {
+      display: inline-block;
+      background-color: #e0e0e0;
+      padding: 3px 6px;
+      border-radius: 3px;
+    }
+    
+    .map-info img {
+      width: 100%;
+      display: block;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .billing-info {
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    
+    .billing-info h3 {
+      color: #0056b3;
+      font-weight: bold;
+      padding: 3px 6px;
+      font-size: 17px;
+    }
+    
+    .billing-info ul {
+      font-size: 15px;
+      margin: 5px;
+      padding: 0 0 0 30px;
+    }
+    
+    .billing-info ol {
+      font-size: 15px;
+    }
+    
+    .billing-info li {
+      line-height: 23px;
+    }
+    
+    .call-info {
+      font-size: 15px;
+      margin: 10px 0 10px 25px;
+    }
+    
+    .availability p {
+      margin: 0;
+      color: #666;
+      font-size: 14px;
+    }
+    
+    .availability {
+      margin: 5px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .english-available {
+      color: #007bff;
+      font-weight: bold;
+      margin-top: 5px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      padding-left: 30px;
+      background-position: left center;
+    }
+    
+    .proceed-button {
+      display: flex;
+      justify-content: space-around;
+      width: 320px;
+      background-color: #000;
+      color: white;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    
+    .proceed-button:hover {
+      background-color: #333;
+    }
+    
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+    
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+    
+    hr {
+      margin: 10px 0 !important;
+    }
+    
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: auto;
+      margin: 5px;
+    }
+    
+    .carousel img {
+      height: 50px;
+      display: block;
+    }
+    
+    .carousel-item {
+      color: black;
+      margin: 10px;
+      flex: 0 0 auto;
+      position: relative;
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 15px;
+      width: auto;
+    }
+    
+    #map {
+      height: 200px;
+    }
+    
+    /* Footer CSS */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: auto;
+      right: auto;
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      justify-content: space-around;
+      height: 60px;
+      flex-direction: row;
+      align-items: center;
+      /* box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.2); */ /* 上の影を削除 */
+
+      color: #555;
+      padding-right: 20px;
+      padding-left: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+    }
+
+    .footer a {
+      color: #555;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: #000;
+      text-align: center;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .nav-link img {
+      display: block;
+      margin: 0 auto;
+      width: 30px;
+      height: auto;
+    }
+
+    .nav-link span {
+      display: block;
+      font-size: 14px;
+    }
+    
+  </style>
+	<body>
+		<section>
+			<header>
+        <a href="#" onclick="history.back(); return false;"><img src="{% static "home/arrow-left.svg" %}" alt="Back-arrow" style="width: 22px; height: 22px;"></a>
+				<div class="top">
+					<h1 class="fs-4">{% trans "Hospital Details" %}</h1>      
+				</div>
+				{% if hospital.id in favourite_hospitals_ids %}
+            <a class="delete-favorite-button" style="float: right;" href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                </svg>
+            </a>
+        {% else %}
+          <div style="width: 22px; height: 22px;">
+        {% endif %}
+			</header>
+
+
+			<main>
+				<div class="slider">
+          <div class="slides">
+
+            {% for image in hospitalBooking.hospital.images.all %}
+              <div class="slide">
+                  <img src="{{ image.photo.url }}" alt="Image for {{ hospitalBooking.hospital.name }}" onclick="enlargeImage(this)"/>
+              </div>
+            {% empty %}
+              <div class="slide">
+                  <p>No images available for this hospital.</p>
+              </div>
+            {% endfor %}
+
+          </div>
+          <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+          <button class="next" onclick="moveSlide(1)">&#10095;</button> 
+        </div>
+		
+				<div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01" />
+          <div id="caption"></div>
+        </div> 
+		
+				<div class="name-rate">
+					<h2 class="fs-4 m-0" style="margin-bottom: 10px !important;">{{hospitalBooking.hospital.name}}
+            {% if hospitalBooking.status == "waiting" %}
+              <span class="badge text-bg-secondary" style="font-size: 15px">{% trans "Waiting" %}</span>
+            {% elif hospitalBooking.status == "approved"  %}
+              <span class="badge text-bg-success" style="font-size: 15px">{% trans "Approved" %}</span>
+            {% elif hospitalBooking.status == "rejected"  %}
+              <span class="badge text-bg-danger" style="font-size: 15px">{% trans "Rejected" %}</span>
+            {% elif hospitalBooking.status == "canceled"  %}
+              <span class="badge text-bg-danger" style="font-size: 15px">{% trans "Canceled" %}</span>
+            {% endif %} 
+          </h2>
+				</div>
+
+        <div class="billing-info">
+					<h3 style="color: #555555; margin-bottom:8px;">{% trans "Personal Information" %}</h3>
+					<ul class="ps-3">
+            <li><p><strong>{% trans "Name" %}:</strong> {{ hospitalBooking.firstname }} {{ hospitalBooking.surname }}</p></li>
+            <li><p><strong>{% trans "Gender" %}:</strong> {% if hospitalBooking.gender %}{% trans "Female" %}{% else %}{% trans "Male" %}{% endif %}</p></li>
+            <li><p><strong>{% trans "Date of Birth" %}:</strong> <span class="fw-normal">{{ hospitalBooking.dob|date:"Y/m/d" }}</span></p></li>
+            <li><p><strong>{% trans "Email Address" %}:</strong> {{ hospitalBooking.email }}</p></li>
+            <li><p><strong>{% trans "Phone Number" %}:</strong> {{ hospitalBooking.phone }}</p></li>
+          </ul>
+				</div>
+				<br>
+				<div class="billing-info">
+					<h3 style="color: #555555; margin-bottom:8px;">{% trans "Appointment Information" %}</h3>
+					<ul class="ps-3">
+            {% if status == "approved"%}
+              <li><p><strong>{% trans "Reserved Time" %}:</strong><br>
+                <span class="fw-normal">{{ hospitalBooking.first_date_reserved|date:"Y/m/d" }} {{ hospitalBooking.first_date_from_reserved|time:"H:i" }}~{{ hospitalBooking.first_date_to_reserved|time:"H:i" }}</span></p></li>
+            {% else%}
+              <li><p><strong>{% trans "1st Preferred Time" %}:</strong><br>
+                <span class="fw-normal">{{ hospitalBooking.first_date|date:"Y/m/d" }} {{ hospitalBooking.first_date_from|time:"H:i" }}~{{ hospitalBooking.first_date_to|time:"H:i" }}</span></p></li>
+              {% if hospitalBooking.second_date %}
+                <li><p><strong>{% trans "2nd Preferred Time" %}:</strong><br>
+                  <span class="fw-normal">{{ hospitalBooking.second_date|date:"Y/m/d" }} {{ hospitalBooking.second_date_from|time:"H:i" }}~{{ hospitalBooking.second_date_to|time:"H:i" }}</span></p></li>
+              {% endif %}
+            {% endif %}
+            <li><p><strong>{% trans "Symptom" %}:</strong><br> 
+              {% if hospitalBooking.symptom|length > 112 %}
+              {{ hospitalBooking.symptom|slice:":112" }}<a class="fw-bold" href="#" id="showMoreLink" onclick="showMoreInfo()" style="display: inline;">[{{ "Show More" }}]</a>
+              <span id="moreInfo" style="display: none;">
+              {{ hospitalBooking.symptom|slice:"112:" }}
+              <a class="fw-bold" href="#" id="showLessLink" onclick="showLessInfo()" style="display: none;">[{{ "Show Less" }}]</a>
+              </span>
+              {% else %}
+              {{ hospitalBooking.symptom }}
+              {% endif %}
+            </p></li>
+            <li>
+              <p><strong>{% trans "Duration" %}:</strong><br> {{ hospitalBooking.duration }}</p
+            ></li>
+          </ul>
+				</div>
+        <br>
+        <div class="billing-info">
+					<h3 style="color: #555555; margin-bottom:8px;">{% trans "Insurance Information" %}</h3>
+					<ul class="ps-3">
+              {% if hospitalBooking.status == "approved" %}
+              <li><p><strong>{% trans "Insurance Status" %}:</strong><br>
+              {% if hospitalBooking.insurance_type == cashless %}
+                <span style="text-decoration: underline;">{% trans "Cashless Supported" %}</span><br>
+              {% elif hospitalBooking.insurance_type == insurance %}
+                <span style="text-decoration: underline;">{% trans "Insurance Supported" %}</span><br>
+              {% else %}
+                <span style="text-decoration: underline;">{% trans "Insurance Unsupported" %}</span><br>
+              {% endif %}
+            {% endif %}
+            </p></li>
+            <li><p><strong>{% trans "Insurance" %}:</strong> <span class="fw-normal">{{ coverage }}</span></p></li>
+            {% if hospitalBooking.coverage == "Others" %}
+              <li><p><strong>{% trans "Insurance Company" %}:</strong> <span class="fw-normal">{{ hospitalBooking.insuranceCompany }}</span></p></li>
+            {% endif %}
+            <li><p><strong>{% trans "Policy Number" %}:</strong> <span class="fw-normal">{{ hospitalBooking.policyNumber }}</span></p></li>
+            <li><p><strong>{% trans "Date Created" %}:</strong><br>
+              <span class="fw-normal">{{ hospitalBooking.created_at|date:"Y/m/d H:i A" }}</span></p></li>
+          </ul>
+				</div>
+        <div class="main d-grid gap-3" style="margin-top: 25px; margin-bottom: 50px;">
+          <a href="{% url 'delete_booked_hospital' hospitalBooking.id %}?source=booked" class="btn btn-outline-dark bg-danger border-0 text-white" id="cancel-appointment">{% trans "Cancel an appointment" %}</a>
+        </div>
+			</main>
+
+			<div class="footer">
+        <a href="{% url "home" %}" class="nav-link" style="width: 70px; padding: 0px;">
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-house"
+          viewBox="0 0 16 16"
+          >
+          <path
+          d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"
+          />
+          </svg>
+          <span>{% trans "Home" %}</span>
+        </a>
+        <a href="{% url "care" %}" class="nav-link" style="width: 70px; padding: 0px;">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-calendar-event"
+            viewBox="0 0 16 16"
+          >
+            <path
+            d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"
+            />
+            <path
+            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"
+            />
+          </svg>
+          <span>{% trans "Bookings" %}</span>
+        </a>
+        <a href="{% url "mydata" %}" class="nav-link" style="width: 70px; padding: 0px;">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-card-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+            d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"
+            />
+            <path
+            d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"
+            />
+          </svg>
+          <span>{% trans "My Data" %}</span>
+        </a>
+      </div>
+		</section>
+	</body>
+  {% if user.is_authenticated and user.patient.is_patient %}
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBX832CK"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->	
+	{% endif %}	
+</html>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.btn-outline-dark').forEach(function(link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault(); 
+        var confirmation = confirm('Are you sure you want to delete this booking?');
+        if (confirmation) {
+          var href = this.getAttribute('href'); 
+          window.location.href = href; 
+        }
+      });
+    });
+  });
+  function showMoreInfo() {
+    var moreInfo = document.getElementById("moreInfo");
+    var showMoreLink = document.getElementById("showMoreLink");
+    var showLessLink = document.getElementById("showLessLink");
+
+    if (moreInfo && showMoreLink && showLessLink) {
+        moreInfo.style.display = "inline";
+        showMoreLink.style.display = "none";
+        showLessLink.style.display = "inline";
+    }
+  }
+
+  function showLessInfo() {
+      var moreInfo = document.getElementById("moreInfo");
+      var showMoreLink = document.getElementById("showMoreLink");
+      var showLessLink = document.getElementById("showLessLink");
+
+      if (moreInfo && showMoreLink && showLessLink) {
+          moreInfo.style.display = "none";
+          showMoreLink.style.display = "inline";
+          showLessLink.style.display = "none";
+      }
+  } 
+
+  let currentIndex = 0; 
+  const slides = document.querySelectorAll(".slide"); 
+  const totalSlides = slides.length; 
+
+  function moveSlide(direction) {
+    currentIndex += direction; 
+    if (currentIndex >= totalSlides) { 
+    currentIndex = 0;
+    } else if (currentIndex < 0) { 
+    currentIndex = totalSlides - 1;
+    }
+    updateSlidePosition();
+  }
+
+  function updateSlidePosition() {
+    for (let i = 0; i < slides.length; i++) {
+    slides[i].style.transform = `translateX(-${currentIndex * 100}%)`;
+    slides[i].style.transition = 'transform 0.5s ease-out'; 
+    }
+  }
+
+  function enlargeImage(img) {
+    let modal = document.getElementById("myModal");
+    let modalImg = document.getElementById("img01");
+    let captionText = document.getElementById("caption");
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    captionText.innerHTML = img.alt;
+
+    let span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function () {
+    modal.style.display = "none";
+    };
+  }
+
+  function initMap() {
+    const geocoder = new google.maps.Geocoder();
+  
+    const address = '{{ hospital.name }}';
+  
+    geocoder.geocode({ 'address': address }, function(results, status) {
+    if (status == 'OK') {
+      const map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15, 
+      center: results[0].geometry.location
+      });
+  
+      const marker = new google.maps.Marker({
+      map: map,
+      position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+    });
+  }    
+</script>
+  

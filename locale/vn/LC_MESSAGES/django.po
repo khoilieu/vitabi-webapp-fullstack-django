@@ -1,0 +1,1052 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-03 17:07+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: .\vitabi\settings.py:111
+msgid "English"
+msgstr "Tiếng Anh"
+
+#: .\vitabi\settings.py:112
+msgid "Japanese"
+msgstr "Tiếng Nhật"
+
+#: .\vitabi\settings.py:113
+msgid "Vietnamese"
+msgstr "Tiếng Việt"
+
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+msgid "Your result"
+msgstr "Kết quả"
+
+msgid "Information distance not available."
+msgstr "Khoảng cách thông tin không có sẵn."
+
+msgid "You likely do not have infectious diarrhea, but you should go hospital"
+msgstr "Có thể bạn không bị tiêu chảy truyền nhiễm nhưng nên đến bệnh viện"
+
+msgid "You likely have infectious diarrhea, and you should go hospital."
+msgstr "Có khả năng bạn bị tiêu chảy truyền nhiễm và nên đến bệnh viện."
+
+msgid "You likely have infectious diarrhea."
+msgstr "Rất có thể bạn đang bị tiêu chảy truyền nhiễm."
+
+msgid "Hospital visit recommendeds"
+msgstr "Nên đến bệnh viện"
+
+msgid "Can usually be managed at home"
+msgstr "Thường có thể được quản lý tại nhà"
+
+msgid "Advice on coronavirus (COVID-19)"
+msgstr "Lời khuyên về vi-rút Corona (Covid-19)"
+
+msgid "ー A new, continuous cough"
+msgstr "ー Cơn ho mới, liên tục"
+
+msgid "ー Fever"
+msgstr "ー Sốt"
+
+msgid "ー Difficulty breathing"
+msgstr "ー Khó thở"
+
+msgid "ー Loss or change to your sense of taste or smell"
+msgstr "ー Mất hoặc thay đổi vị giác hoặc khứu giác"
+
+msgid "Most people with coronavirus have at least one of these symptoms."
+msgstr "Hầu hết những người nhiễm virus Corona đều có ít nhất một trong những triệu chứng này."
+
+msgid "7 out of 10 people with these symptoms had this condition."
+msgstr "7 trong số 10 người có những triệu chứng này đều mắc phải tình trạng này."
+
+msgid "People with symptoms similar to yours can usually manage their symptoms safely at home. You could also seek advice by visiting or contacting your local pharmacy. If your symptoms persist longer than expected, if they get worse, or if you notice new symptoms, you should consult a doctor for further assessment and advice."
+msgstr "Những người có triệu chứng tương tự như bạn thường có thể kiểm soát các triệu chứng của họ một cách an toàn tại nhà. Bạn cũng có thể tìm kiếm lời khuyên bằng cách đến thăm hoặc liên hệ với hiệu thuốc địa phương. Nếu các triệu chứng của bạn kéo dài hơn dự kiến, nếu chúng trở nên tồi tệ hơn hoặc nếu bạn nhận thấy các triệu chứng mới, bạn nên tham khảo ý kiến ​​​​bác sĩ để được đánh giá và tư vấn thêm."
+
+msgid "Less likely causes"
+msgstr "Nguyên nhân ít có khả năng hơn"
+
+msgid "ーFlu"
+msgstr "ーCúm"
+
+msgid "5 out of 1000 people with these symptoms had this condition."
+msgstr "5 trong số 1000 người có những triệu chứng này đều mắc phải tình trạng này."
+
+msgid "ーMigraine"
+msgstr "ーĐau nửa đầu"
+
+msgid "Suggested Medicines"
+msgstr "Thuốc được đề xuất"
+
+msgid "Call"
+msgstr "Gọi"
+
+msgid "Find Hospitals"
+msgstr "Tìm bệnh viện"
+
+msgid "Call 911 now, or correspondent number in your region and ask for an ambulance."
+msgstr "Gọi 911 ngay bây giờ hoặc số phóng viên trong khu vực của bạn và yêu cầu xe cứu thương."
+
+msgid "This could be an emergency. People with similar symptoms, usually need to go to the emergency department."
+msgstr "Đây có thể là một trường hợp khẩn cấp. Những người có triệu chứng tương tự thường cần đến khoa cấp cứu."
+
+msgid "Account"
+msgstr "Tài Khoản"
+
+msgid "Personal Details"
+msgstr "Thông Tin Cá Nhân"
+
+msgid "Medical Information"
+msgstr "Thông Tin Y Tế"
+
+msgid "Password and Security"
+msgstr "Mật Khẩu & Bảo Mật"
+
+msgid "Password & Security"
+msgstr "Mật Khẩu & Bảo Mật"
+
+msgid "Sign Out"
+msgstr "Đăng Xuất"
+
+msgid "Home"
+msgstr "Trang Chủ"
+
+msgid "Care"
+msgstr "Chăm Sóc"
+
+msgid "My Data"
+msgstr "Dữ Liệu"
+
+msgid "Change Password"
+msgstr "Thay Đổi Mật Khẩu"
+
+msgid "Old password"
+msgstr "Mật khẩu cũ"
+
+msgid "New password"
+msgstr "Mật khẩu mới"
+
+msgid "Confirm new password"
+msgstr "Xác nhận mật khẩu mới"
+
+msgid "Change my password"
+msgstr "Thay đổi mật khẩu"
+
+msgid "Login"
+msgstr "Đăng Nhập"
+
+msgid "Log In"
+msgstr "Đăng Nhập"
+
+msgid "Enter email"
+msgstr "Nhập email"
+
+msgid "Enter password"
+msgstr "Nhập mật khẩu"
+
+msgid "Register"
+msgstr "Đăng Ký"
+
+msgid "Don't have an account?"
+msgstr "Bạn không có tài khoản?"
+
+msgid "Male"
+msgstr "Nam"
+
+msgid "Female"
+msgstr "Nữ"
+
+msgid "Height"
+msgstr "Chiều Cao"
+
+msgid "Weight"
+msgstr "Cân Nặng"
+
+msgid "Insurance"
+msgstr "Bảo Hiểm"
+
+msgid "History"
+msgstr "Lịch Sử"
+
+msgid "Setting"
+msgstr "Cài Đặt"
+
+msgid "Help"
+msgstr "Hỗ Trợ"
+
+msgid "Legal"
+msgstr "Điều Lệ"
+
+msgid "Saved"
+msgstr "Đã Lưu"
+
+msgid "Password"
+msgstr "Mật Khẩu"
+
+msgid "Security"
+msgstr "Bảo Mật"
+
+msgid "Name"
+msgstr "Tên"
+
+msgid "Gender"
+msgstr "Giới Tính"
+
+msgid "Address"
+msgstr "Địa Chỉ"
+
+msgid "Email Address"
+msgstr "Địa Chỉ Email"
+
+msgid "Nationality"
+msgstr "Quốc Tịch"
+
+msgid "Language you speak"
+msgstr "Ngôn Ngữ Bạn Nói"
+
+msgid "Currency"
+msgstr "Tiền Tệ"
+
+msgid "Local currency"
+msgstr "Tiền tệ địa phương"
+
+msgid "Units"
+msgstr "Đơn Vị"
+
+msgid "Metrics"
+msgstr "Số liệu"
+
+msgid "Username"
+msgstr "Tên đăng nhập"
+
+msgid "Full Name"
+msgstr "Tên Đầy Đủ"
+
+msgid "Phone Number"
+msgstr "Số Điện Thoại"
+
+msgid "Phone number"
+msgstr "Số Điện Thoại"
+
+msgid "Select your nationality"
+msgstr "Chọn quốc tịch của bạn"
+
+msgid "Vietnam"
+msgstr "Việt Nam"
+
+msgid "Japan"
+msgstr "Nhật Bản"
+
+msgid "United Kingdom (UK)"
+msgstr "Vương Quốc Anh"
+
+msgid "Re-enter Password"
+msgstr "Xác Nhận Mật Khẩu"
+
+msgid "Already have an account?"
+msgstr "Đã có tài khoản?"
+
+msgid "Select your language"
+msgstr "Chọn ngôn ngữ của bạn"
+
+msgid "Update Personal Details"
+msgstr "Cập nhật chi tiết cá nhân"
+
+msgid "Update"
+msgstr "Cập Nhật"
+
+msgid "Languages"
+msgstr "Ngôn Ngữ"
+
+msgid "Update Setting"
+msgstr "Cập Nhật Cài Đặt"
+
+msgid "Date of Birth"
+msgstr "Ngày/Tháng/Năm Sinh"
+
+msgid "Manage Your Hospital Visits"
+msgstr "Quản lý chăm sóc"
+
+msgid "Book an appointment"
+msgstr "Đặt lịch hẹn"
+
+msgid "Conclusion Details"
+msgstr "Chi Tiết Kết Luận"
+
+msgid "Conclusion"
+msgstr "Kết Luận"
+
+msgid "Filter"
+msgstr "Lọc"
+
+msgid "Affiliated with insurers"
+msgstr "Liên kết với các công ty bảo hiểm"
+
+msgid "By integrating your insurance details during booking, we automatically handle claims with your insurance company, ensuring you don't have to pay any medical expenses out of pocket."
+msgstr "Nhận chăm sóc cho các bệnh thông thường và mãn tính. Bạn cũng có thể nhận được đơn thuốc, giấy giới thiệu và giấy báo bệnh."
+
+msgid "Book a hospital appointment for yourself or a family member. We'll quickly connect you directly with the appropriate medical specialist."
+msgstr "Đặt một cuộc hẹn cho bạn hoặc thành viên gia đình của bạn. Chúng tôi sẽ kết nối bạn với bác sĩ lâm sàng qua điện thoại hoặc trò chuyện video."
+
+msgid "English-speaking staff available"
+msgstr "Có nhân viên nói tiếng Anh"
+
+msgid "Japanese-speaking staff available"
+msgstr "Có nhân viên nói tiếng Nhật"
+
+msgid "How to Use Direct Billing Service"
+msgstr "Cách Sử Dụng Dịch Vụ Thanh Toán Trực Tiếp"
+
+msgid "Distance"
+msgstr "Khoảng Cách"
+
+msgid "Less than 1km"
+msgstr "Trong phạm vi 1km"
+
+msgid "Less than 3km"
+msgstr "Trong phạm vi 3km"
+
+msgid "Less than 5km"
+msgstr "Trong phạm vi 5km"
+
+msgid "Opening Hours"
+msgstr "Giờ mở cửa"
+
+msgid "Current time"
+msgstr "Thời điểm hiện tại"
+
+msgid "Midnight (9PM~)"
+msgstr "Nửa đêm (9 giờ tối~)"
+
+msgid "Search"
+msgstr "Tìm kiếm"
+
+msgid "Viet Nam"
+msgstr "Việt Nam"
+
+msgid "Cambodia"
+msgstr "Campuchia"
+
+msgid "Find Hospital"
+msgstr "Tìm bệnh viện"
+
+msgid "Sort"
+msgstr "Sắp xếp"
+
+msgid "ENGLISH AVAILABLE"
+msgstr "TIẾNG ANH CÓ SẴN"
+
+msgid "Calculating distance..."
+msgstr "Đang tính khoảng cách..."
+
+msgid "Calculating time..."
+msgstr "Tính toán thời gian..."
+
+msgid "Open"
+msgstr "Mở"
+
+msgid "Direct Billing Available"
+msgstr "Thanh toán trực tiếp"
+
+msgid "Hospital Information"
+msgstr "Thông tin bệnh viện"
+
+msgid "Supported Insurance"
+msgstr "Bảo hiểm được hỗ trợ"
+
+msgid "Supported Languages"
+msgstr "Ngôn ngữ được hỗ trợ"
+
+msgid "Book a hospital"
+msgstr "Đặt bệnh viện"
+
+msgid "Present your insurance policy at the reception desk and ask for cashless service to be provided. (You may need your passport.)"
+msgstr "Xuất trình hợp đồng bảo hiểm của bạn tại quầy lễ tân và yêu cầu cung cấp dịch vụ không dùng tiền mặt. (Bạn có thể cần hộ chiếu của bạn.)"
+
+msgid "Receive treatment."
+msgstr "Được điều trị."
+
+msgid "if needed."
+msgstr "nếu cần thiết."
+
+msgid "Proceed to Booking"
+msgstr "Tiến hành đặt chỗ"
+
+msgid "Logout"
+msgstr "Đăng Xuất"
+
+msgid "How can we help you?"
+msgstr "Chúng tôi có thể giúp gì?"
+
+msgid "Check symptoms"
+msgstr "Kiểm tra triệu chứng"
+
+msgid "Find a hospital"
+msgstr "Tìm bệnh viện"
+
+msgid "Your Lastest Activites"
+msgstr "Hoạt động mới nhất"
+
+msgid "Diagnose"
+msgstr "Chẩn đoán"
+
+msgid "Continue"
+msgstr "Tiếp tục"
+
+msgid "Hospital Saved"
+msgstr "Bệnh viện đã lưu"
+
+msgid "Bookings"
+msgstr "Đặt lịch"
+
+msgid "Saved Hospitals"
+msgstr "Các Bệnh Viện Đã Lưu"
+
+msgid "Not found"
+msgstr "Không tìm thấy"
+
+msgid "Current Location"
+msgstr "Vị trí hiện tại"
+
+msgid "Reset"
+msgstr "Cài lại"
+
+msgid "Duration"
+msgstr "Thời gian"
+
+msgid "Good Morning"
+msgstr "Chào buổi sáng"
+
+msgid "Good Afternoon"
+msgstr "Chào buổi chiều"
+
+msgid "Good Evening"
+msgstr "Chào buổi tối"
+
+msgid "How can I help you?"
+msgstr "Tôi có thể giúp gì cho bạn?"
+
+msgid "Do you have nausea or vomiting?"
+msgstr "Bạn có cảm giác buồn nôn hoặc nôn mửa không?"
+
+msgid "Are there people who have similar symptoms around you?"
+msgstr "Có người nào xung quanh bạn có triệu chứng tương tự không?"
+
+msgid "What did you eat whithin 6 hours?"
+msgstr "Bạn đã ăn gì trong vòng 6 giờ qua?"
+
+msgid "Do you have any other symptoms?"
+msgstr "Bạn có triệu chứng nào khác không?"
+
+msgid "What kind of stool do you have?"
+msgstr "Phân của bạn như thế nào?"
+
+msgid "When did your diarrhia start?"
+msgstr "Khi nào bạn bắt đầu bị tiêu chảy?"
+
+msgid "Have your weight change over 2.3kg?"
+msgstr "Cân nặng của bạn có thay đổi hơn 2.3kg không?"
+
+msgid "Do you have fever? (>37.5? )"
+msgstr "Bạn có sốt không? (>37.5°C?)"
+
+msgid "Do you have bloody stool?"
+msgstr "Bạn có phân có máu không?"
+
+msgid "Do you wake up during sleep?"
+msgstr "Bạn có tỉnh giấc khi đang ngủ không?"
+
+msgid "Are you taking immune-suppressing medications? or have you been told that your immune system is weakened?"
+msgstr "Bạn có đang uống thuốc ức chế miễn dịch không? hoặc bạn có được thông báo là hệ miễn dịch của mình bị suy yếu không?"
+
+msgid "Yes"
+msgstr "Có"
+
+msgid "No"
+msgstr "Không"
+
+msgid "I have diarrhia"
+msgstr "Tôi bị tiêu chảy"
+
+msgid "Mayonnaise"
+msgstr "Mayonnaise"
+
+msgid "Symptoms occurred 8~14 hours after eating insufficiently reheated chicken or animalmeat."
+msgstr "Triệu chứng xuất hiện 8~14 giờ sau khi ăn thịt gà hoặc thịt động vật hâm nóng không đủ."
+
+msgid "Thick, viscous stool"
+msgstr "Phân đặc, sền sệt"
+
+msgid "Less than 2 weeks ago"
+msgstr "Ít hơn 2 tuần trước"
+
+msgid "Fried Potato"
+msgstr "Khoai tây chiên"
+
+msgid "Egg Salad"
+msgstr "Salad trứng"
+
+msgid "Custard"
+msgstr "Kem Custard"
+
+msgid "Chicken"
+msgstr "Gà"
+
+msgid "Chinese-Style Fried Rice"
+msgstr "Cơm chiên kiểu Trung Hoa"
+
+msgid "Others"
+msgstr "Khác"
+
+msgid "Other"
+msgstr "Khác"
+
+msgid "Symptom occured 8~72 hours after eating seafood"
+msgstr "Triệu chứng xuất hiện 8~72 giờ sau khi ăn hải sản"
+
+msgid "Vomiting lasting more than 14 hours"
+msgstr "Nôn mửa kéo dài hơn 14 giờ"
+
+msgid "Red diarrhia stool"
+msgstr "Phân tiêu chảy có màu đỏ"
+
+msgid "No other symptom"
+msgstr "Không có triệu chứng khác"
+
+msgid "Small but frequent stools"
+msgstr "Phân nhỏ nhưng đi nhiều lần"
+
+msgid "Large amount of water-soluble stools"
+msgstr "Lượng lớn phân hòa tan trong nước"
+
+msgid "More than 2 weeks, less than 4 weeks ago"
+msgstr "Hơn 2 tuần, ít hơn 4 tuần trước"
+
+msgid "More than 4 weeks ago"
+msgstr "Hơn 4 tuần trước"
+
+msgid "District"
+msgstr "Quận"
+
+msgid "City"
+msgstr "Thành phố"
+
+msgid "Ward"
+msgstr "Phường"
+
+msgid "Closed"
+msgstr "Đã đóng"
+
+msgid "Book Hospital Visit"
+msgstr "Đặt Lịch Bệnh Viện"
+
+msgid "Firstname"
+msgstr "Tên đầu"
+
+msgid "Surname"
+msgstr "Họ"
+
+msgid "Next"
+msgstr "Tiếp theo"
+
+msgid "Hospital Appointment"
+msgstr "Cuộc Hẹn Bệnh Viện"
+
+msgid "Verify Account"
+msgstr "Xác Nhận Tài Khoản"
+
+msgid "VERIFY ACCOUNT"
+msgstr "XÁC NHẬN TÀI KHOẢN"
+
+msgid "Enter 5-digit code we have sent to your email"
+msgstr "Nhập mã gồm 5 chữ số chúng tôi đã gửi tới email của bạn"
+
+msgid "Didn't not receive the code?"
+msgstr "Bạn chưa nhận được mã?"
+
+msgid "Resend Code"
+msgstr "Gửi Lại Mã"
+
+msgid "by clicking next, you agree to our"
+msgstr "bằng cách nhấp vào tiếp theo, bạn đồng ý với chúng tôi"
+
+msgid "Privacy Policy"
+msgstr "Chính Sách Bảo Mật"
+
+msgid "and"
+msgstr "và"
+
+msgid "Terms and Conditions"
+msgstr "Các Điều Khoản và Điều Kiện"
+
+msgid "Hospital"
+msgstr "Bệnh Viện"
+
+msgid "Please Briefly describe your condition, including symptoms, severity, onset time, and etc."
+msgstr "Vui lòng mô tả ngắn gọn tình trạng của bạn, bao gồm các triệu chứng, mức độ nghiêm trọng, thời gian khởi phát, v.v."
+
+msgid "1st Preferred Date/Time (Required)"
+msgstr "Ngày/giờ ưu tiên thứ nhất (Bắt Buộc)"
+
+msgid "2nd Preferred Date/Time (Optional)"
+msgstr "Ngày/giờ ưu tiên thứ hai (Không Bắt Buộc)"
+
+msgid "Coverage"
+msgstr "Bảo Hiểm"
+
+msgid "Select your insurance"
+msgstr "Chọn bảo hiểm của bạn"
+
+msgid "No coverage"
+msgstr "Không có bảo hiểm"
+
+msgid "Insurance Company"
+msgstr "Công Ty Bảo Hiểm"
+
+msgid "Enter your insurance coverage"
+msgstr "Nhập công ty bảo hiểm của bạn"
+
+msgid "Policy Number"
+msgstr "Số Chính Sách"
+
+msgid "e.g."
+msgstr "ví dụ:"
+
+msgid "Final Confirmation"
+msgstr "Xác Nhận Cuối Cùng"
+
+msgid "Selected Hospital"
+msgstr "Bệnh viện được chọn"
+
+msgid "1st Preferred Date/Times"
+msgstr "Ngày/Thời Gian Ưu Tiên Thứ Nhất"
+
+msgid "2nd Preferred Date/Times"
+msgstr "Ngày/Thời Gian Ưu Tiên Thứ Hai"
+
+msgid "More Information"
+msgstr "Thông Tin Thêm"
+
+msgid "Confirm and Book"
+msgstr "Xác Nhận và Đặt"
+
+msgid "from"
+msgstr "từ"
+
+msgid "to"
+msgstr "tới"
+
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+msgid "Successfully Booked"
+msgstr "Đặt Chỗ Thành Công"
+
+msgid "You need to register to access this page"
+msgstr "Bạn cần đăng ký để truy cập trang này"
+
+msgid "Sign Up"
+msgstr "Đăng Ký"
+
+msgid "Note: This is your booking date, we will get back to you soon after we check whether your booking date is accepted or not"
+msgstr "Lưu ý: Đây là ngày đặt phòng của bạn, chúng tôi sẽ liên hệ lại với bạn ngay sau khi kiểm tra xem ngày đặt phòng của bạn có được chấp nhận hay không"
+
+msgid "Back to"
+msgstr "Trở về"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Dear"
+msgstr "Kính thưa"
+
+msgid "Best regards,"
+msgstr "Trân trọng,"
+
+msgid "Thank you for booking with us"
+msgstr "Cảm ơn bạn đã đặt phòng với chúng tôi"
+
+msgid "Your booking has been confirmed with the following details"
+msgstr "Thông tin đặt phòng của bạn đã được xác nhận với các chi tiết sau"
+
+msgid "Your Verification Code"
+msgstr "Mã Xác Nhận Của Bạn"
+
+msgid "Your verification code is"
+msgstr "Mã xác nhận của bạn là"
+
+msgid "Your new verification code is"
+msgstr "Mã xác nhận mới của bạn là"
+
+msgid "A new verification code has been sent to your email."
+msgstr "Mã xác minh mới đã được gửi đến email của bạn."
+
+msgid "The verification code is incorrect. Please try again."
+msgstr "Mã xác minh là không chính xác. Vui lòng thử lại."
+
+msgid "Passwords do not match"
+msgstr "Mật khẩu không trùng khớp"
+
+msgid "Email already existed"
+msgstr "Email đã tồn tại"
+
+msgid "Email or password does not valid"
+msgstr "Email hoặc mật khẩu không hợp lệ"
+
+msgid "Personal Information"
+msgstr "Thông tin cá nhân"
+
+msgid "Appointment Information"
+msgstr "Thông tin cuộc hẹn"
+
+msgid "Insurance Information"
+msgstr "Thông tin bảo hiểm"
+
+msgid "Account registration successful"
+msgstr "Đăng ký tài khoản thành công"
+
+msgid "Symptom checker"
+msgstr "Kiểm tra triệu chứng"
+
+msgid "Symptom Checker"
+msgstr "Kiểm Tra Triệu Chứng"
+
+msgid "Waiting"
+msgstr "Chờ phản hồi"
+
+msgid "Approved"
+msgstr "Đã phê duyệt"
+
+msgid "Rejected"
+msgstr "Đã từ chối"
+
+msgid "We'll reach you soon to let you know when you should visit it"
+msgstr "Chúng tôi sẽ liên hệ với bạn sớm để cho bạn biết khi nào bạn nên ghé thăm nó"
+
+msgid "Tokio Marine"
+msgstr "Tokio Marine"
+
+msgid "Sompo Japan"
+msgstr "Sompo Japan"
+
+msgid "AIG Insurance"
+msgstr "Bảo hiểm AIG"
+
+msgid "AIU Insurance"
+msgstr "Bảo hiểm AIU"
+
+msgid "HS Insurance"
+msgstr "Bảo hiểm HS"
+
+msgid "Profile"
+msgstr "Hồ Sơ"
+
+msgid "Not selected"
+msgstr "Không chọn"
+
+msgid "hospitals"
+msgstr "bệnh viện"
+
+msgid "Preferred Language"
+msgstr "Ngôn ngữ ưa thích"
+
+msgid "Current password"
+msgstr "Mật khẩu hiện tại"
+
+msgid "Enter current password"
+msgstr "Nhập mật khẩu hiện tại"
+
+msgid "Enter new password"
+msgstr "Nhập mật khẩu mới"
+
+msgid "Re-enter new password"
+msgstr "Nhập lại mật khẩu mới"
+
+msgid "Japanese Yen (￥)"
+msgstr "Yên Nhật (￥)"
+
+msgid "Enter firstname"
+msgstr "Nhập tên đầu"
+
+msgid "Enter surname"
+msgstr "Nhập họ"
+
+msgid "Display Language"
+msgstr "Ngôn Ngữ Hiển Thị"
+
+msgid "insurance"
+msgstr "bảo hiểm"
+
+msgid "Date Created"
+msgstr "Ngày Tạo"
+
+msgid "No insurance information found"
+msgstr "Không tìm thấy thông tin bảo hiểm"
+
+msgid "Sort by Name"
+msgstr "Sắp xếp theo tên"
+
+msgid "Sort by Rating"
+msgstr "Sắp xếp theo đánh giá"
+
+msgid "Sort by Distance"
+msgstr "Sắp xếp theo khoảng cách"
+
+msgid "Booked Hospitals"
+msgstr "Bệnh Viện Đã Đặt"
+
+msgid "Booked hospital information could not be found"
+msgstr "Không thể tìm thấy thông tin bệnh viện đã đặt"
+
+msgid "Appointment at"
+msgstr "Cuộc hẹn tại"
+
+msgid "You can now access your appointment information for more information"
+msgstr "Bạn có thể truy cập thông tin cuộc hẹn của mình để biết thêm thông tin"
+
+msgid "You can access the appointment information to see the reason for rejecting this appointment"
+msgstr "Bạn có thể truy cập thông tin cuộc hẹn để xem lý do từ chối cuộc hẹn này"
+
+msgid "Vitabi Admin"
+msgstr "Quản trị Vitabi"
+
+msgid "No hospital information found"
+msgstr "Không tìm thấy thông tin bệnh viện"
+
+msgid "Booker"
+msgstr "Người đặt"
+
+msgid "Open Now"
+msgstr "Hiện tại đang mở"
+
+msgid "Approve"
+msgstr "Chấp nhận"
+
+msgid "Reject"
+msgstr "Từ chối"
+
+msgid "Disapprove"
+msgstr "Không chấp nhận"
+
+msgid "Headache, stomachache, diarrhea, and etc."
+msgstr "Nhức đầu, đau bụng, tiêu chảy, và một số triệu chứng khác"
+
+msgid "No saved hospitals found"
+msgstr "Không tìm thấy bệnh viện đã lưu"
+
+msgid "You have booked a hospital, please wait for a response."
+msgstr "Bạn đã đặt một bệnh viện, vui lòng chờ phản hồi."
+
+msgid "Your Hospital Booking Approved"
+msgstr "Đặt phòng bệnh viện của bạn đã được phê duyệt"
+
+msgid "Your booking has been approved for the following reason"
+msgstr "Đặt phòng của bạn đã được chấp thuận vì lý do sau"
+
+msgid "Your Hospital Booking Rejected"
+msgstr "Đặt phòng bệnh viện của bạn đã bị từ chối"
+
+msgid "Your booking has been rejected for the following reason"
+msgstr "Đặt phòng của bạn đã bị từ chối vì lý do sau"
+
+msgid "Cancel an appointment"
+msgstr "Hủy bỏ cuộc hẹn"
+
+msgid "Your appointment date is"
+msgstr "Ngày hẹn của bạn là"
+
+msgid "Time From"
+msgstr "Thời gian từ"
+
+msgid "Appointment Date"
+msgstr "Ngày hẹn"
+
+msgid "To"
+msgstr "Tới"
+
+msgid "Approve Reason"
+msgstr "Lý do phê duyệt"
+
+msgid "Approve Booking"
+msgstr "Phê duyệt đặt chỗ"
+
+msgid "Loading..."
+msgstr "Đang tải..."
+
+msgid "It may take 10 seconds"
+msgstr "Có thể mất 10 giây"
+
+msgid "Please select a valid time"
+msgstr "Vui lòng chọn thời gian hợp lệ"
+
+msgid "Language You Prefer To Speak At The Hospital"
+msgstr "Ngôn Ngữ Bạn Thích Nói Ở Bệnh Viện"
+
+msgid "Please select a time when the hospital is open!"
+msgstr "Hãy chọn thời gian trong thời gian bệnh viện mở cửa!"
+
+msgid "Enter insurance company"
+msgstr "Nhập công ty bảo hiểm"
+
+msgid "Enter policy number"
+msgstr "Nhập số chính sách"
+
+msgid "You don't select any insurance"
+msgstr "Bạn không chọn bảo hiểm nào"
+
+msgid "Be aware that in some countries, you may be charged for using the ambulance service."
+msgstr "Xin lưu ý rằng ở một số quốc gia, bạn có thể bị tính phí khi sử dụng dịch vụ xe cứu thương."
+
+msgid "Make an appointment for a hospital visit, or if your condition is severe, call an ambulance using the appropriate number in your region."
+msgstr "Đặt lịch hẹn đến bệnh viện hoặc nếu tình trạng của bạn nghiêm trọng, hãy gọi xe cấp cứu bằng số thích hợp ở khu vực của bạn."
+
+msgid "Appointment Request Received"
+msgstr "Đã nhận được yêu cầu cuộc hẹn"
+
+msgid "I'm Nhat, CEO of Vitabi"
+msgstr "Tôi là Nhat, CEO của Vitabi"
+
+msgid "Please be aware that your booking is not yet complete. We are processing your appointment request with your preferred time and place. We will notify you as soon as your booking is approved"
+msgstr "Xin lưu ý rằng việc đặt chỗ của bạn vẫn chưa hoàn tất. Chúng tôi đang xử lý yêu cầu đặt lịch hẹn của bạn theo thời gian và địa điểm mà bạn mong muốn. Chúng tôi sẽ thông báo cho bạn ngay khi đặt chỗ của bạn được chấp thuận"
+
+msgid "Thank you for booking with us! We welcome any of your feedback. If you have any questions or feedback, please feel free to reply to this message"
+msgstr "Cảm ơn bạn đã đặt phòng với chúng tôi! Chúng tôi hoan nghênh mọi phản hồi của bạn. Nếu bạn có bất kỳ câu hỏi hoặc phản hồi nào, vui lòng trả lời tin nhắn này"
+
+msgid "Select Country"
+msgstr "Chọn Quốc Gia"
+
+msgid "Country"
+msgstr "Quốc Gia"
+
+msgid "All Insurances"
+msgstr "Tất Cả Bảo Hiểm"
+
+msgid "Subject"
+msgstr "Chủ đề"
+
+msgid "CEO of Vitabi"
+msgstr "CEO của Vitabi"
+
+msgid "Best regards"
+msgstr "Trân trọng"
+
+msgid "Hello Mr."
+msgstr "Xin chào Ông"
+
+msgid "Hello Ms."
+msgstr "Xin chào Bà"
+
+msgid "Your Appointment Request Has Been Approved!"
+msgstr "Yêu cầu cuộc hẹn của bạn đã được phê duyệt!"
+
+msgid "I am pleased to inform you that your booking request to"
+msgstr "Tôi vui mừng thông báo với bạn rằng yêu cầu đặt phòng của bạn tới"
+
+msgid "has been approved"
+msgstr "đã được chấp nhận"
+
+msgid "Here are the details of your visit"
+msgstr "Dưới đây là chi tiết chuyến thăm của bạn"
+
+msgid "Approved Hospital"
+msgstr "Bệnh viện được phê duyệt"
+
+msgid "Visiting Time"
+msgstr "Thời Gian Đến"
+
+msgid "Symptom"
+msgstr "Triệu Chứng"
+
+msgid "When visiting the hospital, please don't forget to bring"
+msgstr "Khi đến bệnh viện đừng quên mang theo"
+
+msgid "Your passport or photo ID"
+msgstr "Hộ chiếu hoặc ID ảnh của bạn"
+
+msgid "Your insurance document with policy number (if you have one)"
+msgstr "Giấy tờ bảo hiểm của bạn có số hợp đồng (nếu có)"
+
+msgid "Insurance claim form (if you have one)"
+msgstr "Mẫu yêu cầu bồi thường bảo hiểm (nếu có)"
+
+msgid "We wish you a speedy recovery."
+msgstr "Chúng tôi chúc bạn phục hồi nhanh chóng."
+
+msgid "Sender Name"
+msgstr "Tên Người Gửi"
+
+msgid "Here is the information you have provided"
+msgstr "Đây là thông tin bạn đã cung cấp"
+
+msgid "This is an automatically sent acknowledgment email for users who have just booked a hospital appointment via Vitabi"
+msgstr "Đây là email xác nhận được gửi tự động cho người dùng vừa đặt lịch hẹn đến bệnh viện qua Vitabi"
+
+msgid "View"
+msgstr "Xem"
+
+msgid "Sort by Status"
+msgstr "Sắp xếp theo trạng thái"
+
+msgid "Wait a moment"
+msgstr "Chờ vài giây"
+
+msgid "Example: AAfter eating Pad Thai at a street stall in Bangkok yesterday, I started having constant stomach aches and diarrhea."
+msgstr "Ví dụ: Sau khi ăn Pad Thai tại một quầy hàng rong ở Bangkok hôm qua, tôi bắt đầu bị đau bụng liên tục và tiêu chảy."
+
+msgid "What is your symptom?"
+msgstr "Bạn có triệu chứng gì?"
+
+msgid "How long does it last?"
+msgstr "Triệu chứng kéo dài bao lâu rồi?"
+
+msgid "Example: 5 days, 3 hours, or just a few hours ago."
+msgstr "Ví dụ: 5 ngày trước, 3 giờ trước, hoặc chỉ vài giờ trước."
+
+msgid "Monday"
+msgstr "Thứ 2"
+
+msgid "Tuesday"
+msgstr "Thứ 3"
+
+msgid "Wednesday"
+msgstr "Thứ 4"
+
+msgid "Thursday"
+msgstr "Thứ 5"
+
+msgid "Friday"
+msgstr "Thứ 6"
+
+msgid "Saturday"
+msgstr "Thứ 7"
+
+msgid "Sunday"
+msgstr "Chủ Nhật"
+
+msgid "If you want to cancel your booking, please click"
+msgstr "Nếu bạn muốn hủy đặt chỗ của mình, vui lòng nhấn vào"
+
+msgid "here"
+msgstr "đây"
+
+msgid "Please be aware that your booking is not yet complete. We are processing your appointment request with your preferred time and place. We will notify you as soon as your booking is approved."
+msgstr "Xin lưu ý rằng đặt chỗ của bạn vẫn chưa hoàn tất. Chúng tôi đang xử lý yêu cầu đặt hẹn của bạn với thời gian và địa điểm bạn mong muốn. Chúng tôi sẽ thông báo cho bạn ngay khi đặt chỗ của bạn được chấp nhận."
+
+msgid "Thank you for booking with us! We welcome any of your feedback. If you have any questions or feedback, please feel free to reply to this message."
+msgstr "Cảm ơn bạn đã đặt chỗ với chúng tôi! Chúng tôi rất hoan nghênh mọi phản hồi từ bạn. Nếu bạn có bất kỳ câu hỏi hoặc phản hồi nào, xin vui lòng phản hồi lại tin nhắn này."
+
+msgid "Example: After eating Pad Thai at a street stall in Bangkok yesterday, I started having constant stomach aches and diarrhea."
+msgstr "Ví dụ: Sau khi ăn Pad Thai tại một quán hàng rong ở Bangkok ngày hôm qua, tôi bắt đầu có cơn đau bụng và tiêu chảy liên tục."

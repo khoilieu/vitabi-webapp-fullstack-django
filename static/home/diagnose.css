@@ -1,0 +1,213 @@
+body {
+    min-height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    scrollbar-width: none;
+}
+
+section {
+    height: fit-content;
+    width:400px;
+    border: 1px solid #ccc;
+}
+
+/* Header CSS */
+header {
+    padding-right: 20px;
+    padding-left: 20px;
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); */ /* 下の影を削除 */
+
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    right: auto;
+    left: auto;
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown a{
+    font-size: 14px;
+}
+
+.dropdown-toggle {
+    min-width: 100px;
+    width:30%;
+    height: 35px;
+}
+
+.dropdown-menu {
+    font-size:14px;
+}
+
+#title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px !important;
+}
+
+h1 {
+    margin: 0px !important;
+    font-size: 26px !important;;
+}
+
+/* Main CSS */
+main {
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 10%;
+    padding-bottom: 20%;
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    font-size: 30px;
+}
+
+.modal {
+    min-height: 680px;
+    width: 342px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+
+h2 {
+    font-size: 16px !important; 
+    text-align: center;
+    line-height: 1.6 !important;
+}
+
+.continue-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; 
+}
+
+.symptom-duration-form {
+    border-radius: 10px; 
+    background: #fff; 
+    width: 100%;
+}
+
+  .symptom-duration-form h2 {
+    font-size: 18px;
+    text-align: left; 
+    margin-bottom: 20px; 
+  }
+
+  .symptom-duration-form label {
+    display: flex; 
+    position: relative; 
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 16px; 
+    flex-direction: row;
+  }
+
+  .choose {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+  }
+
+  .symptom-duration-form input[type="radio"] {
+    left: 0;
+    top: 0;
+  }
+
+  .symptom-duration-form input[type="radio"] + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    border-radius: 3px;
+  }
+
+  .symptom-duration-form input[type="radio"]:checked + label:before {
+    content: "\2713"; 
+    color: #000; 
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px; 
+  }
+
+/* Footer CSS */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: auto;
+    right: auto;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-around;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    /* box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.2); */ /* 上の影を削除 */
+
+    color: #555;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+}
+
+.footer a {
+    color: #555;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-link img {
+    display: block;
+    margin: 0 auto;
+    width: 30px;
+    height: auto;
+}
+
+.nav-link span {
+    display: block;
+    font-size: 14px;
+}
