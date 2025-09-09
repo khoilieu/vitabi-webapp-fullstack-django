@@ -91,7 +91,7 @@ The platform addresses the critical need for accessible healthcare information a
 
 ## 📸 Screenshots & Demo
 
-*Đang cập nhật*
+Link: https://application.vitabi.us/en/
 
 ## 📊 Project Status
 
